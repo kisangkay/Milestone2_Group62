@@ -5,11 +5,11 @@
 
 ## Team members
 
-| Student Number | Name      | 
-|----------------|-----------|
-| s111111        | Full name |
-| s222222        | Full name | 
-| s333333        | Full name | 
+| Student Number | Name          | 
+|----------------|---------------|
+| s5278432       | Simarjot Kaur |
+| s              | Stephen Koech | 
+| s              | Harsh Patel   | 
 
 
 <div style="page-break-after: always;"></div>
@@ -49,9 +49,78 @@
 
 ### 1.1 Problem Background
 
-- Problem Identification: What problem does this system solve?
-- Dataset: What is the dataset used?
-- Data Input/Output: What kind of data input and output is required?
+- Problem Identification:
+
+1. **System Benefits:**
+This system is used for analyzing and visualizing nutritional data from various food items. It helps the users in the following ways:
+
+1. **Food Search**: Enables consumers to obtain comprehensive nutritional data regarding certain meals swiftly.
+
+2. **Visualizing Nutrient Breakdown**: Visual representations such as pie charts and bar graphs are provided to help people better comprehend the nutritional makeup of certain meals.
+
+3. **Filtering by Nutrition Ranges**: This feature helps with diet planning and health management by allowing users to find items that fit within a given range of nutrients.
+
+4. **Nutritional Level Categorization**: This feature makes it simpler for users to find foods that fall into particular dietary categories (low, mid, or high) by allowing them to filter items based on their levels of nutritional content.
+
+Furthermore, the tool known as Nutrient Correlation Analysis provides a more in-depth understanding of the connections among distinct nutrients, assisting users in comprehending the possible links between different nutrients and their availability in different diets.
+
+2.  **Dataset:**
+
+The Nutritional_Food_Database.csv dataset, which includes comprehensive nutritional data for a variety of food products, is the one that was utilized. The following columns are part of the dataset:
+
+- **Food:** The food item's name or kind.
+
+- **Caloric Value:** The total energy contained in food, expressed as kilocalories (kcal) per 100 grams, is known as its calorie value.
+
+- **Fat (in g):** Total fat content in grams, broken down into monounsaturated, polyunsaturated, and saturated fats.
+
+- **carbs (in g):** Total carbs (including sugars) in 100 grams.
+
+- **Protein:** The total amount of proteins in 100 grams.
+
+- **Nutritional Fibre (g):** The amount of fiber in 100 grams.
+
+- **Cholesterol (in mg):** The amount of cholesterol in milligrams, or mg/100 grammes.
+
+- **Sodium (in g):** The amount of sodium in 100 grams.
+
+- **Water (g):** The amount of water in 100 grammes.
+
+- **Vitamins:** Different vitamins per 100 grammes (A, B1, B11, B12, B2, B3, B5, B6, C, D, E, and K in mg).
+
+- **Minerals:** Different minerals per 100 grammes (Calcium, Copper, Iron, Magnesium, Manganese, Phosphorus, Potassium, Selenium, Zinc in mg).
+
+- *Nutrition Density:** A measure of a food's nutritious content per calorie.
+
+<![endif]>Data  Input/Output:  What  kind  of  data  input  and  output  is  required?
+
+3. **Data Input:**
+
+These are the data input types that the system needs:
+
+**1. Food Name Enter:** Users may search for and obtain nutritional information about an item by entering its name.
+
+**2. Input for Nutrient Selection:** Users may filter items according to their nutritional composition or choose certain nutrients (such as fat, protein, and carbs) to see how they are broken down.
+
+**3. Input of Nutrient Range:** For a certain nutrient (fat between 5g and 10g, for example), users may enter the lowest and maximum values to filter meals that fall within that range.
+
+**4. Choosing Nutrient Levels:** Foods may be filtered by the user according to the levels of fat, protein, carbs, and other nutrients (low, mid, and high).
+
+**5. Input for Nutrient Correlation (for the extra feature):** Inn order to create scatter plots and determine correlation coefficients, users can choose two or more nutrients and examine their association.
+
+4. **Data Output:**
+
+The following categories of data output are offered by the system:
+
+**1. Display of Nutritional Data:** The system provides all of the nutritional data, including calories, fats, carbs, proteins, vitamins, and minerals, for the food item that is being searched.
+
+**2. Illustrations:** The system produces visuals that break down various nutrients (such as fat, protein, and carbs) for specific foods, such as pie charts and bar graphs.
+
+**3. Food List Filtered:** meals that meet certain dietary criteria may be easily identified by the system, which provides a list of meals that match the user's selected nutritional range or level.
+
+**4. Analysis of Nutrient Correlation (for the extra feature):** Scatter plots illustrating the link between certain nutrients produced by the system, together with trend lines and correlation coefficients that shed light on how these nutrients relate to one another in various diets.
+
+
 - Target Users: Who will use the system, and why?
 
 ### 1.2 System capabilities/overview
