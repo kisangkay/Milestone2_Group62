@@ -1,15 +1,15 @@
 # Software Design Document
 
-## Project Name: XXXX
-## Group Number: 001
+## Project Name: My Nutrition
+## Group Number: 62
 
 ## Team members
 
-| Student Number | Name      | 
-|----------------|-----------|
-| s111111        | Full name |
-| s222222        | Full name | 
-| s333333        | Full name | 
+| Student Number | Name          | 
+|----------------|---------------|
+| s5330485       | Koech Stephen |
+| s222222        | Full name     | 
+| s333333        | Full name     | 
 
 
 <div style="page-break-after: always;"></div>
@@ -103,9 +103,9 @@ Include at least 5 use cases, each corresponding to a specific function.
 ## 3.	Software Design and System Components 
 
 ### 3.1	Software Design
-Include a flowchart that illustrates how your software will operate.
+In the My Nutrition software's design, the below flowchart outlines a sequential progression of the steps and possibilities from start to end.
 
-Example:  
+Draft 1:  
 ![Software Design](./software_design_flowchart.png)
 
 ### 3.2	System Components
@@ -138,7 +138,7 @@ Present a structural design, a hierarchy chart, showing the overall interface’
 - Navigation: How will users navigate through the software?
 - Design Choices: Explain why these design choices were made.
 
-Example:  
+Draft 1:  
 ![Structural Design](./Structural_Design.png)
 
 ### 4.2	Visual Design
