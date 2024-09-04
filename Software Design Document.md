@@ -1,6 +1,6 @@
 # Software Design Document
 
-## Project Name: My Nutrition
+## Project Name: Nutrient Analyzer
 ## Group Number: 62
 
 ## Team members
@@ -8,7 +8,7 @@
 | Student Number | Name          | 
 |----------------|---------------|
 | s5278432       | Simarjot Kaur |
-| s              | Stephen Koech | 
+| s5330485       | Stephen Koech | 
 | s              | Harsh Patel   | 
 
 
