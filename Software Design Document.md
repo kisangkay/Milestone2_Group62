@@ -386,23 +386,73 @@ High: Exceeding 66% of the maximum amount.
 
 **R8.2** If new data is added to the CSV file, the system must be able to update the database.
 ### 2.3 Use Case Diagram
-Provide a system-level Use Case Diagram illustrating all required features.
+#### The Use Case diagram of “Nutrient Analyzer” is as follows:
 
-Example:  
-![Use Case Diagram](./UCD.png)
+![Use Case Diagram](./UseCase_Diagram.drawio.png)
 
 ### 2.4 Use Cases
-Include at least 5 use cases, each corresponding to a specific function.
+
+#### These five usage scenarios each illustrates a crucial system function:
 
 
-| Use Case ID    | xxx  |
-|----------------|------|
-| Use Case Name  | xxxx |
-| Actors         | xxxx |
-| Description    | xxxx |
-| Flow of Events | xxxx |
-| Alternate Flow | xxxx |
 
+| Use Case ID    | UC - 01                                                                                                                                                                                                                                 |
+|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Use Case Name  | Food Search                                                                                                                                                                                                                             |
+| Actors         | User                                                                                                                                                                                                                                    |
+| Description    | When a user enters the name of a food, the system will show all of the food's nutritional details.                                                                                                                                      |
+| Flow of Events | **1.** The user types a food item's name into the search field. <br/>**2.** The food products that match are retrieved from the database by the system.<br/> **3.** The food products and their nutritional information are shown by the system. |
+| Alternate Flow | If no food is found, the system displays a "No Results Found" message.
+                                                                                                                                                                                                                                        |
+
+
+<br>
+
+| Use Case ID    | UC - 02                                                                                                                                                                                                                                          |
+|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Use Case Name  |    Nutritional Analysis                                                                                                                                                                                                                                  |
+| Actors         | User                                                                                                                                                                                                                                             |
+| Description    | Pie charts and bar graphs are used to provide users with a comprehensive nutritional analysis of the food item they have selected.
+                                                                                                                                              |
+| Flow of Events | **1.** A food item is chosen by the user from the search results. <br/>**2.** The chosen food's nutritional information is retrieved by the system.<br/> **3.** The system creates and shows bar graphs and pie charts that illustrate how nutrients are distributed. |
+| Alternate Flow | The user is prompted to choose a meal item by the system if none is selected.                                                                                                                                                                          
+                                                                                                                                                                                                                                        |
+
+<br>
+
+| Use Case ID    | UC - 03                                                                                                                                                                                                                                                              |
+|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Use Case Name  | Nutrition Range Filtering                                                                                                                                                                                                                                            |
+| Actors         | User                                                                                                                                                                                                                                                                 |
+| Description    |   Foods that meet the requirements are filtered after users enter a nutritional type and a range of minimum and maximum values.                                                                                                                                 
+                                                                                                                                              |
+| Flow of Events | **1.**  The user chooses a type of nutrient (fat, protein, etc.). <br/>**2.** A minimum and maximum range are specified by the user.<br/> **3.** Foods that fall within the designated range are filtered by the system and displayed. |
+| Alternate Flow | The user is prompted to choose a meal item by the system if none is selected.                                                                                                                                                                                        
+                                                                                                                                                                                                                                        |
+
+<br>
+
+| Use Case ID    | UC - 04                                                                                                                                                                                                                                |
+|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Use Case Name  | Nutrition Level Filtering                                                                                                                                                                                                              |
+| Actors         | User                                                                                                                                                                                                                                   |
+| Description    | According to the proportion of nutrient values, users may filter items by their nutritional levels (low, mid, or high).                                                                                                         
+                                                                                                                                              |
+| Flow of Events | **1.**  The user chooses a level (low, mid, or high) and a nutritional type. <br/>**2.** The meal is categorized by the system and shown according to the chosen level.|
+| Alternate Flow | The system displays a "No Results Found" notice if no meals meet the criteria.                                                                                                                                                          
+                                                                                                                                                                                                                                        |
+
+<br>
+
+| Use Case ID    | UC - 05                                                                                                                                                           |
+|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Use Case Name  | Additional Feature                                                                                                                                                |
+| Actors         | User                                                                                                                                                              |
+| Description    | Using an extra function (e.g., comparing nutritional levels between foods or visualizing a pattern), users do a more in-depth investigation.                      
+                                                                                                                                              |
+| Flow of Events | **1.**  The user can choose from a variety of foods or a particular advanced analysis option. <br/>**2.** The system gets the pertinent information. <br/> **3** The system does the analysis or visualizes the data, then shows the outcome. |
+| Alternate Flow | The user is prompted to change their option by the system if insufficient data is chosen.                                                                                   
+                                                                                                                                                                                                                                        |
 
 
 # 3.	Software Design and System Components 
