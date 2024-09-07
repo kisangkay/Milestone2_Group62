@@ -93,7 +93,8 @@ git<!-- TOC -->
 
 ### 1.1 Problem Background
 
-- Problem Identification:
+1. **Problem Identification:**
+
 
 1. **System Benefits:**
 This system is used for analyzing and visualizing nutritional data from various food items. It helps the users in the following ways:
@@ -108,7 +109,7 @@ This system is used for analyzing and visualizing nutritional data from various 
 
 Furthermore, the tool known as Nutrient Correlation Analysis provides a more in-depth understanding of the connections among distinct nutrients, assisting users in comprehending the possible links between different nutrients and their availability in different diets.
 
-2.  **Dataset:**
+**2. Dataset:**
 
 The Nutritional_Food_Database.csv dataset, which includes comprehensive nutritional data for a variety of food products, is the one that was utilized. The following columns are part of the dataset:
 
@@ -136,9 +137,8 @@ The Nutritional_Food_Database.csv dataset, which includes comprehensive nutritio
 
 - *Nutrition Density:** A measure of a food's nutritious content per calorie.
 
-<![endif]>Data  Input/Output:  What  kind  of  data  input  and  output  is  required?
 
-3. **Data Input:**
+**3. Data Input:**
 
 These are the data input types that the system needs:
 
@@ -164,35 +164,271 @@ The following categories of data output are offered by the system:
 
 **4. Analysis of Nutrient Correlation (for the extra feature):** Scatter plots illustrating the link between certain nutrients produced by the system, together with trend lines and correlation coefficients that shed light on how these nutrients relate to one another in various diets.
 
+**Target Users:**
 
-- Target Users: Who will use the system, and why?
+**1. Nutritionists and dietitians:** This data is being used by the nutritionists and dietitians, because of the following reasons:
 
-### 1.2 System capabilities/overview
+**Reasons:**
 
-- System Functionality: What will the system do?
-- Features and Functionalities: Describe the key features and functionalities of the system.
+To provide their clients with customized meal plans, they must examine and display the nutritional value of different foods. With this application, individuals may more easily create customized nutrition plans by searching for items, seeing comprehensive nutritional breakdowns, and filtering possibilities according to certain dietary requirements.
 
-### 1.3	Benefit Analysis
+**2. Health-Conscious Individuals:** This data is being used by health-conscious people, because of the following reasons:
 
-How will this system provide value or benefit?
+**Reasons:**
+
+Those committed to controlling their diet, level of exercise, or health may utilize the system to help them make well-informed food choices. They can do food searches, view nutritional analyses, and identify items that fit their dietary requirements—for example, balanced, high-protein, low-fat, or both.
+
+**3.** **Fitness enthusiasts and athletes:** This data is being used by  fitness enthusiasts and athletes, because of the following reasons:
+
+**Reasons:**
+
+People who are committed to fitness and athletes frequently keep a careful eye on their food consumption. They can quickly identify foods that contain the proper ratios of macronutrients (fats, proteins, and carbs) and evaluate nutritional density to maximize performance thanks to this approach.
+
+**4. Researchers in Medicine:** This data is being used by researchers in medicine, because of the following reasons:
+
+**Reasons:**
+
+By using the method, nutrition and health researchers may examine the relationships between various nutrients and dietary outcomes. For their study, the nutritional correlation analysis function and the visualizations offer insightful information.
+
+**5. Producers and Developers of Food:** This data is being used by producers and developers of food, because of the following reasons:
+
+**Reasons:**
+
+Food product developers may use the system to compare their goods to others on the market and to identify nutritional trends. This aids in their ability to properly sell their products and fulfill nutritional guidelines.
+
+**6. Academic Institutions (Professors & Students):** This data is being used by academic institutions, because of the following reasons:
+
+**Reasons:**
+
+This tool may be used for instructional reasons by professors and students studying food science, nutrition, and health. It offers a useful, interactive method for investigating nutritional information, spotting patterns, and learning more about the nutrient makeup of different meals.
+
+**7. Providers of Healthcare:**
+
+**Reasons:**
+
+For managing chronic disorders like diabetes or heart disease, doctors and other healthcare practitioners may utilize the system to help patients choose meals that match certain dietary criteria, such as low cholesterol or low salt.
+
+### 1.1 System  overview
+
+**System Functionality:**
+
+The technology will give users access to an extensive interface for analyzing and visualizing nutritional information from an extensive food database. Users of the system may see nutritional breakdowns, filter items according to nutrient levels and ranges, search for certain foods, and visualize data using graphs and charts. Users may also investigate relationships between various nutrients using the system, which can assist in identifying trends and patterns in eating habits.
+
+**Features and Functionalities:**
+
+**1. Food Search:**
+
+**Functionality:** Any food item may be searched for by name by users.
+
+**Output:** It shows all of the nutritional data, including calories, fats, carbs, proteins, vitamins, and minerals, for the meal that was searched for.
+
+**2. Nutritional Analysis Visualization:**
+
+**Functionality:** Lets users choose a food and see the nutritional analysis of that item.
+
+**Output:** It produces bar graphs and pie charts that illustrate the ratios of different nutrients (such as lipids, proteins, and carbs) in the chosen meal.
+
+**3. Filter for Nutrition Range:**
+
+**Functionality:** By entering minimum and maximum values for nutrients like fat, protein, carbs, etc., users may filter items based on given nutritional ranges.
+
+**Output:** It provides a list of meals that are within the designated range of nutrients, making it easier for users to choose alternatives that satisfy their dietary needs.
+
+**4. Filter for Nutrition Level:**
+
+**Functionality:** Foods may be filtered by users according to three levels of nutritional content (low, mid, and high) for components including fat, protein, carbs, sugar, and total nutritional density.
+
+**Output:** Assists users with locating foods that meet particular dietary requirements by classifying items as low, mid, or high for the selected nutrient.
+
+**5. Analysis of Nutrient Correlation (Additional Feature):**
+
+**Functionality:** Users may examine how two or more nutrients are correlated, for example, how fat and carbs or vitamins and minerals are related.
+
+**Output:** To assist users in understanding the relationships between various nutrients, scatter plots displaying the correlation are provided, along with trend lines and correlation coefficients.
+
+**6. Export Data:**
+
+**Functionality:** The nutritional data and visualizations may be exported by users for additional study or distribution.
+
+**Output:** Enables data to be exported for offline analysis or display in a variety of formats (CSV, PNG for graphs).
+
+**7. Easily navigable graphical interface:**
+
+**Functionality:** The system offers a graphical user interface that is simple to use and intuitive for smooth data processing and visualization.
+
+**Output:** A user-friendly, aesthetically pleasing interface that leads non-technical people through the process of exploring data.
+
+**8. Options for Sorting and Filtering Data:**
+
+**Functionality:** The food list may be sorted by the user according to various parameters (e.g., foods with the lowest fat or highest to lowest protein content).
+
+**Output:** To facilitate decision-making, lists are sorted according to user-selected filters or sorting choices.
+
+### 1.2 Benefit  Analysis
+
+There are several important domains in which the suggested data analysis and visualization system would be extremely valuable.
+
+**1. Enhanced Nutritional Awareness:** The technology will assist consumers in comprehending the nutritional value of the foods they eat on a deeper level. Users are provided with comprehensive statistics and graphical displays, such as pie charts and bar graphs, to enable them to observe the distribution of various nutrients, including proteins, carbs, and fats, in their diet. Making educated food choices is made simpler and healthy eating habits are encouraged by this realization.
+
+**2. Personalized Dietary Planning:** Users may choose foods with low fat or high protein content by filtering items according to their dietary requirements or preferences. This makes it possible to plan meals in a more individualized and customized way, which aids in the achievement of certain health objectives including blood sugar regulation, muscular growth, and weight loss.
+
+**3. Time Efficiency for Healthcare Professionals:** By eliminating the need to laboriously go through big datasets, nutritionists, dietitians, and other healthcare workers may swiftly evaluate nutritional data. Professionals will be able to concentrate more on giving their patients and clients tailored advice and treatment plans thanks to this time-saving feature.
+
+**4. Data-Driven Food Research and Development:** The system will be a useful resource for specialists in the food sector in assessing patterns in nutritional content and pinpointing chances for the creation of new food products. Food producers may provide healthier food alternatives that satisfy consumer desires by utilizing the information.
+
+**5. Simple Food Comparison:** By comparing the nutritional values of various foods side by side, users may choose healthier options with more ease. People who are trying to increase their total nutritional intake or who have dietary limitations may find this option especially helpful.
+
+**6. Visual Nutritional Breakdown:** Users can more easily understand and interact with complicated nutritional data thanks to the system's visualization tools, which include pie charts and bar graphs. As a result, the user experience is enhanced overall and a larger audience—including those lacking technical or nutritional expertise—can more easily obtain nutritional data.
+
+**7. Support for Health and Wellness Goals:** By allowing users to filter meals based on their nutritional value, the system will assist them in matching the foods they eat to certain health and wellness objectives, such as controlling cholesterol levels, cutting back on sugar intake, or upping protein intake.
+
+**8. Educational Resource:** By using the method, educators, students, and medical professionals may have a better understanding of how certain nutrients affect general health. It offers an experiential learning opportunity with nutritional data and may be utilized for both academic and self-directed learning.
+
+**9. Enhanced Nutritional Openness:** More transparency about food composition is encouraged by the system's provision of precise and comprehensive nutritional information. Customers may use this to make more moral and health-conscious selections regarding the goods they purchase and eat.
 
 ## 2. Requirements
 
-### 2.1 User Requirements
+### 2.1 User  Requirements
 
-Detail how users are expected to interact with or use the program. What functionalities must the system provide from the end-user perspective? This can include both narrative descriptions and a listing of user needs.
+A wide range of people, including professionals, are expected to utilize this system as they need quick access to comprehensive nutritional data. Key user personas and the interactions they require are listed below.
 
-Note: Since no specific client or user is assigned, you may create a fictional user. Who do you envision using your software?
+**Fictional User Persona 1:**
 
-### 2.2	Software Requirements
-Define the functionality the software will provide. This section should list requirements formally, often using the word "shall" to describe functionalities.
+**Sarah, a Health-Conscious Customer:**
 
-Example Functional Requirements:  
-- R1.1 The program shall accept multiple file names as arguments from the command line.  
-- R1.2 Each file name can be a simple file name or include the full path of the file with one or more levels.  
+Sarah is a thirty-year-old working woman who values leading a healthy lifestyle. She keeps a careful eye on her nutrition to make sure she gets the proper ratio of nutrients to keep her healthy and full of energy.
 
-- etc …
+**User Requirements:**
 
+**1. Search by Food Name:** In order to obtain comprehensive nutritional data fast, Sarah needs to be able to search for items by name.
+
+**2. See Nutritional Breakdown:** She would want to quickly view a visual breakdown of the main macronutrients—fats, proteins, and carbohydrates—as well as other important nutrients, such as minerals and vitamins.
+
+**3. Filter by Nutrition Ranges:** To make better dietary decisions, Sarah would want to filter items based on particular nutritional values (such as low-fat, high-protein meals).
+
+**4. Compare Foods:** To improve meal planning, she must be able to compare various food products side by side.
+
+**5. Track Nutritional Density:** To find foods that offer more nutrients per calorie, Sarah is interested in the "nutrient density" option.
+
+**Fictional User Persona 2:**
+
+**Profile of Dr. Mike, a Nutritionist:**
+
+Dr. Mike is a forty-five-year-old nutritionist who helps patients with high cholesterol and diabetes by offering dietary advice.
+
+**User Requirements:**
+
+**1. Examine Nutritional Data for Clients:** Dr. Mike must enter client-specific specifications (such as minimal salt or sugar content) and obtain dietary suggestions by those specifications.
+
+**2. Visualize Nutritional Breakdown:** To show customers how nutrients are broken down graphically during consultations, he needs tools like pie charts and bar graphs.
+
+**3. Filter by Nutritional Levels:** For dietary planning tailored to each client, the system must enable Dr. Mike to filter meals by high, mid, and low nutritional content (e.g., high protein, low fat).
+
+**4. Save and Export Reports:** To share data with his customers during follow-up consultations, he would want to save and export nutritional reports**.**
+
+**Fictional User Persona 3:**
+
+**Profile of a Food Researcher, Rachel:**
+
+Rachel is a 38-year-old food researcher employed at a business that creates novel food items. She studies dietary patterns and searches for chances to provide better options.
+
+**User Requirements:**
+
+**1. Obtain Complete Nutritional Information:** Rachel needs thorough access to a variety of food products and the nutrients—such as lipids, vitamins, and minerals—that go along with them.
+
+**2. Compare Various Nutritional Values:** To identify possible components for new goods, she has to compare foods from different categories (such as low-calorie, and high-vitamin foods).
+
+**3. Filter by Nutritional Ranges:** For her research and product development, Rachel needs to be able to filter meals depending on particular nutritional levels (e.g., rich in Vitamin D, low in cholesterol).
+
+**4. Provide Visual Data Insights:** To share findings with her colleagues, she must provide visual data insights, such as nutritional comparison charts.
+
+**Functionalities from the End-User Perspective:**
+
+**1.** **Food Search by Name:** To swiftly search any food item by name and obtain its whole nutritional profile, which includes calories, macronutrients (fat, carbs, and protein), and micronutrients (vitamins and minerals), users require a straightforward search bar.
+
+**2. Comprehensive Nutritional Analysis:** The breakdown of lipids, carbs, proteins, and other important nutrients should be shown in tables, pie charts, and bar graphs that allow users to pick any item and examine complete nutritional information.
+
+**3. Filter for Nutritional Range:** For low-sodium foods, for instance. the system should allow users to enter the lowest and maximum values for each nutrient and provide a list of items that fit within that range.
+
+**4. Filter for Nutritional Levels:** Foods should be able to be filtered by three nutritional levels (low, mid, and high) for important nutrients such as protein, carbs, fats, and sugars. This aids in locating meals that meet particular dietary requirements.
+
+**5. Comparing Foods:** To help users make educated decisions, the system should allow them to compare many items at once and display their nutritional values side by side.
+
+**6. Visual Guide to Nutrition:** To facilitate comprehension and improve decision-making, users need tools that allow them to create visual representations of nutritional data, such as pie charts and bar graphs.
+
+**7. Data Export and Report Creation:** Nutritionists and researchers, for example, must export or store nutritional data for client consultations, future analysis, and reporting.
+
+**8. Extra feature (to be suggested by the group):** A "Meal Planner" feature, which would allow users to mix and match foods to make meals and view the meal's complete nutritional breakdown, might be added to the system to further improve its usefulness and assist users in maintaining balanced diets.
+
+### 2.2 Software  Requirements
+
+The functional criteria that the system has to meet are listed in this section. For the purpose of ensuring clarity in system design and execution, each need is officially articulated.
+
+**R1: Food Search**
+
+**R1.1** Users will be able to look for meals by name using the system.
+
+**R1.2** Following the search, the system will show all of the nutritional details for the meal that was chosen.
+
+**R1.3** The search results will be shown by the system as a list with clickable items for more information.
+
+**R2: Nutrition Breakdown**
+
+**R2.1** Users will be able to choose a food item and read a comprehensive nutritional breakdown of that food.
+
+**R2.2** The nutritional breakdown will be shown by the system utilizing bar graphs for micronutrients (vitamins and minerals) and pie charts for macronutrients (fat, protein, and carbs).
+
+**R2.3** In addition to the graphical depiction, the system will show the precise values of each nutrient (e.g., grams, milligrams).
+
+**R3: Filter for Nutritional Range**
+
+**R3.1** Users will be able to enter the minimum and maximum amounts of a certain nutrient (such as protein or fat) into the system.
+
+**R3.2** For the chosen nutrient, the system will show a list of foods that are within the designated range.
+
+**R3.3** The food's nutritional value will be shown by the system in the result list.
+
+**R4: Filter for Nutritional Level**
+
+**R4.1** Foods may be filtered by users according to three different nutritional levels: low, mid, and high.
+
+**R4.2** The system will classify the following nutritional levels:
+
+Low: A figure that is under 33% of the maximum.
+
+Mid: From 33% to 66% of the maximum amount.
+
+High: Exceeding 66% of the maximum amount.
+
+**R4.3** Users will be able to filter the system based on several nutrient categories, including protein, sugar, fat, and carbs.
+
+**R5: Extra Functionality (Meal Planning)**
+
+**R5.1** Users will be able to put together various food components to make meals using the system.
+
+**R5.2** After integrating the nutritional values of all the foods that were chosen, the system will show the overall nutritional breakdown of the meal.
+
+**R5.3** The system must have the ability to export or store the nutritional information for the meal.
+
+**R6: Report Generation and Data Export**
+
+**R6.1** Users will be able to export nutritional data in the form of CSV or PDF files from the system.
+
+**R6.2** The system will let users create and store reports depending on the meals they've chosen or the filters they've used.
+
+**R7: Interface with Users**
+
+**R7.1** The system must include a graphical user interface that is easy to use for conducting searches, seeing breakdowns, and applying filters.
+
+**R7.2** The system must guarantee that the interface is responsive and provides easy access to all of the capabilities.
+
+**R7.3** To assist users in navigating the features, the system will include tooltips and help text.
+
+**R8: Information Retrieval**
+
+**R8.1** A CSV file named Nutritional_Food_Database.csv will be loaded by the system with nutritional data.
+
+**R8.2** If new data is added to the CSV file, the system must be able to update the database.
 ### 2.3 Use Case Diagram
 Provide a system-level Use Case Diagram illustrating all required features.
 
