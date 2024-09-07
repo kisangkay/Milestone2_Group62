@@ -295,7 +295,7 @@ The section below contains a list of all the data structures to be used in the s
 In each data structure, we outline the type, all its planned usages and  defined functions that use the data structure.
 
 
-### <table><tr><td> 1. Data Structure: for (Food name and its nutritional information) </td></tr></table>
+### <table><tr><td> 1. Data Structure name (food_name_and_its_data): for (Food name and its nutritional information) </td></tr></table>
 
 - Data structure type: List of dictionaries
 - Usage: This list holds each food item and its corresponding nutritional information. 
@@ -308,14 +308,14 @@ In each data structure, we outline the type, all its planned usages and  defined
 - - **calculate_nutrient_level()**
 - - **nutritional_density_visualizer()**
 
-### <table><tr><td> 2. Data Structure: for (Food selected and its nutritional information) </td></tr></table>
+### <table><tr><td> 2. Data Structure name (selected_food) for: (Food selected and its nutritional information) </td></tr></table>
 
 - Data structure type: a dictionary
 - Usage: When a user selects a specific food item, all the nutritional information is stored here.
 - All functions using dictionary data type:
 - - **display_all_nutritional_breakdown()**
 
-### <table><tr><td> 3. Data Structure: for (storing already calculated nutrient threshold) </td></tr></table>
+### <table><tr><td> 3. Data Structure name (calculated_nutrient_levels) for: (storing already calculated nutrient threshold) </td></tr></table>
 
 - Data structure type: Tuple
 - Usage: It has been used to store the levels of a food nutrient level (which can either be low, mid or high)
@@ -323,7 +323,7 @@ In each data structure, we outline the type, all its planned usages and  defined
 - - **calculate_nutrient_level()**
 - - **filter_foods_by_nutrient_level()**
 
-### <table><tr><td> 4. Data Structure: for (storing already calculated min or max value of a calculated nutrient range) </td></tr></table>
+### <table><tr><td> 4. Data Structure name (calculated_nutrient_range) for: (storing already calculated min or max value of a calculated nutrient range) </td></tr></table>
 
 - Data structure type: Tuple
 - Usage: It has been used to store the levels of a food nutrient level (which can either be low, mid or high)
@@ -334,8 +334,22 @@ In each data structure, we outline the type, all its planned usages and  defined
 Below is a flowchart to expound more on the functional process of each function we have outlined above in 3.2.1
 
 ### 1. Function 1 Detailed design: _search_food_by_its_name()_
+![Function 1 flowchart](./FLOWCHART_search_food_by_its_name.png)
 
+### 2. Function 2 Detailed design: _display_all_nutritional_breakdown()_
+![Function 2 flowchart](./FLOWCHART_display_all_nutritional_breakdown.png)
 
+### 3. Function 3 Detailed design: _filter_foods_by_nutrient_range()_
+![Function 3 flowchart](./FLOWCHART_filter_foods_by_nutrient_range.png)
+
+### 4. Function 4 Detailed design: _calculate_nutrient_level()_
+![Function 4 flowchart](./FLOWCHART_calculate_nutrient_level.png)
+
+### 5. Function 5 Detailed design: _filter_foods_by_nutrient_level()_
+![Function 5 flowchart](./FLOWCHART_filter_foods_by_nutrient_level.png)
+
+### 6. Function 6 Detailed design: _nutritional_density_visualizer()_
+![Function 6 flowchart](./FLOWCHART_nutritional_density_visualizer.png)
 
 ## 4. User Interface Design
 
