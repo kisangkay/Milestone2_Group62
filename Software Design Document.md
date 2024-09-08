@@ -18,7 +18,7 @@
 
 # Table of Contents
 
-git<!-- TOC -->
+<!-- TOC -->
 * [Software Design Document](#software-design-document)
   * [Project Name: Nutrient Analyzer](#project-name-nutrient-analyzer)
   * [Group Number: 62](#group-number-62)
@@ -26,13 +26,15 @@ git<!-- TOC -->
 * [Table of Contents](#table-of-contents)
   * [1. System Vision](#1-system-vision)
     * [1.1 Problem Background](#11-problem-background)
-    * [1.2 System capabilities/overview](#12-system-capabilitiesoverview)
-    * [1.3	Benefit Analysis](#13benefit-analysis)
+    * [1.1 System  overview](#11-system--overview)
+    * [1.2 Benefit  Analysis](#12-benefit--analysis)
   * [2. Requirements](#2-requirements)
-    * [2.1 User Requirements](#21-user-requirements)
-    * [2.2	Software Requirements](#22software-requirements)
+    * [2.1 User  Requirements](#21-user--requirements)
+    * [2.2 Software  Requirements](#22-software--requirements)
     * [2.3 Use Case Diagram](#23-use-case-diagram)
+      * [The Use Case diagram of “Nutrient Analyzer” is as follows:](#the-use-case-diagram-of-nutrient-analyzer-is-as-follows)
     * [2.4 Use Cases](#24-use-cases)
+      * [These five usage scenarios each illustrates a crucial system function:](#these-five-usage-scenarios-each-illustrates-a-crucial-system-function)
 * [3.	Software Design and System Components](#3-software-design-and-system-components-)
   * [3.1	Software Design](#31software-design)
 * [3.2	System Components](#32system-components)
@@ -447,7 +449,7 @@ High: Exceeding 66% of the maximum amount.
 | Description    | When a user enters the name of a food, the system will show all of the food's nutritional details.                                                                                                                                               |
 | Flow of Events | **1.** The user types a food item's name into the search field. <br/>**2.** The food products that match are retrieved from the database by the system.<br/> **3.** The food products and their nutritional information are shown by the system. |
 | Alternate Flow | If no food is found, the system displays a "No Results Found" message.                                                                                                                                                                           |
-|
+
 
 
 <br>
@@ -457,7 +459,6 @@ High: Exceeding 66% of the maximum amount.
 | Use Case Name  | Nutritional Analysis                                                                                                                                                                                                                                                  |
 | Actors         | User                                                                                                                                                                                                                                                                  |
 | Description    | Pie charts and bar graphs are used to provide users with a comprehensive nutritional analysis of the food item they have selected.                                                                                                                                    |
-|
 | Flow of Events | **1.** A food item is chosen by the user from the search results. <br/>**2.** The chosen food's nutritional information is retrieved by the system.<br/> **3.** The system creates and shows bar graphs and pie charts that illustrate how nutrients are distributed. |
 | Alternate Flow | The user is prompted to choose a meal item by the system if none is selected.                                                                                                                                                                                         |
 |
@@ -732,7 +733,7 @@ On the nutrition level filter screen, we group the elements drop down that selec
 ### 4.1.3 Navigation
 In our navigation design, we implemented consistency in visual and structural design, such that a common menu will be pinned at the top of the frame and provides access to all functional windows in the software. Besides that, each window visited will have a back button, so that if a user is not able to recall which page they were previously on, simply clicking on the back button would return them to their previous page.
  
-![Hierarchy chart showing page navigation](./Wireframes and Hierarchy/Nutrient_Analyzer_Hierarchy_navigation.png)
+![Hierarchy chart showing page navigation](Wireframes_and_Hierarchy/Nutrient_Analyzer_Hierarchy_navigation.png)
 
 #### 4.1.3.1 Navigation Logic
 1. The main home screen user interface will provide a possibility to navigate to any other page by clicking of buttons on the top of the screen. This navigation template is reused in all other pages since it does not collide with the functional pages content, and enhances consistency for a users familiarization of the interface. This transition logic where users do not necessarily have to revisit the home page again to navigate to other modules is helpful to maintain ease of screen navigation.
@@ -765,7 +766,7 @@ This will be the main starting point of the software, where access points to any
 
 - #### Welcome message and a brief introduction
 
-![Home Page welcome screen](./Wireframes and Hierarchy/Home_screen_wireframe.png)
+![Home Page welcome screen](Wireframes_and_Hierarchy/Home_screen_wireframe.png)
 ### Justification of the Home screen design:
 - This design is meant to provide a familiar interface that is similar to other already existing applications, leading to an intuitive experience where a user can easily point out the location of a feature they are after. Including a grouped menu also simplifies navigation since all the main functions of Nutrient Analyzer are included here.
 - The menu on the top of the home page will be consistent throughout the user interaction with the software, for a simplified and straight forward user navigation.
@@ -785,7 +786,7 @@ This being the first function of the software, allows a user to enter a food ite
 - -Since the record from the database is large, we want to support a scroll functionality to view more overflowing results.
 - Back button to return to the page they were in previously.
 
-![Food search screen design](./Wireframes and Hierarchy/food-search-screen.png)
+![Food search screen design](Wireframes_and_Hierarchy/food-search-screen.png)
 
 ### Justification of Food Search Screen design
 Ensuring we have enough space to comfortably view the results, the scroll bar enables more data to load in the view. By fixing the search panel on a different section, we ensure a clean interface design that separated the user input section and results section.
@@ -801,7 +802,7 @@ This screen will display a visual pie charts and bar graphs to show the nutrient
 - Checkbox to change visual layout between a pie chart and a graph.
 - Back button to take user to previous page.
 
-![Nutritional breakdown screen design](./Wireframes and Hierarchy/Nutritional-Breakdown-Screen.png)
+![Nutritional breakdown screen design](Wireframes_and_Hierarchy/Nutritional-Breakdown-Screen.png)
 ### Justification of Nutritional Breakdown Screen design
 - The importance of having a visual representation of the nutritional breakdown structure is to present a visually appealing translation of data for better perception of users. Adding a function to switch between either styling of chart presentation would be accommodating for different audience needs.
 - Including a dropdown instead of users having to type in the names of the food item makes it easier to access records from the database compared to having a normal manual search.
@@ -821,7 +822,7 @@ This screen will display a visual pie charts and bar graphs to show the nutrient
 - Filtered results display area
 - Scroll bar for large data results beyond the first page view
 
-![Nutritional range filter screen design](./Wireframes and Hierarchy/nutritional-range-filter.png)
+![Nutritional range filter screen design](Wireframes_and_Hierarchy/nutritional-range-filter.png)
 
 ### Justification of Nutrition Range Filter design
 - Providing a separated section for user input only and for data display provides a cleaner and an orderly interface.
@@ -841,7 +842,7 @@ The nutrition level filter screen corresponds to the function of allowing a user
 - scroll bar in the display section
 - back button to the user's previous screen
 
-![Nutrition level filter screen design](./Wireframes and Hierarchy/nutrition-level-filter.png)
+![Nutrition level filter screen design](Wireframes_and_Hierarchy/nutrition-level-filter.png)
 
 ### Justification of Nutrition Level Filter design
 When it comes to making a selection to apply a filter, we want to make it as easy as possible for the user. Hence the use of radio buttons in the nutrition level group which only takes one option. This way a user knows they are supposed to only pick one option.
@@ -857,7 +858,7 @@ For ease of use of this analysis feature, we limit the food selection options to
 - Display panel to show a bar graph that compares the nutritional density levels of the selected food items.
 - Back button to return a user to their previous page.
 
-![Food density visualizer screen design](./Wireframes and Hierarchy/food-density-visualizer.png)
+![Food density visualizer screen design](Wireframes_and_Hierarchy/food-density-visualizer.png)
 
 ### Justification of Density Visualizer Screen design
 - With this additional feature, we need to compare and get a better representation of the nutritional density of several food items, hence the need to take in multiple selection options of the food items.
