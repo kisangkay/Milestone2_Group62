@@ -178,7 +178,7 @@ To provide their clients with customized meal plans, they must examine and displ
 
 **Reasons:**
 
-Those committed to controlling their diet, level of exercise, or health may utilize the system to help them make well-informed food choices. They can do food searches, view nutritional analyses, and identify items that fit their dietary requirements—for example, balanced, high-protein, low-fat, or both.
+Those committed to controlling their diet, level of exercise, or health may utilize the system to help them make well-informed food choices. They can do food searches, view nutritional analyses, and identify items that fit their dietary requirements: for example, balanced, high-protein, low-fat, or both.
 
 **3.** **Fitness enthusiasts and athletes:** This data is being used by  fitness enthusiasts and athletes, because of the following reasons:
 
@@ -280,7 +280,7 @@ There are several important domains in which the suggested data analysis and vis
 
 **5. Simple Food Comparison:** By comparing the nutritional values of various foods side by side, users may choose healthier options with more ease. People who are trying to increase their total nutritional intake or who have dietary limitations may find this option especially helpful.
 
-**6. Visual Nutritional Breakdown:** Users can more easily understand and interact with complicated nutritional data thanks to the system's visualization tools, which include pie charts and bar graphs. As a result, the user experience is enhanced overall and a larger audience—including those lacking technical or nutritional expertise—can more easily obtain nutritional data.
+**6. Visual Nutritional Breakdown:** Users can more easily understand and interact with complicated nutritional data thanks to the system's visualization tools, which include pie charts and bar graphs. As a result, the user experience is enhanced overall and a larger audience, including those lacking technical or nutritional expertise can more easily obtain nutritional data.
 
 **7. Support for Health and Wellness Goals:** By allowing users to filter meals based on their nutritional value, the system will assist them in matching the foods they eat to certain health and wellness objectives, such as controlling cholesterol levels, cutting back on sugar intake, or upping protein intake.
 
@@ -304,7 +304,7 @@ Sarah is a thirty-year-old working woman who values leading a healthy lifestyle.
 
 **1. Search by Food Name:** In order to obtain comprehensive nutritional data fast, Sarah needs to be able to search for items by name.
 
-**2. See Nutritional Breakdown:** She would want to quickly view a visual breakdown of the main macronutrients—fats, proteins, and carbohydrates—as well as other important nutrients, such as minerals and vitamins.
+**2. See Nutritional Breakdown:** She would want to quickly view a visual breakdown of the main macronutrients: fats, proteins, and carbohydrates as well as other important nutrients, such as minerals and vitamins.
 
 **3. Filter by Nutrition Ranges:** To make better dietary decisions, Sarah would want to filter items based on particular nutritional values (such as low-fat, high-protein meals).
 
@@ -326,7 +326,7 @@ Dr. Mike is a forty-five-year-old nutritionist who helps patients with high chol
 
 **3. Filter by Nutritional Levels:** For dietary planning tailored to each client, the system must enable Dr. Mike to filter meals by high, mid, and low nutritional content (e.g., high protein, low fat).
 
-**4. Save and Export Reports:** To share data with his customers during follow-up consultations, he would want to save and export nutritional reports**.**
+**4. Save and Export Reports:** To share data with his customers during follow-up consultations, he would want to save and export nutritional reports.
 
 **Fictional User Persona 3:**
 
@@ -336,7 +336,7 @@ Rachel is a 38-year-old food researcher employed at a business that creates nove
 
 **User Requirements:**
 
-**1. Obtain Complete Nutritional Information:** Rachel needs thorough access to a variety of food products and the nutrients—such as lipids, vitamins, and minerals—that go along with them.
+**1. Obtain Complete Nutritional Information:** Rachel needs thorough access to a variety of food products and the nutrients, such as lipids, vitamins, and minerals that go along with them.
 
 **2. Compare Various Nutritional Values:** To identify possible components for new goods, she has to compare foods from different categories (such as low-calorie, and high-vitamin foods).
 
@@ -480,7 +480,6 @@ High: Exceeding 66% of the maximum amount.
 | Use Case Name  | Nutrition Level Filtering                                                                                                                                               |
 | Actors         | User                                                                                                                                                                    |
 | Description    | According to the proportion of nutrient values, users may filter items by their nutritional levels (low, mid, or high).                                                 |
-|
 | Flow of Events | **1.**  The user chooses a level (low, mid, or high) and a nutritional type. <br/>**2.** The meal is categorized by the system and shown according to the chosen level. |
 | Alternate Flow | The system displays a "No Results Found" notice if no meals meet the criteria.                                                                                          |
 
