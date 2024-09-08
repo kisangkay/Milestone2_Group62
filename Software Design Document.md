@@ -461,7 +461,6 @@ High: Exceeding 66% of the maximum amount.
 | Description    | Pie charts and bar graphs are used to provide users with a comprehensive nutritional analysis of the food item they have selected.                                                                                                                                    |
 | Flow of Events | **1.** A food item is chosen by the user from the search results. <br/>**2.** The chosen food's nutritional information is retrieved by the system.<br/> **3.** The system creates and shows bar graphs and pie charts that illustrate how nutrients are distributed. |
 | Alternate Flow | The user is prompted to choose a meal item by the system if none is selected.                                                                                                                                                                                         |
-|
 
 <br>
 
@@ -470,10 +469,9 @@ High: Exceeding 66% of the maximum amount.
 | Use Case Name  | Nutrition Range Filtering                                                                                                                                                                                                              |
 | Actors         | User                                                                                                                                                                                                                                   |
 | Description    | Foods that meet the requirements are filtered after users enter a nutritional type and a range of minimum and maximum values.                                                                                                          |
-|
 | Flow of Events | **1.**  The user chooses a type of nutrient (fat, protein, etc.). <br/>**2.** A minimum and maximum range are specified by the user.<br/> **3.** Foods that fall within the designated range are filtered by the system and displayed. |
 | Alternate Flow | The user is prompted to choose a meal item by the system if none is selected.                                                                                                                                                          |
-|
+
 
 <br>
 
@@ -485,7 +483,7 @@ High: Exceeding 66% of the maximum amount.
 |
 | Flow of Events | **1.**  The user chooses a level (low, mid, or high) and a nutritional type. <br/>**2.** The meal is categorized by the system and shown according to the chosen level. |
 | Alternate Flow | The system displays a "No Results Found" notice if no meals meet the criteria.                                                                                          |
-|
+
 
 <br>
 
@@ -494,10 +492,8 @@ High: Exceeding 66% of the maximum amount.
 | Use Case Name  | Additional Feature                                                                                                                                                                                                                            |
 | Actors         | User                                                                                                                                                                                                                                          |
 | Description    | Using an extra function (e.g., comparing nutritional levels between foods or visualizing a pattern), users do a more in-depth investigation.                                                                                                  |
-|
 | Flow of Events | **1.**  The user can choose from a variety of foods or a particular advanced analysis option. <br/>**2.** The system gets the pertinent information. <br/> **3** The system does the analysis or visualizes the data, then shows the outcome. |
 | Alternate Flow | The user is prompted to change their option by the system if insufficient data is chosen.                                                                                                                                                     |
-|
 
 
 # 3.	Software Design and System Components 
