@@ -63,7 +63,7 @@ class MainFrame ( wx.Frame ):
 class FoodSearch_Dialog ( wx.Dialog ):
 
     def __init__( self, parent ):
-        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 471,191 ), style = wx.DEFAULT_DIALOG_STYLE )
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 618,270 ), style = wx.DEFAULT_DIALOG_STYLE )
 
         self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
@@ -111,6 +111,59 @@ class FoodSearch_Dialog ( wx.Dialog ):
 
 
         self.SetSizer( bSizer3 )
+        self.Layout()
+
+        self.Centre( wx.BOTH )
+
+        # Connect Events
+        self.Search_button.Bind( wx.EVT_BUTTON, self.on_search_click )
+
+    def __del__( self ):
+        pass
+
+
+    # Virtual event handlers, override them in your derived class
+    def on_search_click( self, event ):
+        event.Skip()
+
+
+###########################################################################
+## Class NutrientBreakdown_Dialog
+###########################################################################
+
+class NutrientBreakdown_Dialog ( wx.Dialog ):
+
+    def __init__( self, parent ):
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 600,300 ), style = wx.DEFAULT_DIALOG_STYLE )
+
+        self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
+
+        bSizer6 = wx.BoxSizer( wx.VERTICAL )
+
+        bSizer7 = wx.BoxSizer( wx.VERTICAL )
+
+        self.Label = wx.StaticText( self, wx.ID_ANY, _(u"Select Food:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.Label.Wrap( -1 )
+
+        bSizer7.Add( self.Label, 0, wx.ALL, 5 )
+
+        bSizer10 = wx.BoxSizer( wx.HORIZONTAL )
+
+        m_listBox6Choices = []
+        self.m_listBox6 = wx.ListBox( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, m_listBox6Choices, 0 )
+        bSizer10.Add( self.m_listBox6, 0, 0, 5 )
+
+        self.m_panel3 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+        bSizer10.Add( self.m_panel3, 0, 0, 5 )
+
+
+        bSizer7.Add( bSizer10, 1, wx.EXPAND, 5 )
+
+
+        bSizer6.Add( bSizer7, 5, wx.EXPAND, 5 )
+
+
+        self.SetSizer( bSizer6 )
         self.Layout()
 
         self.Centre( wx.BOTH )
