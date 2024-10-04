@@ -1,15 +1,15 @@
 # Executive Summary
 
 Please provide your GitHub repository link.
-### GitHub Repository URL: https://github.com/XXXX/XXXXX.git
+### GitHub Repository URL: https://github.com/kisangkay/Milestone2_Group62.git
 
 ---
 
 You should use your software to prepare an executive summary as outlined below for the five required features.
 
-## 1. [Feature 1 Name]
+## 1. Food Search
 ### Description  
-Briefly describe what this feature does.
+The Food Search feature helps the users to quickly and easily obtain nutritional data on certain food products from the Nutritional Food Database. When users enter the name or kind of food they're looking for, the system will provide pertinent results, showing important nutritional information and letting them refine their search further depending on dietary levels.
 
 ### Steps
 1. Step-by-step instructions for using this feature.

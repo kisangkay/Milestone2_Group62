@@ -134,7 +134,7 @@ class FoodSearch_Dialog ( wx.Dialog ):
 class NutrientBreakdown_Dialog ( wx.Dialog ):
 
     def __init__( self, parent ):
-        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 600,300 ), style = wx.DEFAULT_DIALOG_STYLE )
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 3000,3000 ), style = wx.DEFAULT_DIALOG_STYLE )
 
         self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
@@ -250,7 +250,7 @@ class NutrientRangeFilter_Dialog ( wx.Dialog ):
 class NutritionalLevelFilter_Dialog ( wx.Dialog ):
 
     def __init__( self, parent ):
-        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 301,219 ), style = wx.DEFAULT_DIALOG_STYLE )
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 500,500 ), style = wx.DEFAULT_DIALOG_STYLE )
 
         self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
@@ -292,7 +292,7 @@ class NutritionalLevelFilter_Dialog ( wx.Dialog ):
         bSizer14.Add( self.Filter_button, 0, wx.ALL, 5 )
 
 
-        bSizer13.Add( bSizer14, 1, wx.EXPAND, 5 )
+        bSizer13.Add( bSizer14, 0, 0, 5 )
 
         self.m_grid6 = wx.grid.Grid( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 
@@ -327,3 +327,56 @@ class NutritionalLevelFilter_Dialog ( wx.Dialog ):
     def __del__( self ):
         pass
 
+
+###########################################################################
+## Class NutritionalDensityVisualizer_Dialog
+###########################################################################
+
+class NutritionalDensityVisualizer_Dialog ( wx.Dialog ):
+
+    def __init__( self, parent ):
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 500,500 ), style = wx.DEFAULT_DIALOG_STYLE )
+
+        self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
+
+        bSizer15 = wx.BoxSizer( wx.VERTICAL )
+
+        self.m_staticText18 = wx.StaticText( self, wx.ID_ANY, _(u"Select Foods to Visualize Nutritional Density:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText18.Wrap( -1 )
+
+        bSizer15.Add( self.m_staticText18, 0, wx.ALL, 5 )
+
+        bSizer16 = wx.BoxSizer( wx.VERTICAL )
+
+        SelectFood_ChoiceChoices = []
+        self.SelectFood_Choice = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, SelectFood_ChoiceChoices, 0 )
+        self.SelectFood_Choice.SetSelection( 0 )
+        bSizer16.Add( self.SelectFood_Choice, 0, wx.ALL, 5 )
+
+        self.m_staticText19 = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText19.Wrap( -1 )
+
+        bSizer16.Add( self.m_staticText19, 0, wx.ALL, 5 )
+
+        bSizer17 = wx.BoxSizer( wx.VERTICAL )
+
+        self.m_button12 = wx.Button( self, wx.ID_ANY, _(u"Visualize"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        bSizer17.Add( self.m_button12, 0, wx.ALL, 5 )
+
+        self.m_panel6 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+        bSizer17.Add( self.m_panel6, 1, wx.EXPAND |wx.ALL, 5 )
+
+
+        bSizer16.Add( bSizer17, 1, wx.EXPAND, 5 )
+
+
+        bSizer15.Add( bSizer16, 1, wx.EXPAND, 5 )
+
+
+        self.SetSizer( bSizer15 )
+        self.Layout()
+
+        self.Centre( wx.BOTH )
+
+    def __del__( self ):
+        pass

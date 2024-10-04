@@ -45,6 +45,8 @@ class MyAppFrame(template_frame.MainFrame):
         # Bind the event for the "Food Search" button
         self.FoodSearch_button.Bind(wx.EVT_BUTTON, self.on_food_search_click)
         self.NutrientBreakdown_button.Bind(wx.EVT_BUTTON, self.on_nutrient_breakdown_click)
+        self.NutritionRangeFilter_button.Bind(wx.EVT_BUTTON, self.on_nutrient_range_filter_click)
+        self.NutritionalLevelFilter_button.Bind(wx.EVT_BUTTON, self.on_nutrient_level_filter_click)
 
     # Event handler for the Food Search button
     def on_food_search_click(self, event):
@@ -53,9 +55,18 @@ class MyAppFrame(template_frame.MainFrame):
         dialog.Destroy()
 
      # Event handler for the Nutrient Breakdown button
-
     def on_nutrient_breakdown_click(self, event):
         dialog = NutrientBreakdown_Dialog(self)
+        dialog.ShowModal()
+        dialog.Destroy()
+
+    def on_nutrient_range_filter_click(self, event):
+        dialog = NutrientRangeFilter_Dialog(self)
+        dialog.ShowModal()
+        dialog.Destroy()
+
+    def on_nutrient_level_filter_click(self, event):
+        dialog = NutritionalLevelFilter_Dialog(self)
         dialog.ShowModal()
         dialog.Destroy()
 
@@ -177,6 +188,196 @@ class NutrientBreakdown_Dialog(wx.Dialog):
         # Update the layout and refresh the panel to display the chart
         self.Layout()
         self.m_panel3.Refresh()
+
+
+class NutrientRangeFilter_Dialog(wx.Dialog):
+
+    def __init__(self, parent):
+        wx.Dialog.__init__(self, parent, id=wx.ID_ANY, title="Nutrition Density Range Filter", pos=wx.DefaultPosition, size=wx.Size(600, 300), style=wx.DEFAULT_DIALOG_STYLE)
+
+        self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
+
+        bSizer11 = wx.BoxSizer(wx.VERTICAL)
+
+        bSizer12 = wx.BoxSizer(wx.HORIZONTAL)
+
+        self.m_staticText8 = wx.StaticText(self, wx.ID_ANY, _(u"Min Range: "), wx.DefaultPosition, wx.DefaultSize, 0)
+        self.m_staticText8.Wrap(-1)
+        bSizer12.Add(self.m_staticText8, 0, wx.ALL, 5)
+
+        self.m_textCtrl2 = wx.TextCtrl(self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0)
+        bSizer12.Add(self.m_textCtrl2, 0, wx.ALL, 5)
+
+        self.m_staticText9 = wx.StaticText(self, wx.ID_ANY, _(u"Max Range:"), wx.DefaultPosition, wx.DefaultSize, 0)
+        self.m_staticText9.Wrap(-1)
+        bSizer12.Add(self.m_staticText9, 0, wx.ALL, 5)
+
+        self.m_textCtrl3 = wx.TextCtrl(self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0)
+        bSizer12.Add(self.m_textCtrl3, 0, wx.ALL, 5)
+
+        self.Filter_button = wx.Button(self, wx.ID_ANY, _(u"Filter"), wx.DefaultPosition, wx.DefaultSize, 0)
+        self.Filter_button.Bind(wx.EVT_BUTTON, self.on_filter)  # Bind filter button event
+        bSizer12.Add(self.Filter_button, 0, wx.ALL, 5)
+
+        bSizer11.Add(bSizer12, 0, wx.EXPAND, 2)
+
+        self.m_grid5 = wx.grid.Grid(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0)
+
+        # Grid
+        self.m_grid5.CreateGrid(5, 5)  # Initial grid size
+        self.m_grid5.EnableEditing(False)  # Make grid non-editable
+        self.m_grid5.EnableGridLines(True)
+        self.m_grid5.EnableDragGridSize(False)
+        self.m_grid5.SetMargins(0, 0)
+
+        # Columns
+        self.m_grid5.EnableDragColMove(False)
+        self.m_grid5.EnableDragColSize(True)
+        self.m_grid5.SetColLabelAlignment(wx.ALIGN_CENTER, wx.ALIGN_CENTER)
+
+        # Rows
+        self.m_grid5.EnableDragRowSize(True)
+        self.m_grid5.SetRowLabelAlignment(wx.ALIGN_CENTER, wx.ALIGN_CENTER)
+
+        # Cell Defaults
+        self.m_grid5.SetDefaultCellAlignment(wx.ALIGN_LEFT, wx.ALIGN_TOP)
+        bSizer11.Add(self.m_grid5, 1, wx.ALL | wx.EXPAND, 0)  # Make grid expandable
+
+        self.SetSizer(bSizer11)
+        self.Layout()
+
+        self.Centre(wx.BOTH)
+
+        # Load the data from the CSV file
+        self.food_data = pd.read_csv('Food_Nutrition_Dataset (1).csv')
+
+    def on_filter(self, event):
+        # Get the input values for Nutrition Density
+        min_nutrition_density = float(self.m_textCtrl2.GetValue() or 0)
+        max_nutrition_density = float(self.m_textCtrl3.GetValue() or float('inf'))
+
+        # Filter the DataFrame based on Nutrition Density
+        filtered_data = self.food_data[
+            (self.food_data['Nutrition Density'] >= min_nutrition_density) &
+            (self.food_data['Nutrition Density'] <= max_nutrition_density)
+        ]
+
+        # Clear previous results from the grid
+        self.m_grid5.ClearGrid()
+        self.m_grid5.DeleteRows(0, self.m_grid5.GetNumberRows())  # Clear previous rows
+
+        # Populate the results grid with the filtered food items
+        for index, row in filtered_data.iterrows():
+            self.m_grid5.AppendRows(1)  # Append a new row
+            self.m_grid5.SetCellValue(self.m_grid5.GetNumberRows() - 1, 0, row['food'])  # Food name
+            self.m_grid5.SetCellValue(self.m_grid5.GetNumberRows() - 1, 1, str(row['Nutrition Density']))  # Nutrition Density (additional columns can be added as needed)
+
+class NutritionalLevelFilter_Dialog(wx.Dialog):
+
+    def __init__(self, parent):
+        wx.Dialog.__init__(self, parent, id=wx.ID_ANY, title=_(u"Nutritional Level Filter"), pos=wx.DefaultPosition, size=wx.Size(500, 500), style=wx.DEFAULT_DIALOG_STYLE)
+
+        self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
+
+        bSizer13 = wx.BoxSizer(wx.VERTICAL)
+
+        self.m_staticText11 = wx.StaticText(self, wx.ID_ANY, _(u"Select level of Nutritional Food:"), wx.DefaultPosition, wx.DefaultSize, 0)
+        self.m_staticText11.Wrap(-1)
+
+        bSizer13.Add(self.m_staticText11, 0, wx.ALL, 5)
+
+        bSizer14 = wx.BoxSizer(wx.HORIZONTAL)
+
+        self.m_staticText14 = wx.StaticText(self, wx.ID_ANY, _(u"Low"), wx.DefaultPosition, wx.DefaultSize, 0)
+        self.m_staticText14.Wrap(-1)
+        bSizer14.Add(self.m_staticText14, 0, wx.ALL, 5)
+
+        self.low_checkbox = wx.CheckBox(self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0)
+        self.low_checkbox.SetValue(True)
+        bSizer14.Add(self.low_checkbox, 0, wx.ALL, 5)
+
+        self.m_staticText16 = wx.StaticText(self, wx.ID_ANY, _(u"Medium"), wx.DefaultPosition, wx.DefaultSize, 0)
+        self.m_staticText16.Wrap(-1)
+        bSizer14.Add(self.m_staticText16, 0, wx.ALL, 5)
+
+        self.medium_checkbox = wx.CheckBox(self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0)
+        bSizer14.Add(self.medium_checkbox, 0, wx.ALL, 5)
+
+        self.m_staticText17 = wx.StaticText(self, wx.ID_ANY, _(u"High"), wx.DefaultPosition, wx.DefaultSize, 0)
+        self.m_staticText17.Wrap(-1)
+        bSizer14.Add(self.m_staticText17, 0, wx.ALL, 5)
+
+        self.high_checkbox = wx.CheckBox(self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0)
+        bSizer14.Add(self.high_checkbox, 0, wx.ALL, 5)
+
+        bSizer13.Add(bSizer14, 0, wx.ALIGN_CENTER_HORIZONTAL, 5)
+
+        self.Filter_button = wx.Button(self, wx.ID_ANY, _(u"Filter"), wx.DefaultPosition, wx.DefaultSize, 0)
+        bSizer13.Add(self.Filter_button, 0, wx.ALL | wx.ALIGN_CENTER_HORIZONTAL, 5)
+
+        self.m_grid5 = wx.grid.Grid(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0)
+
+        # Grid
+        self.m_grid5.CreateGrid(5, 5)
+        self.m_grid5.EnableEditing(True)
+        self.m_grid5.EnableGridLines(True)
+        self.m_grid5.EnableDragGridSize(False)
+        self.m_grid5.SetMargins(0, 0)
+
+        # Columns
+        self.m_grid5.EnableDragColMove(False)
+        self.m_grid5.EnableDragColSize(True)
+        self.m_grid5.SetColLabelAlignment(wx.ALIGN_CENTER, wx.ALIGN_CENTER)
+
+        # Rows
+        self.m_grid5.EnableDragRowSize(True)
+        self.m_grid5.SetRowLabelAlignment(wx.ALIGN_CENTER, wx.ALIGN_CENTER)
+
+        # Label Appearance
+        # Cell Defaults
+        self.m_grid5.SetDefaultCellAlignment(wx.ALIGN_LEFT, wx.ALIGN_TOP)
+        bSizer13.Add(self.m_grid5, 0, wx.ALL, 0)
+
+        self.SetSizer(bSizer13)
+        self.Layout()
+
+        self.Centre(wx.BOTH)
+
+        # Connect Events
+        self.Filter_button.Bind(wx.EVT_BUTTON, self.on_filter_click)
+
+    def __del__(self):
+        pass
+
+    # Event handler for filter button click
+    def on_filter_click(self, event):
+        low_selected = self.low_checkbox.IsChecked()
+        medium_selected = self.medium_checkbox.IsChecked()
+        high_selected = self.high_checkbox.IsChecked()
+
+        # Implement your filtering logic here
+        # Example:
+        filtered_data = []
+        if low_selected:
+            # Add logic to include low nutritional level foods
+            pass
+        if medium_selected:
+            # Add logic to include medium nutritional level foods
+            pass
+        if high_selected:
+            # Add logic to include high nutritional level foods
+            pass
+
+        # Update the grid with filtered data
+        self.update_grid(filtered_data)
+
+    def update_grid(self, data):
+        # Clear the existing grid
+        self.m_grid5.ClearGrid()
+        # Populate the grid with new data
+        for row in range(len(data)):
+            for col in range(len(data[row])):
+                self.m_grid5.SetCellValue(row, col, str(data[row][col]))
 
 # Run the application
 if __name__ == "__main__":
