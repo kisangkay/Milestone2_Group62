@@ -15,7 +15,7 @@ EVEN_ROW_COLOUR = '#CCE6FF'
 GRID_LINE_COLOUR = '#ccc'
 
 # Load the CSV file
-csv_file = 'Food_Nutrition_Dataset (1).csv'
+csv_file = 'Food_Nutrition_Dataset.csv'
 food_data = pd.read_csv(csv_file)
 
 class FoodDataTable(wx.grid.GridTableBase):
@@ -76,8 +76,8 @@ class FoodSearchDialog(template_frame.FoodSearch_Dialog):
     def __init__(self, parent):
         super(FoodSearchDialog, self).__init__(parent)
 
-        # Load the CSV data (Food_Nutrition_Dataset (1).csv)
-        self.df = pd.read_csv('Food_Nutrition_Dataset (1).csv')
+        # Load the CSV data (Food_Nutrition_Dataset.csv)
+        self.df = pd.read_csv('Food_Nutrition_Dataset.csv')
 
         # Set initial grid table with full data
         self.table = FoodDataTable(self.df)
@@ -132,7 +132,7 @@ class NutrientBreakdown_Dialog(wx.Dialog):
         bSizer10 = wx.BoxSizer(wx.HORIZONTAL)
 
         # Load the data from the CSV file using pandas
-        self.food_data = pd.read_csv('Food_Nutrition_Dataset (1).csv')  # Ensure the file name matches your actual file
+        self.food_data = pd.read_csv('Food_Nutrition_Dataset.csv')  # Ensure the file name matches your actual file
 
         # Extract food names for the ListBox
         food_choices = self.food_data['food'].tolist()  # Extract the list of food items
@@ -249,7 +249,7 @@ class NutrientRangeFilter_Dialog(wx.Dialog):
         self.Centre(wx.BOTH)
 
         # Load the data from the CSV file
-        self.food_data = pd.read_csv('Food_Nutrition_Dataset (1).csv')
+        self.food_data = pd.read_csv('Food_Nutrition_Dataset.csv')
 
     def on_filter(self, event):
         # Get the input values for Nutrition Density
