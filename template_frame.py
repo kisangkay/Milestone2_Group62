@@ -170,3 +170,160 @@ class NutrientBreakdown_Dialog ( wx.Dialog ):
 
     def __del__( self ):
         pass
+
+
+###########################################################################
+## Class NutrientRangeFilter_Dialog
+###########################################################################
+
+class NutrientRangeFilter_Dialog ( wx.Dialog ):
+
+    def __init__( self, parent ):
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 600,300 ), style = wx.DEFAULT_DIALOG_STYLE )
+
+        self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
+
+        bSizer11 = wx.BoxSizer( wx.VERTICAL )
+
+        bSizer12 = wx.BoxSizer( wx.HORIZONTAL )
+
+        self.m_staticText8 = wx.StaticText( self, wx.ID_ANY, _(u"Min Range: "), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText8.Wrap( -1 )
+
+        bSizer12.Add( self.m_staticText8, 0, wx.ALL, 5 )
+
+        self.m_textCtrl2 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        bSizer12.Add( self.m_textCtrl2, 0, wx.ALL, 5 )
+
+        self.m_staticText9 = wx.StaticText( self, wx.ID_ANY, _(u"Max Range:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText9.Wrap( -1 )
+
+        bSizer12.Add( self.m_staticText9, 0, wx.ALL, 5 )
+
+        self.m_textCtrl3 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        bSizer12.Add( self.m_textCtrl3, 0, wx.ALL, 5 )
+
+        self.Filter_button = wx.Button( self, wx.ID_ANY, _(u"Filter"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        bSizer12.Add( self.Filter_button, 0, wx.ALL, 5 )
+
+
+        bSizer11.Add( bSizer12, 0, wx.EXPAND, 2 )
+
+        self.m_grid5 = wx.grid.Grid( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+
+        # Grid
+        self.m_grid5.CreateGrid( 5, 5 )
+        self.m_grid5.EnableEditing( True )
+        self.m_grid5.EnableGridLines( True )
+        self.m_grid5.EnableDragGridSize( False )
+        self.m_grid5.SetMargins( 0, 0 )
+
+        # Columns
+        self.m_grid5.EnableDragColMove( False )
+        self.m_grid5.EnableDragColSize( True )
+        self.m_grid5.SetColLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
+
+        # Rows
+        self.m_grid5.EnableDragRowSize( True )
+        self.m_grid5.SetRowLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
+
+        # Label Appearance
+
+        # Cell Defaults
+        self.m_grid5.SetDefaultCellAlignment( wx.ALIGN_LEFT, wx.ALIGN_TOP )
+        bSizer11.Add( self.m_grid5, 0, wx.ALL, 0 )
+
+
+        self.SetSizer( bSizer11 )
+        self.Layout()
+
+        self.Centre( wx.BOTH )
+
+    def __del__( self ):
+        pass
+
+
+###########################################################################
+## Class NutritionalLevelFilter_Dialog
+###########################################################################
+
+class NutritionalLevelFilter_Dialog ( wx.Dialog ):
+
+    def __init__( self, parent ):
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 301,219 ), style = wx.DEFAULT_DIALOG_STYLE )
+
+        self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
+
+        bSizer13 = wx.BoxSizer( wx.VERTICAL )
+
+        self.m_staticText11 = wx.StaticText( self, wx.ID_ANY, _(u"Select level of Nutritional Food:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText11.Wrap( -1 )
+
+        bSizer13.Add( self.m_staticText11, 0, wx.ALL, 5 )
+
+        bSizer14 = wx.BoxSizer( wx.HORIZONTAL )
+
+        self.m_staticText14 = wx.StaticText( self, wx.ID_ANY, _(u"Low"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText14.Wrap( -1 )
+
+        bSizer14.Add( self.m_staticText14, 0, wx.ALL, 5 )
+
+        self.low_checkbox = wx.CheckBox( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.low_checkbox.SetValue(True)
+        bSizer14.Add( self.low_checkbox, 0, wx.ALL, 5 )
+
+        self.m_staticText16 = wx.StaticText( self, wx.ID_ANY, _(u"Medium"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText16.Wrap( -1 )
+
+        bSizer14.Add( self.m_staticText16, 0, wx.ALL, 5 )
+
+        self.medium_checkbox = wx.CheckBox( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        bSizer14.Add( self.medium_checkbox, 0, wx.ALL, 5 )
+
+        self.m_staticText17 = wx.StaticText( self, wx.ID_ANY, _(u"High"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText17.Wrap( -1 )
+
+        bSizer14.Add( self.m_staticText17, 0, wx.ALL, 5 )
+
+        self.High_checkbox = wx.CheckBox( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        bSizer14.Add( self.High_checkbox, 0, wx.ALL, 5 )
+
+        self.Filter_button = wx.Button( self, wx.ID_ANY, _(u"Filter"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        bSizer14.Add( self.Filter_button, 0, wx.ALL, 5 )
+
+
+        bSizer13.Add( bSizer14, 1, wx.EXPAND, 5 )
+
+        self.m_grid6 = wx.grid.Grid( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+
+        # Grid
+        self.m_grid6.CreateGrid( 5, 5 )
+        self.m_grid6.EnableEditing( True )
+        self.m_grid6.EnableGridLines( True )
+        self.m_grid6.EnableDragGridSize( False )
+        self.m_grid6.SetMargins( 0, 0 )
+
+        # Columns
+        self.m_grid6.EnableDragColMove( False )
+        self.m_grid6.EnableDragColSize( True )
+        self.m_grid6.SetColLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
+
+        # Rows
+        self.m_grid6.EnableDragRowSize( True )
+        self.m_grid6.SetRowLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
+
+        # Label Appearance
+
+        # Cell Defaults
+        self.m_grid6.SetDefaultCellAlignment( wx.ALIGN_LEFT, wx.ALIGN_TOP )
+        bSizer13.Add( self.m_grid6, 0, wx.ALL, 0 )
+
+
+        self.SetSizer( bSizer13 )
+        self.Layout()
+
+        self.Centre( wx.BOTH )
+
+    def __del__( self ):
+        pass
+
