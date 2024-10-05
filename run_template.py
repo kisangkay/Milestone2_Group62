@@ -193,7 +193,7 @@ class NutrientBreakdown_Dialog(wx.Dialog):
 class NutrientRangeFilter_Dialog(wx.Dialog):
 
     def __init__(self, parent):
-        wx.Dialog.__init__(self, parent, id=wx.ID_ANY, title="Nutrition Density Range Filter", pos=wx.DefaultPosition, size=wx.Size(600, 300), style=wx.DEFAULT_DIALOG_STYLE)
+        wx.Dialog.__init__(self, parent, id=wx.ID_ANY, title="Nutrition Density Range Filter", pos=wx.DefaultPosition, size=wx.Size(600,453), style=wx.DEFAULT_DIALOG_STYLE)
 
         self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
 
@@ -201,8 +201,17 @@ class NutrientRangeFilter_Dialog(wx.Dialog):
 
         bSizer12 = wx.BoxSizer(wx.VERTICAL)
 
+        bSizer121 = wx.BoxSizer(wx.VERTICAL)
+
         self.nutrient_label = wx.StaticText(self, wx.ID_ANY, _(u"Select Nutrient: "), wx.DefaultPosition, wx.DefaultSize, 0)
         self.nutrient_label.Wrap(-1)
+
+        bSizer121.Add(self.nutrient_label, 0, wx.ALL, 5)
+
+        nutrient_choiceChoices = []
+        self.nutrient_choice = wx.Choice(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, nutrient_choiceChoices, 0)
+        self.nutrient_choice.SetSelection(0)
+        bSizer121.Add(self.nutrient_choice, 0, wx.ALL, 5)
 
         self.nutrient_choice = wx.StaticText(self, wx.ID_ANY, _(u"S"), wx.DefaultPosition,
                                             wx.DefaultSize, 0)
