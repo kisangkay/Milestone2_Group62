@@ -190,7 +190,7 @@ class NutrientBreakdown_Dialog(wx.Dialog):
         self.m_panel3.Refresh()
 
 
-class NutrientRangeFilter_Dialog(wx.Dialog):
+class NutrientRangeFilter_Dialog ( wx.Dialog ):
 
     def __init__(self, parent):
         wx.Dialog.__init__(self, parent, id=wx.ID_ANY, title="Nutrition Density Range Filter", pos=wx.DefaultPosition, size=wx.Size(600,453), style=wx.DEFAULT_DIALOG_STYLE)
@@ -203,78 +203,95 @@ class NutrientRangeFilter_Dialog(wx.Dialog):
 
         bSizer121 = wx.BoxSizer(wx.VERTICAL)
 
-        self.nutrient_label = wx.StaticText(self, wx.ID_ANY, _(u"Select Nutrient: "), wx.DefaultPosition, wx.DefaultSize, 0)
+        self.nutrient_label = wx.StaticText(self, wx.ID_ANY, _(u"Select Nutrient"), wx.DefaultPosition, wx.DefaultSize,
+                                            0)
         self.nutrient_label.Wrap(-1)
 
-        bSizer121.Add(self.nutrient_label, 0, wx.ALL, 5)
+        bSizer121.Add(self.nutrient_label, 0, wx.ALL | wx.ALIGN_CENTER_HORIZONTAL, 5)
 
         nutrient_choiceChoices = []
-        self.nutrient_choice = wx.Choice(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, nutrient_choiceChoices, 0)
+        self.nutrient_choice = wx.Choice(self,wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize,choices=food_data.columns[1:].tolist())
         self.nutrient_choice.SetSelection(0)
-        bSizer121.Add(self.nutrient_choice, 0, wx.ALL, 5)
+        bSizer121.Add(self.nutrient_choice, 0, wx.ALL | wx.ALIGN_CENTER_HORIZONTAL, 5)
 
-        self.nutrient_choice = wx.StaticText(self, wx.ID_ANY, _(u"S"), wx.DefaultPosition,
-                                            wx.DefaultSize, 0)
-        self.nutrient_choice.Wrap(-1)
+        bSizer12.Add(bSizer121, 0, wx.ALIGN_CENTER_HORIZONTAL, 5)
 
+        bSizer21 = wx.BoxSizer(wx.HORIZONTAL)
 
         self.m_staticText8 = wx.StaticText(self, wx.ID_ANY, _(u"Min Range: "), wx.DefaultPosition, wx.DefaultSize, 0)
         self.m_staticText8.Wrap(-1)
-        bSizer12.Add(self.m_staticText8, 0, wx.ALL, 5)
+
+        bSizer21.Add(self.m_staticText8, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 5)
 
         self.m_textCtrl2 = wx.TextCtrl(self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0)
-        bSizer12.Add(self.m_textCtrl2, 0, wx.ALL, 5)
+        bSizer21.Add(self.m_textCtrl2, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 5)
 
         self.m_staticText9 = wx.StaticText(self, wx.ID_ANY, _(u"Max Range:"), wx.DefaultPosition, wx.DefaultSize, 0)
         self.m_staticText9.Wrap(-1)
-        bSizer12.Add(self.m_staticText9, 0, wx.ALL, 5)
+
+        bSizer21.Add(self.m_staticText9, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 5)
 
         self.m_textCtrl3 = wx.TextCtrl(self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0)
-        bSizer12.Add(self.m_textCtrl3, 0, wx.ALL, 5)
+        bSizer21.Add(self.m_textCtrl3, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 5)
 
         self.Filter_button = wx.Button(self, wx.ID_ANY, _(u"Filter"), wx.DefaultPosition, wx.DefaultSize, 0)
-        self.Filter_button.Bind(wx.EVT_BUTTON, self.on_filter)  # Bind filter button event
-        bSizer12.Add(self.Filter_button, 0, wx.ALL, 5)
+        bSizer21.Add(self.Filter_button, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 5)
 
-        bSizer11.Add(bSizer12, 0, wx.EXPAND, 2)
+        bSizer12.Add(bSizer21, 0, wx.ALIGN_CENTER_HORIZONTAL, 5)
+
+        bSizer11.Add(bSizer12, 0, 0, 2)
 
         self.m_grid5 = wx.grid.Grid(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0)
 
         # Grid
-        self.m_grid5.CreateGrid(5, 5)  # Initial grid size
-        self.m_grid5.EnableEditing(False)  # Make grid non-editable
+        self.m_grid5.CreateGrid(5, 2)
+        self.m_grid5.EnableEditing(False)
         self.m_grid5.EnableGridLines(True)
         self.m_grid5.EnableDragGridSize(False)
         self.m_grid5.SetMargins(0, 0)
 
         # Columns
+        self.m_grid5.SetColSize(0, 300)
+        self.m_grid5.SetColSize(1, 200)
         self.m_grid5.EnableDragColMove(False)
         self.m_grid5.EnableDragColSize(True)
+        self.m_grid5.SetColLabelValue(0, _(u"Food Name"))
+        self.m_grid5.SetColLabelValue(1, _(u"Value"))
+        self.m_grid5.SetColLabelValue(2, wx.EmptyString)
         self.m_grid5.SetColLabelAlignment(wx.ALIGN_CENTER, wx.ALIGN_CENTER)
 
         # Rows
+        self.m_grid5.AutoSizeRows()
         self.m_grid5.EnableDragRowSize(True)
         self.m_grid5.SetRowLabelAlignment(wx.ALIGN_CENTER, wx.ALIGN_CENTER)
 
+        # Label Appearance
+
         # Cell Defaults
         self.m_grid5.SetDefaultCellAlignment(wx.ALIGN_LEFT, wx.ALIGN_TOP)
-        bSizer11.Add(self.m_grid5, 1, wx.ALL | wx.EXPAND, 0)  # Make grid expandable
+        bSizer11.Add(self.m_grid5, 1, wx.ALIGN_CENTER_HORIZONTAL, 0)
 
         self.SetSizer(bSizer11)
         self.Layout()
 
         self.Centre(wx.BOTH)
 
+        # Bind events
+        self.Filter_button.Bind(wx.EVT_BUTTON, self.on_filter)
+
         # Load the data from the CSV file
         self.food_data = pd.read_csv('Food_Nutrition_Dataset.csv')
 
     def on_filter(self, event):
         # Get the input values for Nutrition Density
+        nutrient = self.nutrient_choice.GetString(self.nutrient_choice.GetSelection())
         min_nutrition_density = float(self.m_textCtrl2.GetValue() or 0)
         max_nutrition_density = float(self.m_textCtrl3.GetValue() or float('inf'))
 
+        results = food_data[(food_data[nutrient] >= min_nutrition_density) & (food_data[nutrient] <= max_nutrition_density)]
+
         # Filter the DataFrame based on Nutrition Density
-        filtered_data = self.food_data[
+        results = self.food_data[
             (self.food_data['Nutrition Density'] >= min_nutrition_density) &
             (self.food_data['Nutrition Density'] <= max_nutrition_density)
         ]
@@ -284,7 +301,7 @@ class NutrientRangeFilter_Dialog(wx.Dialog):
         self.m_grid5.DeleteRows(0, self.m_grid5.GetNumberRows())  # Clear previous rows
 
         # Populate the results grid with the filtered food items
-        for index, row in filtered_data.iterrows():
+        for index, row in results.iterrows():
             self.m_grid5.AppendRows(1)  # Append a new row
             self.m_grid5.SetCellValue(self.m_grid5.GetNumberRows() - 1, 0, row['food'])  # Food name
             self.m_grid5.SetCellValue(self.m_grid5.GetNumberRows() - 1, 1, str(row['Nutrition Density']))  # Nutrition Density (additional columns can be added as needed)

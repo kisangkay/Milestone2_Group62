@@ -192,53 +192,65 @@ class NutrientRangeFilter_Dialog ( wx.Dialog ):
         self.nutrient_label = wx.StaticText( self, wx.ID_ANY, _(u"Select Nutrient"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.nutrient_label.Wrap( -1 )
 
-        bSizer121.Add( self.nutrient_label, 0, wx.ALL, 5 )
+        bSizer121.Add( self.nutrient_label, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
         nutrient_choiceChoices = []
         self.nutrient_choice = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, nutrient_choiceChoices, 0 )
         self.nutrient_choice.SetSelection( 0 )
-        bSizer121.Add( self.nutrient_choice, 0, wx.ALL, 5 )
+        bSizer121.Add( self.nutrient_choice, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
 
-        bSizer12.Add( bSizer121, 1, wx.EXPAND, 5 )
+        bSizer12.Add( bSizer121, 0, wx.ALIGN_CENTER_HORIZONTAL, 5 )
+
+        bSizer21 = wx.BoxSizer( wx.HORIZONTAL )
 
         self.m_staticText8 = wx.StaticText( self, wx.ID_ANY, _(u"Min Range: "), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.m_staticText8.Wrap( -1 )
 
-        bSizer12.Add( self.m_staticText8, 0, wx.ALL, 5 )
+        bSizer21.Add( self.m_staticText8, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
         self.m_textCtrl2 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-        bSizer12.Add( self.m_textCtrl2, 0, wx.ALL, 5 )
+        bSizer21.Add( self.m_textCtrl2, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
         self.m_staticText9 = wx.StaticText( self, wx.ID_ANY, _(u"Max Range:"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.m_staticText9.Wrap( -1 )
 
-        bSizer12.Add( self.m_staticText9, 0, wx.ALL, 5 )
+        bSizer21.Add( self.m_staticText9, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
         self.m_textCtrl3 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-        bSizer12.Add( self.m_textCtrl3, 0, wx.ALL, 5 )
+        bSizer21.Add( self.m_textCtrl3, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
         self.Filter_button = wx.Button( self, wx.ID_ANY, _(u"Filter"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        bSizer12.Add( self.Filter_button, 0, wx.ALL, 5 )
+        bSizer21.Add( self.Filter_button, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
 
-        bSizer11.Add( bSizer12, 0, wx.EXPAND, 2 )
+        bSizer12.Add( bSizer21, 0, wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
-        self.m_grid5 = wx.grid.Grid( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+
+        bSizer11.Add( bSizer12, 0, 0, 2 )
+
+        self.m_grid5 = wx.grid.Grid( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 500,-1 ), 0 )
 
         # Grid
-        self.m_grid5.CreateGrid( 5, 5 )
+        self.m_grid5.CreateGrid( 5, 2 )
         self.m_grid5.EnableEditing( True )
         self.m_grid5.EnableGridLines( True )
         self.m_grid5.EnableDragGridSize( False )
         self.m_grid5.SetMargins( 0, 0 )
 
         # Columns
+        self.m_grid5.SetColSize( 0, 251 )
+        self.m_grid5.SetColSize( 1, 158 )
+        self.m_grid5.AutoSizeColumns()
         self.m_grid5.EnableDragColMove( False )
         self.m_grid5.EnableDragColSize( True )
+        self.m_grid5.SetColLabelValue( 0, _(u"Food Name") )
+        self.m_grid5.SetColLabelValue( 1, _(u"Value") )
+        self.m_grid5.SetColLabelValue( 2, wx.EmptyString )
         self.m_grid5.SetColLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
 
         # Rows
+        self.m_grid5.AutoSizeRows()
         self.m_grid5.EnableDragRowSize( True )
         self.m_grid5.SetRowLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
 
