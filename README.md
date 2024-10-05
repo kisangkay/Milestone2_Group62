@@ -4,7 +4,7 @@
 ## Project Name: Nutrient Analyzer
 ## Group Number: 62
 
-## Team members
+## Team members name
 
 | Student Number | Name          | 
 |----------------|---------------|
