@@ -26,12 +26,19 @@ class MainFrame ( wx.Frame ):
         self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
         self.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_BTNHIGHLIGHT ) )
 
-        bSizer1 = wx.BoxSizer( wx.VERTICAL )
+        bSizer14 = wx.BoxSizer( wx.VERTICAL )
 
-        self.Home = wx.Button( self, wx.ID_ANY, _(u"Home"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        bSizer1.Add( self.Home, 0, wx.ALL, 5 )
+        bSizer1 = wx.BoxSizer( wx.HORIZONTAL )
+
+        bSizer1.SetMinSize( wx.Size( 800,30 ) )
+        self.HomeButton = wx.Button( self, wx.ID_ANY, _(u"Home"), wx.DefaultPosition, wx.DefaultSize, 0 )
+
+        self.HomeButton.SetBitmap( wx.Bitmap( u"../WORKING_HERE_Milestone2_Group62/gui_bitmaps/house.bmp", wx.BITMAP_TYPE_ANY ) )
+        bSizer1.Add( self.HomeButton, 0, wx.ALL, 5 )
 
         self.FoodSearch_button = wx.Button( self, wx.ID_ANY, _(u"Food Search"), wx.DefaultPosition, wx.DefaultSize, 0 )
+
+        self.FoodSearch_button.SetBitmap( wx.Bitmap( u"../WORKING_HERE_Milestone2_Group62/gui_bitmaps/search.bmp", wx.BITMAP_TYPE_ANY ) )
         bSizer1.Add( self.FoodSearch_button, 0, wx.ALL, 5 )
 
         self.NutrientBreakdown_button = wx.Button( self, wx.ID_ANY, _(u"Nutrient Breakdown"), wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -47,7 +54,10 @@ class MainFrame ( wx.Frame ):
         bSizer1.Add( self.NutritionalDensityVisualizer_button, 0, wx.ALL, 5 )
 
 
-        self.SetSizer( bSizer1 )
+        bSizer14.Add( bSizer1, 0, wx.EXPAND, 5 )
+
+
+        self.SetSizer( bSizer14 )
         self.Layout()
 
         self.Centre( wx.BOTH )
@@ -63,27 +73,58 @@ class MainFrame ( wx.Frame ):
 class FoodSearch_Dialog ( wx.Dialog ):
 
     def __init__( self, parent ):
-        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 618,270 ), style = wx.DEFAULT_DIALOG_STYLE )
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 803,480 ), style = wx.DEFAULT_DIALOG_STYLE )
 
         self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
+
+        bSizer25 = wx.BoxSizer( wx.VERTICAL )
+
+        bSizer1 = wx.BoxSizer( wx.HORIZONTAL )
+
+        bSizer1.SetMinSize( wx.Size( 800,30 ) )
+        self.HomeButton = wx.Button( self, wx.ID_ANY, _(u"Home"), wx.DefaultPosition, wx.DefaultSize, 0 )
+
+        self.HomeButton.SetBitmap( wx.Bitmap( u"../WORKING_HERE_Milestone2_Group62/gui_bitmaps/house.bmp", wx.BITMAP_TYPE_ANY ) )
+        bSizer1.Add( self.HomeButton, 0, wx.ALL, 5 )
+
+        self.FoodSearch_button = wx.Button( self, wx.ID_ANY, _(u"Food Search"), wx.DefaultPosition, wx.DefaultSize, 0 )
+
+        self.FoodSearch_button.SetBitmap( wx.Bitmap( u"../WORKING_HERE_Milestone2_Group62/gui_bitmaps/search.bmp", wx.BITMAP_TYPE_ANY ) )
+        bSizer1.Add( self.FoodSearch_button, 0, wx.ALL, 5 )
+
+        self.NutrientBreakdown_button = wx.Button( self, wx.ID_ANY, _(u"Nutrient Breakdown"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        bSizer1.Add( self.NutrientBreakdown_button, 0, wx.ALL, 5 )
+
+        self.NutritionRangeFilter_button = wx.Button( self, wx.ID_ANY, _(u"Nutrition Range Filter"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        bSizer1.Add( self.NutritionRangeFilter_button, 0, wx.ALL, 5 )
+
+        self.NutritionalLevelFilter_button = wx.Button( self, wx.ID_ANY, _(u"Nutrition Level Filter"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        bSizer1.Add( self.NutritionalLevelFilter_button, 0, wx.ALL, 5 )
+
+        self.NutritionalDensityVisualizer_button = wx.Button( self, wx.ID_ANY, _(u"Nutritional Density Visualizer"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        bSizer1.Add( self.NutritionalDensityVisualizer_button, 0, wx.ALL, 5 )
+
+
+        bSizer25.Add( bSizer1, 1, wx.EXPAND|wx.ALL, 8 )
 
         bSizer3 = wx.BoxSizer( wx.VERTICAL )
 
         bSizer5 = wx.BoxSizer( wx.HORIZONTAL )
 
+        bSizer5.SetMinSize( wx.Size( 800,-1 ) )
         self.m_staticText3 = wx.StaticText( self, wx.ID_ANY, _(u"Food Name:"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.m_staticText3.Wrap( -1 )
 
-        bSizer5.Add( self.m_staticText3, 0, wx.ALL, 5 )
+        bSizer5.Add( self.m_staticText3, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
         self.m_textCtrl1 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-        bSizer5.Add( self.m_textCtrl1, 0, wx.ALL, 5 )
+        bSizer5.Add( self.m_textCtrl1, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
         self.Search_button = wx.Button( self, wx.ID_ANY, _(u"Search"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        bSizer5.Add( self.Search_button, 0, wx.ALL, 5 )
+        bSizer5.Add( self.Search_button, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
 
-        bSizer3.Add( bSizer5, 0, 0, 0 )
+        bSizer3.Add( bSizer5, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 0 )
 
         self.m_grid3 = wx.grid.Grid( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 
@@ -110,7 +151,10 @@ class FoodSearch_Dialog ( wx.Dialog ):
         bSizer3.Add( self.m_grid3, 0, wx.ALL, 0 )
 
 
-        self.SetSizer( bSizer3 )
+        bSizer25.Add( bSizer3, 9, 0, 5 )
+
+
+        self.SetSizer( bSizer25 )
         self.Layout()
 
         self.Centre( wx.BOTH )
@@ -134,7 +178,7 @@ class FoodSearch_Dialog ( wx.Dialog ):
 class NutrientBreakdown_Dialog ( wx.Dialog ):
 
     def __init__( self, parent ):
-        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 3000,3000 ), style = wx.DEFAULT_DIALOG_STYLE )
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 900,900 ), style = wx.DEFAULT_DIALOG_STYLE )
 
         self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
@@ -269,7 +313,6 @@ class NutritionalLevelFilter_Dialog ( wx.Dialog ):
         bSizer14.Add( self.m_staticText14, 0, wx.ALL, 5 )
 
         self.low_checkbox = wx.CheckBox( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.low_checkbox.SetValue(True)
         bSizer14.Add( self.low_checkbox, 0, wx.ALL, 5 )
 
         self.m_staticText16 = wx.StaticText( self, wx.ID_ANY, _(u"Medium"), wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -380,3 +423,5 @@ class NutritionalDensityVisualizer_Dialog ( wx.Dialog ):
 
     def __del__( self ):
         pass
+
+

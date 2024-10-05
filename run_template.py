@@ -48,13 +48,14 @@ class MyAppFrame(template_frame.MainFrame):
         self.NutritionRangeFilter_button.Bind(wx.EVT_BUTTON, self.on_nutrient_range_filter_click)
         self.NutritionalLevelFilter_button.Bind(wx.EVT_BUTTON, self.on_nutrient_level_filter_click)
 
+
     # Event handler for the Food Search button
     def on_food_search_click(self, event):
         dialog = FoodSearchDialog(self)
         dialog.ShowModal()  # Open the dialog when the button is clicked
         dialog.Destroy()
 
-     # Event handler for the Nutrient Breakdown button
+    # Event handler for the Nutrient Breakdown button
     def on_nutrient_breakdown_click(self, event):
         dialog = NutrientBreakdown_Dialog(self)
         dialog.ShowModal()
@@ -76,6 +77,11 @@ class FoodSearchDialog(template_frame.FoodSearch_Dialog):
     def __init__(self, parent):
         super(FoodSearchDialog, self).__init__(parent)
 
+        self.HomeButton.Bind(wx.EVT_BUTTON, self.on_home_click)
+        self.NutrientBreakdown_button.Bind(wx.EVT_BUTTON, self.on_nutrient_breakdown_click)
+        self.NutritionRangeFilter_button.Bind(wx.EVT_BUTTON, self.on_nutrient_range_filter_click)
+        self.NutritionalLevelFilter_button.Bind(wx.EVT_BUTTON, self.on_nutrient_level_filter_click)
+
         # Load the CSV data (Food_Nutrition_Dataset.csv)
         self.df = pd.read_csv('Food_Nutrition_Dataset.csv')
 
@@ -86,6 +92,29 @@ class FoodSearchDialog(template_frame.FoodSearch_Dialog):
 
         # Bind the Search button event
         self.Search_button.Bind(wx.EVT_BUTTON, self.on_search_click)
+
+    #for navigation
+    def on_home_click(self, event):
+        dialog = NutritionalLevelFilter_Dialog(self)
+        dialog.Destroy()
+        frame = MyAppFrame(self)
+        frame.Show()  # Open the dialog when the button is clicked
+
+    def on_nutrient_breakdown_click(self, event):
+        dialog = NutrientBreakdown_Dialog(self)
+        dialog.ShowModal()
+        dialog.Destroy()
+
+    def on_nutrient_range_filter_click(self, event):
+        dialog = NutrientRangeFilter_Dialog(self)
+        dialog.ShowModal()
+        dialog.Destroy()
+
+    def on_nutrient_level_filter_click(self, event):
+        dialog = NutritionalLevelFilter_Dialog(self)
+        dialog.ShowModal()
+        dialog.Destroy()
+
 
     # Event handler for the Search button
     def on_search_click(self, event):
@@ -260,7 +289,7 @@ class NutrientRangeFilter_Dialog(wx.Dialog):
         filtered_data = self.food_data[
             (self.food_data['Nutrition Density'] >= min_nutrition_density) &
             (self.food_data['Nutrition Density'] <= max_nutrition_density)
-        ]
+            ]
 
         # Clear previous results from the grid
         self.m_grid5.ClearGrid()
