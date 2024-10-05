@@ -187,15 +187,20 @@ class NutrientRangeFilter_Dialog ( wx.Dialog ):
 
         bSizer12 = wx.BoxSizer( wx.VERTICAL )
 
+        bSizer121 = wx.BoxSizer( wx.VERTICAL )
+
         self.nutrient_label = wx.StaticText( self, wx.ID_ANY, _(u"Select Nutrient"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.nutrient_label.Wrap( -1 )
 
-        bSizer12.Add( self.nutrient_label, 0, wx.ALL, 5 )
+        bSizer121.Add( self.nutrient_label, 0, wx.ALL, 5 )
 
         nutrient_choiceChoices = []
         self.nutrient_choice = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, nutrient_choiceChoices, 0 )
         self.nutrient_choice.SetSelection( 0 )
-        bSizer12.Add( self.nutrient_choice, 0, wx.ALL, 5 )
+        bSizer121.Add( self.nutrient_choice, 0, wx.ALL, 5 )
+
+
+        bSizer12.Add( bSizer121, 1, wx.EXPAND, 5 )
 
         self.m_staticText8 = wx.StaticText( self, wx.ID_ANY, _(u"Min Range: "), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.m_staticText8.Wrap( -1 )
