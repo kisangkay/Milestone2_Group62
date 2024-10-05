@@ -606,8 +606,11 @@ will then determine whether to classify an input to either being one and only on
 
 1. Function's purpose: to take in food items from a user, check them in the database, calculate and display a visual representation of a food's nutritional density relative to the other selected foods.
 
-This function will operate using the function 5 purpose of doing the calculations. The user inputs 3 food names, and the nutrition type to compare its nutritional density. Then will return a pie chart or a bar graph showing the visual comparison of the 3 nutrition density ranges against the other 2.
-
+<span style="color:red"> *
+This function will operate using a similar function as the function 5's purpose of doing the calculations. The user inputs 3 food names, and the nutrition type to compare its nutritional values. Then will return a bar graph showing the visual comparison of the 3 nutrition density ranges against the other 2
+E.g: A user selects goat cheese, fruit jam and corn rice as the 3 foods, then selects to compare the nutritional value "sugars".
+The respective values of the three are taken and a bar graph is generated to visualize the value differences.*
+</span>
 
 2. The function will take in a dictionary type for the food items, and their nutrition density values from the nutrition density column in the database as a float. 
 
