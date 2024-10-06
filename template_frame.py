@@ -32,32 +32,32 @@ class MainFrame ( wx.Frame ):
 
         self.Home = wx.Button( self, wx.ID_ANY, _(u"Home"), wx.DefaultPosition, wx.DefaultSize, 0 )
 
-        self.Home.SetBitmap( wx.Bitmap( u"gui_bitmaps/house.bmp", wx.BITMAP_TYPE_ANY ) )
+        self.Home.SetBitmap( wx.Bitmap( u"gui_bitmaps/house.bmp", wx.BITMAP_TYPE_RESOURCE ) )
         bSizer1.Add( self.Home, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
         self.FoodSearch_button = wx.Button( self, wx.ID_ANY, _(u"Food Search"), wx.DefaultPosition, wx.DefaultSize, 0 )
 
-        self.FoodSearch_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/search.bmp", wx.BITMAP_TYPE_ANY ) )
+        self.FoodSearch_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/search.bmp", wx.BITMAP_TYPE_RESOURCE ) )
         bSizer1.Add( self.FoodSearch_button, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
         self.NutrientBreakdown_button = wx.Button( self, wx.ID_ANY, _(u"Nutrient Breakdown"), wx.DefaultPosition, wx.DefaultSize, 0 )
 
-        self.NutrientBreakdown_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/pie-chart.bmp", wx.BITMAP_TYPE_ANY ) )
+        self.NutrientBreakdown_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/pie-chart.bmp", wx.BITMAP_TYPE_RESOURCE ) )
         bSizer1.Add( self.NutrientBreakdown_button, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
         self.NutritionRangeFilter_button = wx.Button( self, wx.ID_ANY, _(u"Nutrition Range Filter"), wx.DefaultPosition, wx.DefaultSize, 0 )
 
-        self.NutritionRangeFilter_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/arrow-down-up.bmp", wx.BITMAP_TYPE_ANY ) )
+        self.NutritionRangeFilter_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/arrow.bmp", wx.BITMAP_TYPE_RESOURCE ) )
         bSizer1.Add( self.NutritionRangeFilter_button, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
         self.NutritionalLevelFilter_button = wx.Button( self, wx.ID_ANY, _(u"Nutrition Level Filter"), wx.DefaultPosition, wx.DefaultSize, 0 )
 
-        self.NutritionalLevelFilter_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/alt.bmp", wx.BITMAP_TYPE_ANY ) )
+        self.NutritionalLevelFilter_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/alt.bmp", wx.BITMAP_TYPE_RESOURCE ) )
         bSizer1.Add( self.NutritionalLevelFilter_button, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
         self.NutritionalDensityVisualizer_button = wx.Button( self, wx.ID_ANY, _(u"Nutritional Density Visualizer"), wx.DefaultPosition, wx.DefaultSize, 0 )
 
-        self.NutritionalDensityVisualizer_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/bar-chart-line.bmp", wx.BITMAP_TYPE_ANY ) )
+        self.NutritionalDensityVisualizer_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/bar.bmp", wx.BITMAP_TYPE_RESOURCE ) )
         bSizer1.Add( self.NutritionalDensityVisualizer_button, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
 

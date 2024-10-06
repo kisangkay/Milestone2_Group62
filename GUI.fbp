@@ -90,7 +90,7 @@
                 <property name="auth_needed">0</property>
                 <property name="best_size"></property>
                 <property name="bg"></property>
-                <property name="bitmap">Load From File; ../WORKING_HERE_Milestone2_Group62/gui_bitmaps/house.bmp</property>
+                <property name="bitmap">Load From Resource; gui_bitmaps/house.bmp</property>
                 <property name="caption"></property>
                 <property name="caption_visible">1</property>
                 <property name="center_pane">0</property>
@@ -164,7 +164,7 @@
                 <property name="auth_needed">0</property>
                 <property name="best_size"></property>
                 <property name="bg"></property>
-                <property name="bitmap">Load From File; ../WORKING_HERE_Milestone2_Group62/gui_bitmaps/search.bmp</property>
+                <property name="bitmap">Load From Resource; gui_bitmaps/search.bmp</property>
                 <property name="caption"></property>
                 <property name="caption_visible">1</property>
                 <property name="center_pane">0</property>
@@ -239,7 +239,7 @@
                 <property name="auth_needed">0</property>
                 <property name="best_size"></property>
                 <property name="bg"></property>
-                <property name="bitmap">Load From File; ../WORKING_HERE_Milestone2_Group62/gui_bitmaps/pie-chart.bmp</property>
+                <property name="bitmap">Load From Resource; gui_bitmaps/pie-chart.bmp</property>
                 <property name="caption"></property>
                 <property name="caption_visible">1</property>
                 <property name="center_pane">0</property>
@@ -314,7 +314,7 @@
                 <property name="auth_needed">0</property>
                 <property name="best_size"></property>
                 <property name="bg"></property>
-                <property name="bitmap">Load From File; ../WORKING_HERE_Milestone2_Group62/gui_bitmaps/arrow-down-up.bmp</property>
+                <property name="bitmap">Load From Resource; gui_bitmaps/arrow.bmp</property>
                 <property name="caption"></property>
                 <property name="caption_visible">1</property>
                 <property name="center_pane">0</property>
@@ -389,7 +389,7 @@
                 <property name="auth_needed">0</property>
                 <property name="best_size"></property>
                 <property name="bg"></property>
-                <property name="bitmap">Load From File; ../WORKING_HERE_Milestone2_Group62/gui_bitmaps/alt.bmp</property>
+                <property name="bitmap">Load From Resource; gui_bitmaps/alt.bmp</property>
                 <property name="caption"></property>
                 <property name="caption_visible">1</property>
                 <property name="center_pane">0</property>
@@ -464,7 +464,7 @@
                 <property name="auth_needed">0</property>
                 <property name="best_size"></property>
                 <property name="bg"></property>
-                <property name="bitmap">Load From File; ../WORKING_HERE_Milestone2_Group62/gui_bitmaps/bar-chart-line.bmp</property>
+                <property name="bitmap">Load From Resource; gui_bitmaps/bar.bmp</property>
                 <property name="caption"></property>
                 <property name="caption_visible">1</property>
                 <property name="center_pane">0</property>
