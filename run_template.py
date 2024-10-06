@@ -75,7 +75,7 @@ class MyAppFrame(template_frame.MainFrame):
                                                      wx.DefaultSize, 0)
 
         self.NutritionRangeFilter_button.SetBitmap(
-            wx.Bitmap(u"gui_bitmaps/arrow-down-up.bmp", wx.BITMAP_TYPE_ANY))
+            wx.Bitmap(u"gui_bitmaps/arrow.bmp", wx.BITMAP_TYPE_ANY))
         bSizer1.Add(self.NutritionRangeFilter_button, 0, wx.ALL | wx.ALIGN_CENTER_HORIZONTAL, 5)
 
         self.NutritionalLevelFilter_button = wx.Button(self, wx.ID_ANY, _(u"Nutrition Level Filter"),
@@ -89,7 +89,7 @@ class MyAppFrame(template_frame.MainFrame):
                                                              wx.DefaultPosition, wx.DefaultSize, 0)
 
         self.NutritionalDensityVisualizer_button.SetBitmap(
-            wx.Bitmap(u"gui_bitmaps/bar-chart-line.bmp", wx.BITMAP_TYPE_ANY))
+            wx.Bitmap(u"gui_bitmaps/bar.bmp", wx.BITMAP_TYPE_ANY))
         bSizer1.Add(self.NutritionalDensityVisualizer_button, 0, wx.ALL | wx.ALIGN_CENTER_HORIZONTAL, 5)
 
         bSizer30.Add(bSizer1, 0, wx.ALIGN_CENTER_HORIZONTAL, 5)
