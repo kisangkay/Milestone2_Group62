@@ -449,11 +449,23 @@ class NutritionalLevelFilter_Dialog(wx.Dialog):
 
         bSizer13 = wx.BoxSizer(wx.VERTICAL)
 
-        self.m_staticText11 = wx.StaticText(self, wx.ID_ANY, _(u"Select level of Nutrition"), wx.DefaultPosition,
-                                            wx.DefaultSize, 0)
+        self.m_staticText11 = wx.StaticText(self, wx.ID_ANY, _(u"Select Nutrient to check its levels"),
+                                            wx.DefaultPosition, wx.DefaultSize, 0)
         self.m_staticText11.Wrap(-1)
 
-        bSizer13.Add(self.m_staticText11, 0, wx.ALL | wx.ALIGN_CENTER_HORIZONTAL, 5)
+        bSizer13.Add( self.m_staticText11, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+
+        nutrient_choiceChoices = []
+        self.nutrient_choice = wx.Choice(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize,
+                                         choices=food_data.columns[1:].tolist())
+        self.nutrient_choice.SetSelection(0)
+        bSizer13.Add(self.nutrient_choice, 0, wx.ALL | wx.ALIGN_CENTER_HORIZONTAL, 5)
+
+        self.m_staticText111 = wx.StaticText(self, wx.ID_ANY, _(u"Select Nutrient Level"), wx.DefaultPosition,
+                                             wx.DefaultSize, 0)
+        self.m_staticText111.Wrap(-1)
+
+        bSizer13.Add(self.m_staticText111, 0, wx.ALL | wx.ALIGN_CENTER_HORIZONTAL, 5)
 
         bSizer14 = wx.BoxSizer(wx.HORIZONTAL)
 
@@ -470,7 +482,8 @@ class NutritionalLevelFilter_Dialog(wx.Dialog):
 
         bSizer23 = wx.BoxSizer(wx.HORIZONTAL)
 
-        self.Filter_button = wx.Button(self, wx.ID_ANY, _(u"Filter"), wx.DefaultPosition, wx.DefaultSize, 0)
+        self.Filter_button = wx.Button(self, wx.ID_ANY, _(u"Filter Food Items for that Level"), wx.DefaultPosition,
+                                       wx.DefaultSize, 0)
         bSizer23.Add(self.Filter_button, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 5)
 
         bSizer13.Add(bSizer23, 0, wx.ALIGN_CENTER, 5)
@@ -516,7 +529,12 @@ class NutritionalLevelFilter_Dialog(wx.Dialog):
 
     # Virtual event handlers, override them in your derived class
 
-    def filter_nutrition_level(self, event):
+    def filter_nutrition_level(self, event): #feature 4 funtion
+        self.food_data = pd.read_csv('Food_Nutrition_Dataset.csv')
+        #to pick the selected nutrient from the nutrient_choice dropdown
+        selected_nutrient = self.nutrient_choice.GetString(self.nutrient_choice.GetSelection())
+
+        # Determine the selected level (Low, Mid, High) based on radio buttons
         if self.low_radio.GetValue():
             level = 'Low'
         elif self.medium_radio.GetValue():
@@ -526,27 +544,28 @@ class NutritionalLevelFilter_Dialog(wx.Dialog):
         else:
             return
 
-        nutrient = 'Nutrition Density'
-        max_value = food_data[nutrient].max()
+        #get maximm value from the selected nutrient column
+        max_value = self.food_data[selected_nutrient].max()
 
+        #now we apply level checks on the specific nutrient
         if level == 'Low':
-            results = food_data[food_data[nutrient] < (0.33 * max_value)]
+            results = self.food_data[self.food_data[selected_nutrient] < (0.33 * max_value)]
         elif level == 'Mid':
-            results = food_data[
-                (food_data[nutrient] >= (0.33 * max_value)) & (food_data[nutrient] <= (0.66 * max_value))]
-        else:
-            results = food_data[food_data[nutrient] > (0.66 * max_value)]
+            results = self.food_data[
+                (self.food_data[selected_nutrient] >= (0.33 * max_value)) & (
+                            self.food_data[selected_nutrient] <= (0.66 * max_value))
+                ]
+        else:  #otherwise if its high
+            results = self.food_data[self.food_data[selected_nutrient] > (0.66 * max_value)]
 
-        # Clear previous results from the grid
         self.m_grid6.ClearGrid()
-        self.m_grid6.DeleteRows(0, self.m_grid6.GetNumberRows())  # Clear previous rows
+        self.m_grid6.DeleteRows(0, self.m_grid6.GetNumberRows())
 
-        # Populate the results grid with the filtered food items
+        #list filtered foods for that level
         for index, row in results.iterrows():
-            self.m_grid6.AppendRows(1)  # Append a new row
+            self.m_grid6.AppendRows(1)
             self.m_grid6.SetCellValue(self.m_grid6.GetNumberRows() - 1, 0, row['food'])
-            self.m_grid6.SetCellValue(self.m_grid6.GetNumberRows() - 1, 1, str(
-                row['Nutrition Density']))
+            self.m_grid6.SetCellValue(self.m_grid6.GetNumberRows() - 1, 1, str(row[selected_nutrient]))
 
 
 # Feature 5

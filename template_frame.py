@@ -364,10 +364,20 @@ class NutritionalLevelFilter_Dialog ( wx.Dialog ):
 
         bSizer13 = wx.BoxSizer( wx.VERTICAL )
 
-        self.m_staticText11 = wx.StaticText( self, wx.ID_ANY, _(u"Select level of Nutrition"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText11 = wx.StaticText( self, wx.ID_ANY, _(u"Select Nutrient to check its levels"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.m_staticText11.Wrap( -1 )
 
         bSizer13.Add( self.m_staticText11, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+
+        nutrient_choiceChoices = []
+        self.nutrient_choice = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, nutrient_choiceChoices, 0 )
+        self.nutrient_choice.SetSelection( 0 )
+        bSizer13.Add( self.nutrient_choice, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+
+        self.m_staticText111 = wx.StaticText( self, wx.ID_ANY, _(u"Select Nutrient Level"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText111.Wrap( -1 )
+
+        bSizer13.Add( self.m_staticText111, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
         bSizer14 = wx.BoxSizer( wx.HORIZONTAL )
 
@@ -385,7 +395,7 @@ class NutritionalLevelFilter_Dialog ( wx.Dialog ):
 
         bSizer23 = wx.BoxSizer( wx.HORIZONTAL )
 
-        self.Filter_button = wx.Button( self, wx.ID_ANY, _(u"Filter"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.Filter_button = wx.Button( self, wx.ID_ANY, _(u"Filter Food Items for that Level"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer23.Add( self.Filter_button, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
 
