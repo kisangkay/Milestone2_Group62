@@ -16,10 +16,15 @@
 Please Describe what you have accomplished in this group project.
 - s5376549, Harsh Patel
   - Accomplishments: Integrated the database, developed the nutrition range filter, and led system testing.
+  
+
 - s5278432, Simarjot Kaur
   - Accomplishments: Designed the UI and implemented the nutrition visualization feature, focusing on usability testing.
-- s5330485, Stephen Koech
-  - Accomplishments: Managed the project, developed search and filter features, and led integration testing, and designed the UI
+
+
+- s5330485, Stephen Koech 
+  - Accomplishments: <span style="color:red"> Participated in managing the project, designed the GUI and its components, implemented the features and functionalities in the .py files, and updated the Software Design Document
+</span>
 
 <div style="page-break-after: always;"></div>
 
