@@ -26,40 +26,55 @@ class MainFrame ( wx.Frame ):
         self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
         self.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_BTNHIGHLIGHT ) )
 
+        bSizer30 = wx.BoxSizer( wx.VERTICAL )
+
         bSizer1 = wx.BoxSizer( wx.VERTICAL )
 
         self.Home = wx.Button( self, wx.ID_ANY, _(u"Home"), wx.DefaultPosition, wx.DefaultSize, 0 )
 
-        self.Home.SetBitmap( wx.Bitmap( u"../WORKING_HERE_Milestone2_Group62/gui_bitmaps/house.bmp", wx.BITMAP_TYPE_ANY ) )
-        bSizer1.Add( self.Home, 0, wx.ALL, 5 )
+        self.Home.SetBitmap( wx.Bitmap( u"gui_bitmaps/house.bmp", wx.BITMAP_TYPE_ANY ) )
+        bSizer1.Add( self.Home, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
         self.FoodSearch_button = wx.Button( self, wx.ID_ANY, _(u"Food Search"), wx.DefaultPosition, wx.DefaultSize, 0 )
 
-        self.FoodSearch_button.SetBitmap( wx.Bitmap( u"../WORKING_HERE_Milestone2_Group62/gui_bitmaps/search.bmp", wx.BITMAP_TYPE_ANY ) )
-        bSizer1.Add( self.FoodSearch_button, 0, wx.ALL, 5 )
+        self.FoodSearch_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/search.bmp", wx.BITMAP_TYPE_ANY ) )
+        bSizer1.Add( self.FoodSearch_button, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
         self.NutrientBreakdown_button = wx.Button( self, wx.ID_ANY, _(u"Nutrient Breakdown"), wx.DefaultPosition, wx.DefaultSize, 0 )
 
-        self.NutrientBreakdown_button.SetBitmap( wx.Bitmap( u"../WORKING_HERE_Milestone2_Group62/gui_bitmaps/pie-chart.bmp", wx.BITMAP_TYPE_ANY ) )
-        bSizer1.Add( self.NutrientBreakdown_button, 0, wx.ALL, 5 )
+        self.NutrientBreakdown_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/pie-chart.bmp", wx.BITMAP_TYPE_ANY ) )
+        bSizer1.Add( self.NutrientBreakdown_button, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
         self.NutritionRangeFilter_button = wx.Button( self, wx.ID_ANY, _(u"Nutrition Range Filter"), wx.DefaultPosition, wx.DefaultSize, 0 )
 
-        self.NutritionRangeFilter_button.SetBitmap( wx.Bitmap( u"../WORKING_HERE_Milestone2_Group62/gui_bitmaps/arrow-down-up.bmp", wx.BITMAP_TYPE_ANY ) )
-        bSizer1.Add( self.NutritionRangeFilter_button, 0, wx.ALL, 5 )
+        self.NutritionRangeFilter_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/arrow-down-up.bmp", wx.BITMAP_TYPE_ANY ) )
+        bSizer1.Add( self.NutritionRangeFilter_button, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
         self.NutritionalLevelFilter_button = wx.Button( self, wx.ID_ANY, _(u"Nutrition Level Filter"), wx.DefaultPosition, wx.DefaultSize, 0 )
 
-        self.NutritionalLevelFilter_button.SetBitmap( wx.Bitmap( u"../WORKING_HERE_Milestone2_Group62/gui_bitmaps/alt.bmp", wx.BITMAP_TYPE_ANY ) )
-        bSizer1.Add( self.NutritionalLevelFilter_button, 0, wx.ALL, 5 )
+        self.NutritionalLevelFilter_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/alt.bmp", wx.BITMAP_TYPE_ANY ) )
+        bSizer1.Add( self.NutritionalLevelFilter_button, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
         self.NutritionalDensityVisualizer_button = wx.Button( self, wx.ID_ANY, _(u"Nutritional Density Visualizer"), wx.DefaultPosition, wx.DefaultSize, 0 )
 
-        self.NutritionalDensityVisualizer_button.SetBitmap( wx.Bitmap( u"../WORKING_HERE_Milestone2_Group62/gui_bitmaps/bar-chart-line.bmp", wx.BITMAP_TYPE_ANY ) )
-        bSizer1.Add( self.NutritionalDensityVisualizer_button, 0, wx.ALL, 5 )
+        self.NutritionalDensityVisualizer_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/bar-chart-line.bmp", wx.BITMAP_TYPE_ANY ) )
+        bSizer1.Add( self.NutritionalDensityVisualizer_button, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
 
-        self.SetSizer( bSizer1 )
+        bSizer30.Add( bSizer1, 0, wx.ALIGN_CENTER_HORIZONTAL, 5 )
+
+        bSizer29 = wx.BoxSizer( wx.VERTICAL )
+
+        self.welcome_text = wx.StaticText( self, wx.ID_ANY, _(u"Welcome to Nutrient Analyzer. To get started, please select from the options above"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.welcome_text.Wrap( -1 )
+
+        bSizer29.Add( self.welcome_text, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+
+
+        bSizer30.Add( bSizer29, 0, wx.ALIGN_CENTER_HORIZONTAL, 5 )
+
+
+        self.SetSizer( bSizer30 )
         self.Layout()
 
         self.Centre( wx.BOTH )
@@ -99,18 +114,25 @@ class MainFrame ( wx.Frame ):
 class FoodSearch_Dialog ( wx.Dialog ):
 
     def __init__( self, parent ):
-        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 618,270 ), style = wx.DEFAULT_DIALOG_STYLE )
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 803,480 ), style = wx.DEFAULT_DIALOG_STYLE )
 
         self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
+        bSizer35 = wx.BoxSizer( wx.VERTICAL )
+
         bSizer3 = wx.BoxSizer( wx.VERTICAL )
+
+        self.m_staticText31 = wx.StaticText( self, wx.ID_ANY, _(u"Enter a food name to view its nutritional details"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText31.Wrap( -1 )
+
+        bSizer3.Add( self.m_staticText31, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
         bSizer5 = wx.BoxSizer( wx.HORIZONTAL )
 
         self.m_staticText3 = wx.StaticText( self, wx.ID_ANY, _(u"Food Name:"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.m_staticText3.Wrap( -1 )
 
-        bSizer5.Add( self.m_staticText3, 0, wx.ALL, 5 )
+        bSizer5.Add( self.m_staticText3, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
         self.m_textCtrl1 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer5.Add( self.m_textCtrl1, 0, wx.ALL, 5 )
@@ -119,9 +141,12 @@ class FoodSearch_Dialog ( wx.Dialog ):
         bSizer5.Add( self.Search_button, 0, wx.ALL, 5 )
 
 
-        bSizer3.Add( bSizer5, 0, 0, 0 )
+        bSizer3.Add( bSizer5, 0, wx.ALIGN_CENTER_HORIZONTAL, 0 )
 
-        self.m_grid3 = wx.grid.Grid( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+
+        bSizer35.Add( bSizer3, 0, wx.EXPAND, 5 )
+
+        self.m_grid3 = wx.grid.Grid( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,-1 ), 0 )
 
         # Grid
         self.m_grid3.CreateGrid( 5, 5 )
@@ -131,11 +156,28 @@ class FoodSearch_Dialog ( wx.Dialog ):
         self.m_grid3.SetMargins( 0, 0 )
 
         # Columns
+        self.m_grid3.SetColSize( 0, 193 )
+        self.m_grid3.SetColSize( 1, 130 )
+        self.m_grid3.SetColSize( 2, 135 )
+        self.m_grid3.SetColSize( 3, 129 )
+        self.m_grid3.SetColSize( 4, 278 )
         self.m_grid3.EnableDragColMove( False )
         self.m_grid3.EnableDragColSize( True )
+        self.m_grid3.SetColLabelValue( 0, _(u"Food Name") )
+        self.m_grid3.SetColLabelValue( 1, _(u"Nutrition value 1") )
+        self.m_grid3.SetColLabelValue( 2, _(u"Nutrition value 2") )
+        self.m_grid3.SetColLabelValue( 3, _(u"Nutrition value 3") )
+        self.m_grid3.SetColLabelValue( 4, _(u"Nutrition value 4") )
+        self.m_grid3.SetColLabelValue( 5, _(u"Nutrition value 5") )
+        self.m_grid3.SetColLabelValue( 6, _(u"Nutrition value 6") )
+        self.m_grid3.SetColLabelValue( 7, _(u"Nutrition value 7") )
+        self.m_grid3.SetColLabelValue( 8, _(u"Nutrition value 8") )
+        self.m_grid3.SetColLabelValue( 9, _(u"Nutrition value 9") )
+        self.m_grid3.SetColLabelValue( 10, _(u"Nutrition value 10") )
         self.m_grid3.SetColLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
 
         # Rows
+        self.m_grid3.AutoSizeRows()
         self.m_grid3.EnableDragRowSize( True )
         self.m_grid3.SetRowLabelAlignment( wx.ALIGN_CENTER, wx.ALIGN_CENTER )
 
@@ -143,10 +185,10 @@ class FoodSearch_Dialog ( wx.Dialog ):
 
         # Cell Defaults
         self.m_grid3.SetDefaultCellAlignment( wx.ALIGN_LEFT, wx.ALIGN_TOP )
-        bSizer3.Add( self.m_grid3, 0, wx.ALL, 0 )
+        bSizer35.Add( self.m_grid3, 1, wx.ALIGN_CENTER_HORIZONTAL|wx.ALL, 0 )
 
 
-        self.SetSizer( bSizer3 )
+        self.SetSizer( bSizer35 )
         self.Layout()
 
         self.Centre( wx.BOTH )
@@ -170,18 +212,17 @@ class FoodSearch_Dialog ( wx.Dialog ):
 class NutrientBreakdown_Dialog ( wx.Dialog ):
 
     def __init__( self, parent ):
-        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 900,900 ), style = wx.DEFAULT_DIALOG_STYLE )
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 803,480 ), style = wx.DEFAULT_DIALOG_STYLE )
 
         self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
         bSizer6 = wx.BoxSizer( wx.VERTICAL )
 
-        bSizer7 = wx.BoxSizer( wx.VERTICAL )
+        bSizer6.SetMinSize( wx.Size( 803,480 ) )
+        self.food_label = wx.StaticText( self, wx.ID_ANY, _(u"Select Food:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.food_label.Wrap( -1 )
 
-        self.Label = wx.StaticText( self, wx.ID_ANY, _(u"Select Food:"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.Label.Wrap( -1 )
-
-        bSizer7.Add( self.Label, 0, wx.ALL, 5 )
+        bSizer6.Add( self.food_label, 0, wx.ALL, 5 )
 
         bSizer10 = wx.BoxSizer( wx.HORIZONTAL )
 
@@ -190,13 +231,10 @@ class NutrientBreakdown_Dialog ( wx.Dialog ):
         bSizer10.Add( self.m_listBox6, 0, 0, 5 )
 
         self.m_panel3 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
-        bSizer10.Add( self.m_panel3, 0, 0, 5 )
+        bSizer10.Add( self.m_panel3, 1, wx.ALL|wx.EXPAND, 5 )
 
 
-        bSizer7.Add( bSizer10, 1, wx.EXPAND, 5 )
-
-
-        bSizer6.Add( bSizer7, 5, wx.EXPAND, 5 )
+        bSizer6.Add( bSizer10, 1, wx.EXPAND, 5 )
 
 
         self.SetSizer( bSizer6 )
@@ -204,8 +242,16 @@ class NutrientBreakdown_Dialog ( wx.Dialog ):
 
         self.Centre( wx.BOTH )
 
+        # Connect Events
+        self.m_listBox6.Bind( wx.EVT_LISTBOX, self.on_food_selected )
+
     def __del__( self ):
         pass
+
+
+    # Virtual event handlers, override them in your derived class
+    def on_food_selected( self, event ):
+        event.Skip()
 
 
 ###########################################################################
