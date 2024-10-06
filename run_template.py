@@ -85,7 +85,7 @@ class MyAppFrame(template_frame.MainFrame):
             wx.Bitmap(u"gui_bitmaps/alt.bmp", wx.BITMAP_TYPE_ANY))
         bSizer1.Add(self.NutritionalLevelFilter_button, 0, wx.ALL | wx.ALIGN_CENTER_HORIZONTAL, 5)
 
-        self.NutritionalDensityVisualizer_button = wx.Button(self, wx.ID_ANY, _(u"Nutritional Density Visualizer"),
+        self.NutritionalDensityVisualizer_button = wx.Button(self, wx.ID_ANY, _(u"Nutritional Comparison Visualizer"),
                                                              wx.DefaultPosition, wx.DefaultSize, 0)
 
         self.NutritionalDensityVisualizer_button.SetBitmap(
@@ -582,7 +582,7 @@ class NutritionalDensity_Comparison_Dialog(wx.Dialog):
 
         bSizer25 = wx.BoxSizer(wx.VERTICAL)
 
-        self.m_staticText18 = wx.StaticText(self, wx.ID_ANY, _(u"Select Foods to Visualize Nutritional Density"),
+        self.m_staticText18 = wx.StaticText(self, wx.ID_ANY, _(u"Select Foods to Visualize Nutritional Comparison"),
                                             wx.DefaultPosition, wx.DefaultSize, 0)
         self.m_staticText18.Wrap(-1)
 

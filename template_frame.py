@@ -55,7 +55,7 @@ class MainFrame ( wx.Frame ):
         self.NutritionalLevelFilter_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/alt.bmp", wx.BITMAP_TYPE_RESOURCE ) )
         bSizer1.Add( self.NutritionalLevelFilter_button, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
-        self.NutritionalDensityVisualizer_button = wx.Button( self, wx.ID_ANY, _(u"Nutritional Density Visualizer"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.NutritionalDensityVisualizer_button = wx.Button( self, wx.ID_ANY, _(u"Nutritional Comparison Visualizer"), wx.DefaultPosition, wx.DefaultSize, 0 )
 
         self.NutritionalDensityVisualizer_button.SetBitmap( wx.Bitmap( u"gui_bitmaps/bar.bmp", wx.BITMAP_TYPE_RESOURCE ) )
         bSizer1.Add( self.NutritionalDensityVisualizer_button, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
@@ -462,7 +462,7 @@ class NutritionalDensity_Comparison_Dialog ( wx.Dialog ):
 
         bSizer25 = wx.BoxSizer( wx.VERTICAL )
 
-        self.m_staticText18 = wx.StaticText( self, wx.ID_ANY, _(u"Select Foods to Visualize Nutritional Density"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText18 = wx.StaticText( self, wx.ID_ANY, _(u"Select Foods to Visualize Nutritional Comparison"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.m_staticText18.Wrap( -1 )
 
         bSizer25.Add( self.m_staticText18, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )

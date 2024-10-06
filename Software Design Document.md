@@ -225,11 +225,11 @@ The technology will give users access to an extensive interface for analyzing an
 
 **Output:** It shows all of the nutritional data, including calories, fats, carbs, proteins, vitamins, and minerals, for the meal that was searched for.
 
-**2. Nutritional Analysis Visualization:**
+**2. Nutritional <span style="color:red"> Breakdown Visualization:**
 
-**Functionality:** Lets users choose a food and see the nutritional analysis of that item.
+**Functionality:** Lets users choose a food and see the nutritional analysis <span style="color:red"> breakdown</span> of that item.
 
-**Output:** It produces bar graphs and pie charts that illustrate the ratios of different nutrients (such as lipids, proteins, and carbs) in the chosen meal.
+**Output:** It produces a<span style="color:red"> pie chart that illustrate the ratios of different nutrients (such as <span style="color:red"> Calorie value, proteins, and Saturated fats) in the selected food item.
 
 **3. Filter for Nutrition Range:**
 
@@ -239,31 +239,26 @@ The technology will give users access to an extensive interface for analyzing an
 
 **4. Filter for Nutrition Level:**
 
-**Functionality:** Foods may be filtered by users according to three levels of nutritional content (low, mid, and high) for components including fat, protein, carbs, sugar, and total nutritional density.
+**Functionality:** Foods may be filtered by users according to three levels of nutritional content (low, mid, and high) for <span style="color:red">nutritional values including fat, protein, carbs, sugar, and nutritional density etc.
 
 **Output:** Assists users with locating foods that meet particular dietary requirements by classifying items as low, mid, or high for the selected nutrient.
 
-**5. Analysis of Nutrient Correlation (Additional Feature):**
+**5. Analysis of Nutrient <span style="color:red"> Density Visualizer </span> (Additional Feature):**
 
-**Functionality:** Users may examine how two or more nutrients are correlated, for example, how fat and carbs or vitamins and minerals are related.
+**Functionality:** Users may examine how <span style="color:red"> three nutrients vary in range of the selected nutrient, for example, how fats or how vitamins range in the selected foods differ.
 
-**Output:** To assist users in understanding the relationships between various nutrients, scatter plots displaying the correlation are provided, along with trend lines and correlation coefficients.
+**Output:** To assist users in <span style="color:red">  better visualizing to understand the relationships between various food items,though a generated bar graph clearly showing the ranges in values as heights of the bar graph.
 
-**6. Export Data:**
 
-**Functionality:** The nutritional data and visualizations may be exported by users for additional study or distribution.
-
-**Output:** Enables data to be exported for offline analysis or display in a variety of formats (CSV, PNG for graphs).
-
-**7. Easily navigable graphical interface:**
+**6. Easily navigable graphical interface:**
 
 **Functionality:** The system offers a graphical user interface that is simple to use and intuitive for smooth data processing and visualization.
 
 **Output:** A user-friendly, aesthetically pleasing interface that leads non-technical people through the process of exploring data.
 
-**8. Options for Sorting and Filtering Data:**
+**7. Options for Sorting and Filtering Data:**
 
-**Functionality:** The food list may be sorted by the user according to various parameters (e.g., foods with the lowest fat or highest to lowest protein content).
+**Functionality:** The food list may be sorted by the user according to various parameters (e.g., foods with <span style="color:red"> a specific range of the nutrient value.
 
 **Output:** To facilitate decision-making, lists are sorted according to user-selected filters or sorting choices.
 
