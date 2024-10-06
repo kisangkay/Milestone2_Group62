@@ -44,19 +44,19 @@ After finishing searching, click the Close button to exit the Food Search interf
 
 ### Screenshots
 **1. Navigate the Food Search Function:** 
-![FoodSearch_Step1.png](FoodSearch_Step1.png)
+![FoodSearch_Step1.png](Executive_summary_screenshots/FoodSearch_Step1.png)
 
 **2. Enter in the food Name:** 
-![FoodSearch_Step2.png](FoodSearch_Step2.png)
+![FoodSearch_Step2.png](Executive_summary_screenshots/FoodSearch_Step2.png)
 
 **3. Start the Search:**
-![FoodSearch_Step3.png](FoodSearch_Step3.png)
+![FoodSearch_Step3.png](Executive_summary_screenshots/FoodSearch_Step3.png)
 
 **4. View the results of the search:**
-![FoodSearch_Step4.png](FoodSearch_Step4.png)
+![FoodSearch_Step4.png](Executive_summary_screenshots/FoodSearch_Step4.png)
 
 **5. Exit the Feature:**
-![FoodSearch_Step1.png](FoodSearch_Step1.png)
+![FoodSearch_Step1.png](Executive_summary_screenshots/FoodSearch_Step1.png)
 
 ---
 
@@ -95,19 +95,19 @@ Once finished, select Close to exit or go back to the main menu.
 ### Screenshots
  
 **1. Select nutrient Breakdown Option:** 
-![NutrientBreakdown_Step1.png](NutrientBreakdown_Step1.png)
+![NutrientBreakdown_Step1.png](Executive_summary_screenshots/NutrientBreakdown_Step1.png)
 
 **2. Choose a Food item:**
-![NutrientBreakdown_Step2.png](NutrientBreakdown_Step2.png)
+![NutrientBreakdown_Step2.png](Executive_summary_screenshots/NutrientBreakdown_Step2.png)
 
 **3. View the breakdown of nutrients:**
-![NutrientBreakdown_Step3.png](NutrientBreakdown_Step3.png)
+![NutrientBreakdown_Step3.png](Executive_summary_screenshots/NutrientBreakdown_Step3.png)
 
 **4. Go back to select another food:**
-![NutrientBreakdown_Step4.png](NutrientBreakdown_Step4.png)
+![NutrientBreakdown_Step4.png](Executive_summary_screenshots/NutrientBreakdown_Step4.png)
 
 **5. Exit the Feature:**
-![NutrientBreakdown_Step1.png](NutrientBreakdown_Step1.png)
+![NutrientBreakdown_Step1.png](Executive_summary_screenshots/NutrientBreakdown_Step1.png)
 
 ---
 
@@ -160,25 +160,25 @@ After locating the foods you want, click the Close button to close the range fil
 ### Screenshots
 
 **1. Select the Nutrition Range Filter Function:**
-![NutritionRangeFilter_Step1.png](NutritionRangeFilter_Step1.png)
+![NutritionRangeFilter_Step1.png](Executive_summary_screenshots/NutritionRangeFilter_Step1.png)
 
 **2.Click on Drop Down function:**
-![NutritionRangeFilter_Step2.png](NutritionRangeFilter_Step2.png)
+![NutritionRangeFilter_Step2.png](Executive_summary_screenshots/NutritionRangeFilter_Step2.png)
 
 **3. Select the Nutrients:**
-![NutritionRangeFilter_Step3.png](NutritionRangeFilter_Step3.png)
+![NutritionRangeFilter_Step3.png](Executive_summary_screenshots/NutritionRangeFilter_Step3.png)
 
 **4. Set the range of Nutrient:**
-![NutritionRangeFilter_Step4.png](NutritionRangeFilter_Step4.png)
+![NutritionRangeFilter_Step4.png](Executive_summary_screenshots/NutritionRangeFilter_Step4.png)
 
 **5. Click on Filter:** 
-![NutritionRangeFilter_Step5.png](NutritionRangeFilter_Step5.png)
+![NutritionRangeFilter_Step5.png](Executive_summary_screenshots/NutritionRangeFilter_Step5.png)
 
 **6. Refine the Filter**  
-![NutritionRangeFilter_Step6.png](NutritionRangeFilter_Step6.png)
+![NutritionRangeFilter_Step6.png](Executive_summary_screenshots/NutritionRangeFilter_Step6.png)
 
 **6. Exit the Feature:** 
-![NutritionRangeFilter_Step1.png](NutritionRangeFilter_Step1.png)
+![NutritionRangeFilter_Step1.png](Executive_summary_screenshots/NutritionRangeFilter_Step1.png)
 
 ---
 
@@ -236,19 +236,19 @@ After locating the items you want, select Close to close the nutrition level fil
 ### Screenshots
     
 **1. Navigate the Nutrition Level Feature:**
-![NutritionLevelFilter_Step1.png](NutritionLevelFilter_Step1.png)
+![NutritionLevelFilter_Step1.png](Executive_summary_screenshots/NutritionLevelFilter_Step1.png)
 
 **2. Choose Your Nutritional Levels:**
-![NutritionLevelFilter_Step2.png](NutritionLevelFilter_Step2.png)
+![NutritionLevelFilter_Step2.png](Executive_summary_screenshots/NutritionLevelFilter_Step2.png)
 
 **3. Click on the Filter button:**
-![NutritionLevelFilter_Step3.png](NutritionLevelFilter_Step3.png)
+![NutritionLevelFilter_Step3.png](Executive_summary_screenshots/NutritionLevelFilter_Step3.png)
 
 **4. View Results Filtered and again adjust the level:**
-![NutritionLevelFilter_Step4.png](NutritionLevelFilter_Step4.png)
+![NutritionLevelFilter_Step4.png](Executive_summary_screenshots/NutritionLevelFilter_Step4.png)
 
 **5. Exit the Feature:**
-![NutritionLevelFilter_Step1.png](NutritionLevelFilter_Step1.png)
+![NutritionLevelFilter_Step1.png](Executive_summary_screenshots/NutritionLevelFilter_Step1.png)
 ---
 
 # 5. Nutritional Density Visualizer
@@ -286,21 +286,21 @@ After visualize the items you want, select Close to close the nutrition level fi
 ### Screenshots
 
 **1. Navigate the Nutritional Density Visualizer.**
-![NutritionalDensityVisualizer_Step1.png](NutritionalDensityVisualizer_Step1.png)
+![NutritionalDensityVisualizer_Step1.png](Executive_summary_screenshots/NutritionalDensityVisualizer_Step1.png)
 
 **2. Choose the Nutrient**
-![NutritionalDensityVisualizer_Step2.png](NutritionalDensityVisualizer_Step2.png)
+![NutritionalDensityVisualizer_Step2.png](Executive_summary_screenshots/NutritionalDensityVisualizer_Step2.png)
 
 **3. Choose the Food to compare**
-![NutritionalDensityVisualizer_Step3.png](NutritionalDensityVisualizer_Step3.png)
+![NutritionalDensityVisualizer_Step3.png](Executive_summary_screenshots/NutritionalDensityVisualizer_Step3.png)
 
 **4. Press the 'Visualize' button.**
-![NutritionalDensityVisualizer_Step4.png](NutritionalDensityVisualizer_Step4.png)
+![NutritionalDensityVisualizer_Step4.png](Executive_summary_screenshots/NutritionalDensityVisualizer_Step4.png)
 
 **Re-define the findings**
-![NutritionalDensityVisualizer_Step5.png](NutritionalDensityVisualizer_Step5.png)
+![NutritionalDensityVisualizer_Step5.png](Executive_summary_screenshots/NutritionalDensityVisualizer_Step5.png)
 
 **5. Exit the Feature:**
-![NutritionalDensityVisualizer_Step1.png](NutritionalDensityVisualizer_Step1.png)
+![NutritionalDensityVisualizer_Step1.png](Executive_summary_screenshots/NutritionalDensityVisualizer_Step1.png)
 
 ---

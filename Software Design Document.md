@@ -146,13 +146,14 @@ These are the data input types that the system needs:
 
 **1. Food Name Enter:** Users may search for and obtain nutritional information about an item by entering its name.
 
-**2. Input for Nutrient Selection:** Users may filter items according to their nutritional composition or choose certain nutrients (such as fat, protein, and carbs) to see how they are broken down.
+**2. <span style="color:red"> Input for Nutrient Visual breakdown:** <span style="color:red"> To get a visual representation of a specific food item, a user selects their food choice from an input selection field.
 
-**3. Input of Nutrient Range:** For a certain nutrient (fat between 5g and 10g, for example), users may enter the lowest and maximum values to filter meals that fall within that range.
+**3. <span style="color:red"> Input for Nutrition Range Filter:** <span style="color:red"> Users may filter food items according to their nutritional composition by choosing certain nutrients (such as fat, protein, and carbs) and entering the minimum and maximum values to see the food items that fall within the range of the specified values.
+
 
 **4. Choosing Nutrient Levels:** Foods may be filtered by the user according to the levels of fat, protein, carbs, and other nutrients (low, mid, and high).
 
-**5. Input for Nutrient Correlation (for the extra feature):** Inn order to create scatter plots and determine correlation coefficients, users can choose two or more nutrients and examine their association.
+**5. Input for Nutrient <span style="color:red">  Density Visualizer (for the extra feature):** <span style="color:red">  In order to create a bar graph to visualize the selected compared food items, users can choose a nutrition and three food items to visualize their comparison of the chosen nutrition.
 
 4. **Data Output:**
 
@@ -575,10 +576,10 @@ No side effects.
 - mid: between 33% and 66% of the highest value,
 - high: greater than 66% of the highest value,
 
-will then determine whether to classify an input to either being one and only one of the three options.
+will then determine whether to classify <span style="color:red">  a food item's nutrition to either being one and only one of the three options.
 
 
-2. Input parameters: The function will take in a specific nutrient_name of type string, and all its numeric values in type float, to determine the highest value, then use it to classify whether the nutritional value of a specific food is either low, mid or high which will be returned in a tuple.
+2. Input parameters: The function will take in a specific nutrient_name of type string, and all its numeric values in type float <span style="color:red">  from the database </span>, to determine the highest value, then use it to classify whether the nutritional value of a specific food is either low, mid or high which will be returned in a tuple.
 
 
 3. The function will return a tuple (low, mid, high) which each represents the threshold category a food falls within.
