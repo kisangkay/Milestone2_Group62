@@ -2,6 +2,8 @@
 
 ## Project Name: Nutrient Analyzer
 ## Group Number: 62
+### <span style="color:red"> Assignment 2: Milestone 2 Data Analysis and Visualisation</span>
+
 
 ## Team members
 
@@ -22,6 +24,7 @@
 * [Software Design Document](#software-design-document)
   * [Project Name: Nutrient Analyzer](#project-name-nutrient-analyzer)
   * [Group Number: 62](#group-number-62)
+    * [<span style="color:red"> Assignment 2: Milestone 2 Data Analysis and Visualisation</span>](#span-stylecolorred-assignment-2-milestone-2-data-analysis-and-visualisationspan)
   * [Team members](#team-members)
 * [Table of Contents](#table-of-contents)
   * [1. System Vision](#1-system-vision)
@@ -37,14 +40,14 @@
       * [These five usage scenarios each illustrates a crucial system function:](#these-five-usage-scenarios-each-illustrates-a-crucial-system-function)
 * [3.	Software Design and System Components](#3-software-design-and-system-components-)
   * [3.1	Software Design](#31software-design)
+  * [<span style="color:red">Changes to Flow Chart Diagram: </span>](#span-stylecolorredchanges-to-flow-chart-diagram-span)
 * [3.2	System Components](#32system-components)
   * [3.2.1 Functions](#321-functions)
   * [1. Function 1 searching for a food by its name:](#1-function-1-searching-for-a-food-by-its-name)
   * [2. Function 2 displays a visual representation of a selected food's nutritional breakdown:](#2-function-2-displays-a-visual-representation-of-a-selected-foods-nutritional-breakdown)
   * [3. Function 3 filters foods based on a selected nutrient value range (min-max)](#3-function-3-filters-foods-based-on-a-selected-nutrient-value-range-min-max)
   * [4. Function 4 Calculates nutritional level in a nutritional property (low, mid, high)](#4-function-4-calculates-nutritional-level-in-a-nutritional-property-low-mid-high)
-  * [5. Function 5 filters foods by selected levels (low, mid, high)](#5-function-5-filters-foods-by-selected-levels-low-mid-high)
-  * [6. Function 6 nutritional density visualizer](#6-function-6-nutritional-density-visualizer)
+  * [5. Function 5 Nutritional Comparison visualizer](#5-function-5-nutritional-comparison-visualizer)
   * [3.2.2 Data Structures Used](#322-data-structures-used)
     * [<table><tr><td> 1. Data Structure name (food_name_and_its_data): for (Food name and its nutritional information) </td></tr></table>](#tabletrtd-1-data-structure-name-foodnameanditsdata-for-food-name-and-its-nutritional-information-tdtrtable)
     * [<table><tr><td> 2. Data Structure name (selected_food) for: (Food selected and its nutritional information) </td></tr></table>](#tabletrtd-2-data-structure-name-selectedfood-for-food-selected-and-its-nutritional-information-tdtrtable)
@@ -54,9 +57,8 @@
     * [1. Function 1 Detailed design: _search_food_by_its_name()_](#1-function-1-detailed-design-searchfoodbyitsname)
     * [2. Function 2 Detailed design: _display_all_nutritional_breakdown()_](#2-function-2-detailed-design-displayallnutritionalbreakdown)
     * [3. Function 3 Detailed design: _filter_foods_by_nutrient_range()_](#3-function-3-detailed-design-filterfoodsbynutrientrange)
-    * [4. Function 4 Detailed design: _calculate_nutrient_level()_](#4-function-4-detailed-design-calculatenutrientlevel)
-    * [5. Function 5 Detailed design: _filter_foods_by_nutrient_level()_](#5-function-5-detailed-design-filterfoodsbynutrientlevel)
-    * [6. Function 6 Detailed design: _nutritional_density_visualizer()_](#6-function-6-detailed-design-nutritionaldensityvisualizer)
+    * [4. <span style="color:red"> Function 4 Detailed design: _filter_foods_by_nutrient_level()_</span>](#4-span-stylecolorred-function-4-detailed-design-filterfoodsbynutrientlevelspan)
+    * [5. Function 5 Detailed design: _nutritional_comparison_visualizer()_](#5-function-5-detailed-design-nutritionalcomparisonvisualizer)
   * [4. User Interface Design](#4-user-interface-design)
     * [4.1 Structural Design](#41-structural-design)
     * [Planned structure of the application frames in wxForm builder:](#planned-structure-of-the-application-frames-in-wxform-builder)
@@ -67,21 +69,27 @@
     * [Nutrient Analyzer Wireframes](#nutrient-analyzer-wireframes)
     * [1. Main Home Screen](#1-main-home-screen)
       * [Components of Home Screen:](#components-of-home-screen)
+    * [<span style="color:red">Changes made to the image:</span>](#span-stylecolorredchanges-made-to-the-imagespan)
     * [Justification of the Home screen design:](#justification-of-the-home-screen-design)
     * [2. Food Search Screen](#2-food-search-screen)
       * [Components of the Food Search Screen:](#components-of-the-food-search-screen)
+    * [<span style="color:red">Changes made to the image:</span>](#span-stylecolorredchanges-made-to-the-imagespan-1)
     * [Justification of Food Search Screen design](#justification-of-food-search-screen-design)
     * [3. Nutritional Breakdown Screen](#3-nutritional-breakdown-screen)
       * [Components of the Nutritional Breakdown Screen:](#components-of-the-nutritional-breakdown-screen)
+    * [<span style="color:red">Changes made to the image:</span>](#span-stylecolorredchanges-made-to-the-imagespan-2)
     * [Justification of Nutritional Breakdown Screen design](#justification-of-nutritional-breakdown-screen-design)
     * [4. Nutrition Range Filter Screen](#4-nutrition-range-filter-screen)
       * [Components of the Nutrition Range Filter Screen:](#components-of-the-nutrition-range-filter-screen)
+    * [<span style="color:red">Changes made to the image:</span>](#span-stylecolorredchanges-made-to-the-imagespan-3)
     * [Justification of Nutrition Range Filter design](#justification-of-nutrition-range-filter-design)
     * [5. Nutrition Level Filter Screen](#5-nutrition-level-filter-screen)
       * [Components of the Nutrition Level Filter Screen:](#components-of-the-nutrition-level-filter-screen)
+    * [<span style="color:red">Changes made to the image:</span>](#span-stylecolorredchanges-made-to-the-imagespan-4)
     * [Justification of Nutrition Level Filter design](#justification-of-nutrition-level-filter-design)
-    * [5. Nutrition Density Visualizer Screen](#5-nutrition-density-visualizer-screen)
-      * [Components of the Nutrition Density Visualizer Screen:](#components-of-the-nutrition-density-visualizer-screen)
+    * [5. Nutrition <span style="color:red">Comparison</span> Visualizer Screen](#5-nutrition-span-stylecolorredcomparisonspan-visualizer-screen)
+      * [Components of the Nutrition Comparison Visualizer Screen:](#components-of-the-nutrition-comparison-visualizer-screen)
+    * [<span style="color:red">Changes made to the image:</span>](#span-stylecolorredchanges-made-to-the-imagespan-5)
     * [Justification of Density Visualizer Screen design](#justification-of-density-visualizer-screen-design)
     * [Overall screen navigation and design logic](#overall-screen-navigation-and-design-logic)
 <!-- TOC -->
@@ -306,7 +314,7 @@ Sarah is a thirty-year-old working woman who values leading a healthy lifestyle.
 
 **4. Compare Foods:** To improve meal planning, she must be able to compare various food products side by side.
 
-**5. Track Nutritional Density:** To find foods that offer more nutrients per calorie, Sarah is interested in the "nutrient density" option.
+**5. <span style="color:red"> Compare the nutritional values between 3 food choices:** To find foods that offer more nutrients per calorie out of <span style="color:red">  3 options, Sarah can be interested in the any food nutrition or even the nutritional density option.
 
 **Fictional User Persona 2:**
 
@@ -322,7 +330,6 @@ Dr. Mike is a forty-five-year-old nutritionist who helps patients with high chol
 
 **3. Filter by Nutritional Levels:** For dietary planning tailored to each client, the system must enable Dr. Mike to filter meals by high, mid, and low nutritional content (e.g., high protein, low fat).
 
-**4. Save and Export Reports:** To share data with his customers during follow-up consultations, he would want to save and export nutritional reports.
 
 **Fictional User Persona 3:**
 
@@ -344,19 +351,15 @@ Rachel is a 38-year-old food researcher employed at a business that creates nove
 
 **1.** **Food Search by Name:** To swiftly search any food item by name and obtain its whole nutritional profile, which includes calories, macronutrients (fat, carbs, and protein), and micronutrients (vitamins and minerals), users require a straightforward search bar.
 
-**2. Comprehensive Nutritional Analysis:** The breakdown of lipids, carbs, proteins, and other important nutrients should be shown in tables, pie charts, and bar graphs that allow users to pick any item and examine complete nutritional information.
+**2. Comprehensive Nutritional Analysis:** The breakdown of lipids, carbs, proteins, and other important nutrients should be shown in a <span style="color:red"> pie chart,</span> that allow users to pick any item and examine <span style="color:red"> its top nutritional information.
 
 **3. Filter for Nutritional Range:** For low-sodium foods, for instance. the system should allow users to enter the lowest and maximum values for each nutrient and provide a list of items that fit within that range.
 
 **4. Filter for Nutritional Levels:** Foods should be able to be filtered by three nutritional levels (low, mid, and high) for important nutrients such as protein, carbs, fats, and sugars. This aids in locating meals that meet particular dietary requirements.
 
-**5. Comparing Foods:** To help users make educated decisions, the system should allow them to compare many items at once and display their nutritional values side by side.
+**5. Comparing Foods:** To help users make educated decisions, the system should allow them to compare <span style="color:red"> three </span>items at once and display their nutritional values side by side.
 
 **6. Visual Guide to Nutrition:** To facilitate comprehension and improve decision-making, users need tools that allow them to create visual representations of nutritional data, such as pie charts and bar graphs.
-
-**7. Data Export and Report Creation:** Nutritionists and researchers, for example, must export or store nutritional data for client consultations, future analysis, and reporting.
-
-**8. Extra feature (to be suggested by the group):** A "Meal Planner" feature, which would allow users to mix and match foods to make meals and view the meal's complete nutritional breakdown, might be added to the system to further improve its usefulness and assist users in maintaining balanced diets.
 
 ### 2.2 Software  Requirements
 
@@ -364,19 +367,19 @@ The functional criteria that the system has to meet are listed in this section. 
 
 **R1: Food Search**
 
-**R1.1** Users will be able to look for meals by name using the system.
+**R1.1** Users will be able to look for <span style="color:red"> food items</span> by name using the system.
 
-**R1.2** Following the search, the system will show all of the nutritional details for the meal that was chosen.
+**R1.2** Following the search, the system will show all of the nutritional details for the <span style="color:red"> food item</span> that was chosen.
 
-**R1.3** The search results will be shown by the system as a list with clickable items for more information.
+**R1.3** The search results will be shown by the system as a list with <span style="color:red"> a scrollable interface to view additional results beyond the first page
 
 **R2: Nutrition Breakdown**
 
-**R2.1** Users will be able to choose a food item and read a comprehensive nutritional breakdown of that food.
+**R2.1** Users will be able to choose a food item and <span style="color:red"> view a graphical</span> nutritional breakdown of that food.
 
-**R2.2** The nutritional breakdown will be shown by the system utilizing bar graphs for micronutrients (vitamins and minerals) and pie charts for macronutrients (fat, protein, and carbs).
+**R2.2** The nutritional breakdown will be shown by the system utilizing<span style="color:red">  pie charts </span>for macronutrients <span style="color:red"> (Caloric value, protein, and fats).
 
-**R2.3** In addition to the graphical depiction, the system will show the precise values of each nutrient (e.g., grams, milligrams).
+**R2.3** In addition to the graphical depiction, the system will show the precise values of each nutrient <span style="color:red"> in percentage relevant to its entire composition
 
 **R3: Filter for Nutritional Range**
 
@@ -400,37 +403,30 @@ High: Exceeding 66% of the maximum amount.
 
 **R4.3** Users will be able to filter the system based on several nutrient categories, including protein, sugar, fat, and carbs.
 
-**R5: Extra Functionality (Meal Planning)**
+**R5: Extra Functionality <span style="color:red"> Nutritional Comparison Visualizer**
 
-**R5.1** Users will be able to put together various food components to make meals using the system.
+**R5.1** <span style="color:red"> Users will be able to compare the values of a specific nutrient across three different food items.
 
-**R5.2** After integrating the nutritional values of all the foods that were chosen, the system will show the overall nutritional breakdown of the meal.
+**R5.2** After selecting the nutrition to investigate, a user selects the two or three food items from a drop down.
 
-**R5.3** The system must have the ability to export or store the nutritional information for the meal.
+**R6: Interface with Users**
 
-**R6: Report Generation and Data Export**
+**R6.1** The system must include a graphical user interface that is easy to use for conducting searches, seeing breakdowns, and applying filters.
 
-**R6.1** Users will be able to export nutritional data in the form of CSV or PDF files from the system.
+**R6.2** The system must guarantee that the interface is responsive and provides easy access to all of the capabilities.
 
-**R6.2** The system will let users create and store reports depending on the meals they've chosen or the filters they've used.
+**R6.3** To assist users in navigating the features, the system will include <span style="color:red">labeled information of the features and labeled buttons.
 
-**R7: Interface with Users**
+**R7: Information Retrieval**
 
-**R7.1** The system must include a graphical user interface that is easy to use for conducting searches, seeing breakdowns, and applying filters.
+**R7.1** A CSV file named Nutritional_Food_Database.csv will be loaded by the system with nutritional data.
 
-**R7.2** The system must guarantee that the interface is responsive and provides easy access to all of the capabilities.
-
-**R7.3** To assist users in navigating the features, the system will include tooltips and help text.
-
-**R8: Information Retrieval**
-
-**R8.1** A CSV file named Nutritional_Food_Database.csv will be loaded by the system with nutritional data.
-
-**R8.2** If new data is added to the CSV file, the system must be able to update the database.
+**R7.2** If new data is added to the CSV file, the system must be able to update the database.
 ### 2.3 Use Case Diagram
 #### The Use Case diagram of “Nutrient Analyzer” is as follows:
 
-![Use Case Diagram](./UseCase_Diagram.drawio.png)
+![Use Case Diagram](UseCase_Diagram.drawio.png)
+<span style="color:red"> Changed made to the use case diagram were omitting the user authentication feature, making the software accessible openly to any user.
 
 ### 2.4 Use Cases
 
@@ -444,29 +440,29 @@ High: Exceeding 66% of the maximum amount.
 | Actors         | User                                                                                                                                                                                                                                             |
 | Description    | When a user enters the name of a food, the system will show all of the food's nutritional details.                                                                                                                                               |
 | Flow of Events | **1.** The user types a food item's name into the search field. <br/>**2.** The food products that match are retrieved from the database by the system.<br/> **3.** The food products and their nutritional information are shown by the system. |
-| Alternate Flow | If no food is found, the system displays a "No Results Found" message.                                                                                                                                                                           |
+| Alternate Flow | If no food is found, <span style="color:red"> the system doesn't process the blank data to be searched.                                                                                                                                          |
 
 
 
 <br>
 
-| Use Case ID    | UC - 02                                                                                                                                                                                                                                                               |
-|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Use Case Name  | Nutritional Analysis                                                                                                                                                                                                                                                  |
-| Actors         | User                                                                                                                                                                                                                                                                  |
-| Description    | Pie charts and bar graphs are used to provide users with a comprehensive nutritional analysis of the food item they have selected.                                                                                                                                    |
-| Flow of Events | **1.** A food item is chosen by the user from the search results. <br/>**2.** The chosen food's nutritional information is retrieved by the system.<br/> **3.** The system creates and shows bar graphs and pie charts that illustrate how nutrients are distributed. |
-| Alternate Flow | The user is prompted to choose a meal item by the system if none is selected.                                                                                                                                                                                         |
+| Use Case ID    | UC - 02                                                                                                                                                                                                                                                                          |
+|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Use Case Name  | Nutritional Analysis                                                                                                                                                                                                                                                             |
+| Actors         | User                                                                                                                                                                                                                                                                             |
+| Description    | Pie charts and bar graphs are used to provide users with a comprehensive nutritional analysis of the food item they have selected.                                                                                                                                               |
+| Flow of Events | **1.** A food item is chosen by the user from the search results. <br/>**2.** The chosen food's nutritional information is retrieved by the system.<br/> **3.** The system creates and shows<span style="color:red">a pie chart that shows how</span> nutrients are distributed. |
+| Alternate Flow | <span style="color:red"> The system waits for a user to make a selection of any food item.                                                                                                                                                                                       |
 
 <br>
 
-| Use Case ID    | UC - 03                                                                                                                                                                                                                                |
-|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Use Case Name  | Nutrition Range Filtering                                                                                                                                                                                                              |
-| Actors         | User                                                                                                                                                                                                                                   |
-| Description    | Foods that meet the requirements are filtered after users enter a nutritional type and a range of minimum and maximum values.                                                                                                          |
-| Flow of Events | **1.**  The user chooses a type of nutrient (fat, protein, etc.). <br/>**2.** A minimum and maximum range are specified by the user.<br/> **3.** Foods that fall within the designated range are filtered by the system and displayed. |
-| Alternate Flow | The user is prompted to choose a meal item by the system if none is selected.                                                                                                                                                          |
+| Use Case ID    | UC - 03                                                                                                                                                                                                                                                |
+|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Use Case Name  | Nutrition Range Filtering                                                                                                                                                                                                                              |
+| Actors         | User                                                                                                                                                                                                                                                   |
+| Description    | Foods that meet the requirements are filtered after users enter a nutritional type and a range of minimum and maximum values.                                                                                                                          |
+| Flow of Events | **1.**  The user chooses a type of nutrient (fat, protein, etc.). <br/>**2.** A minimum and maximum range are specified by the user.<br/> **3.** Foods that fall within the designated range are filtered by the system and displayed.                 |
+| Alternate Flow | <span style="color:red"> Clicking the filter button without any food or range selected, the system simply shows all the food records and their nutritional information from the database for the user to view which one they would like to begin with. |
 
 
 <br>
@@ -477,18 +473,18 @@ High: Exceeding 66% of the maximum amount.
 | Actors         | User                                                                                                                                                                    |
 | Description    | According to the proportion of nutrient values, users may filter items by their nutritional levels (low, mid, or high).                                                 |
 | Flow of Events | **1.**  The user chooses a level (low, mid, or high) and a nutritional type. <br/>**2.** The meal is categorized by the system and shown according to the chosen level. |
-| Alternate Flow | The system displays a "No Results Found" notice if no meals meet the criteria.                                                                                          |
+| Alternate Flow | <span style="color:red"> The system waits for a user to complete the selection of all required fields.                                                                  |
 
 
 <br>
 
-| Use Case ID    | UC - 05                                                                                                                                                                                                                                       |
-|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Use Case Name  | Additional Feature                                                                                                                                                                                                                            |
-| Actors         | User                                                                                                                                                                                                                                          |
-| Description    | Using an extra function (e.g., comparing nutritional levels between foods or visualizing a pattern), users do a more in-depth investigation.                                                                                                  |
-| Flow of Events | **1.**  The user can choose from a variety of foods or a particular advanced analysis option. <br/>**2.** The system gets the pertinent information. <br/> **3** The system does the analysis or visualizes the data, then shows the outcome. |
-| Alternate Flow | The user is prompted to change their option by the system if insufficient data is chosen.                                                                                                                                                     |
+| Use Case ID    | UC - 05                                                                                                                                                                                                                                                                         |
+|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Use Case Name  | Additional Feature                                                                                                                                                                                                                                                              |
+| Actors         | User                                                                                                                                                                                                                                                                            |
+| Description    | Using an extra function<span style="color:red">Taking in a nutritional value from the drop down and any of the two or three food choices to compare with, then generates a bar graph showing their visual differences.                                                          |
+| Flow of Events | <span style="color:red"> **1.**   The user can select any nutrient from the drop down <br/>**2.** The user selects between two or three food items from the drop downs. <br/></span> **3** The system does the analysis<span style="color:red"> and</span> visualizes the data. |
+| Alternate Flow | <span style="color:red">The system waits for a user to select at least a nutrient and a minimum of two food items before processing the data.                                                                                                                                   |
 
 
 # 3.	Software Design and System Components 
@@ -498,6 +494,10 @@ In the Nutrient Analyzer System software's design, the below flowchart comprehen
 
 All Key Events Flowchart:  
 ![Flowchart all key events](./Flowcharts/Software_design_flowchart.png)
+
+## <span style="color:red">Changes to Flow Chart Diagram: </span>
+
+- <span style="color:red"> Added the final feature number 5  that is the Nutritional Comparison Filter, which takes in the nutrition name, and the input of the two or three food names that will be processed to generate a bar graph showing a visual comparison of the two or three.
 
 # 3.2	System Components
 The system components of the Nutrient Analyzer system covered in this section are:
@@ -514,12 +514,12 @@ In each function, there is:
 - Any side effects that the function may have to other elements in the software in any way.
 
 ## 1. Function 1 searching for a food by its name:
-* ### <table><tr><td>   Function name: _search_food_by_its_name()_</td></tr></table>
+* ### <table><tr><td>   Function name: _search_food_by_its_name()_ <span style="color:red">in run_template, function named: "on_search_click"</span></td></tr></table>
 
 1. Function's purpose:The above function takes in a value entered by a user and searches for a matching record against the food column in the database, then collects all the corresponding nutritional information of the entered food name.
 
 
-2. Input parameters of the function: The function will take in the name of the food (food_name) of data type string, which will contain the name of the food to be searched. e.g ('peas canned') or ('cassava').
+2. Input parameters of the function: The function will take in the name of the food (food_name) <span style="color:red">With the text name in GUI as "m_textCtrl1" </span>of data type string, which will contain the name of the food to be searched. e.g ('peas canned') or ('cassava').
 
 
 3. Returned value: After taking in the parameter into the function, the returned value will be of data type dictionary, which will contain all the values of the food nutritional information. food_dictionary = {"food":"cassava", "caloric value": "51"}
@@ -529,7 +529,7 @@ In each function, there is:
 No any side affects
 
 ## 2. Function 2 displays a visual representation of a selected food's nutritional breakdown:
-* ### <table><tr><td> display_all_nutritional_breakdown() </td></tr></table>
+* ### <table><tr><td> display_all_nutritional_breakdown() <span style="color:red">in run_template function named: "on_food_selected"</span></td></tr></table>
 
 
 1. Function's purpose: To take in the previously gathered nutritional information belonging to a specific food and returning a visual representation of its nutritional breakdown using a bar graph.
@@ -539,15 +539,14 @@ No any side affects
 
 
 3. Return Value:
-Returns a pie chart or a bar graph to give a visual representation of the nutritional properties of the specific food.
+Returns a <span style="color:red"> pie chart </span> to give a visual representation of the nutritional properties of the specific food.
 
 
 4. Side Effects:
 No side effects.
 
 ## 3. Function 3 filters foods based on a selected nutrient value range (min-max)
-* ### <table><tr><td> filter_foods_by_nutrient_range() </td></tr></table>
-
+* ### <table><tr><td> filter_foods_by_nutrient_range() <span style="color:red">in run_template function named: "on_filter"</span></td></tr></table>
 
 1. Function's purpose: To filter foods after a user makes a selection of a specific nutrient property of the food, and some value within a range.
 
@@ -563,8 +562,7 @@ No side effects.
 
 
 ## 4. Function 4 Calculates nutritional level in a nutritional property (low, mid, high)
-* ### <table><tr><td> calculate_nutrient_level() </td></tr></table>
-
+* ### <table><tr><td> calculate_nutrient_level() <span style="color:red">in run_template function named: "filter_nutrition_level"</span></td></tr></table>
 
 1. Function's purpose: This function will take in all the numeric values from a specific column and using this key:
 - low: less than 33% of the highest value,
@@ -575,43 +573,29 @@ will then determine whether to classify <span style="color:red">  a food item's 
 
 
 2. Input parameters: The function will take in a specific nutrient_name of type string, and all its numeric values in type float <span style="color:red">  from the database </span>, to determine the highest value, then use it to classify whether the nutritional value of a specific food is either low, mid or high which will be returned in a tuple.
+3. <span style="color:red">This will work by taking in all the name of the food from the user, and the nutritional content level of type string (low, mid or high) which can be provided by a dropdown select option on the filter page.</span>
 
 
-3. The function will return a tuple (low, mid, high) which each represents the threshold category a food falls within.
+3. The function will <span style="color:red">work on the input (low, mid, high) which each represents the threshold category a food falls within and return a list of the food items falling in that level category.
 
 
 4. No side effects.
 
-
-## 5. Function 5 filters foods by selected levels (low, mid, high)
-* ### <table><tr><td> filter_foods_by_nutrient_level() </td></tr></table>
-
-
-1. **Function's purpose** and **input parameters:** to filter foods by the levels of their nutritional values. The levels will be determined by the function outlined above calculate_nutrient_level() that calculates the level and returns a tuple of either being low, mid or high. This will work by taking in all the name of the food from the user, and the nutritional content level of type string (low, mid or high) which can be provided by a dropdown select option on the filter page.
+## 5. Function 5 Nutritional Comparison visualizer
+* ### <table><tr><td> nutritional_comparison_visualizer() </td></tr></table>
 
 
-2. Return value will be of type list, that will contain all foods fitting in the user selected parameters.
+1. Function's purpose: to take in <span style="color:red">a single nutrient from a user in a drop down, and two or three food items from a user, check them in the database, calculate and display a visual representation of the comparison between the food items on their ranges of the selected nutrient.
+
+* <span style="color:red">This function will operate using a closely similar function as the function 5's purpose of doing the calculations. The user inputs 3 food names, and the nutrition type to compare its nutritional values. Then will return a bar graph showing the visual comparison of the 3 nutrition density ranges against the other 2.
+
+* <span style="color:red"> E.g: A user selects goat cheese, fruit jam and corn rice as the 3 foods, then selects to compare the nutritional value "sugars". 
+The respective values of the three <span style="color:red">food items and a nutrition</span> are taken and a bar graph is generated to visualize the value differences. </span>
+
+2. The function will take in a dictionary type for the food items, and their<span style="color:red"> nutrition values from all the other columns apart from the food name which is a string, and proceed to take the values of the other columns from the database as a float. </span>
 
 
-3. No side effects.
-
-
-## 6. Function 6 nutritional density visualizer
-* ### <table><tr><td> nutritional_density_visualizer() </td></tr></table>
-
-
-1. Function's purpose: to take in food items from a user, check them in the database, calculate and display a visual representation of a food's nutritional density relative to the other selected foods.
-
-<span style="color:red"> *
-This function will operate using a similar function as the function 5's purpose of doing the calculations. The user inputs 3 food names, and the nutrition type to compare its nutritional values. Then will return a bar graph showing the visual comparison of the 3 nutrition density ranges against the other 2
-E.g: A user selects goat cheese, fruit jam and corn rice as the 3 foods, then selects to compare the nutritional value "sugars".
-The respective values of the three are taken and a bar graph is generated to visualize the value differences.*
-</span>
-
-2. The function will take in a dictionary type for the food items, and their nutrition density values from the nutrition density column in the database as a float. 
-
-
-3. The returned result will be of a visual representation of the entered food name items, against each other's nutritional density score on a graph or pie chart,
+3. The returned result will be of a visual representation of the entered food name items, against each other's <span style="color:red">nutritional property value on a bar-graph.
 
 
 4. No side effects.
@@ -666,24 +650,31 @@ In the search_food_by_its_name() function, it begins by displaying a message to 
 
 ### 2. Function 2 Detailed design: _display_all_nutritional_breakdown()_
 ![Function 2 flowchart](./Flowcharts/FLOWCHART_display_all_nutritional_breakdown.png)
+
+
 The function to display_all_nutritional_breakdown() would make use of the data structure food_name_and_its_data containing a list of dictionaries by finding the selected food result inside it and using it to generate a visual bar graph to show in the display panel.
 
 ### 3. Function 3 Detailed design: _filter_foods_by_nutrient_range()_
 ![Function 3 flowchart](./Flowcharts/FLOWCHART_filter_foods_by_nutrient_range.png)
+- <span style="color:red"> Changes made to the flowchart: 
+
 The function filter_foods_by_nutrient_range() uses the data structure food_name_and_its_data containing the list of dictionaries, to find a valid nutrient range property input by a user, and returns a list of only food items fitting the specified parameters.
 
-### 4. Function 4 Detailed design: _calculate_nutrient_level()_
-![Function 4 flowchart](./Flowcharts/FLOWCHART_calculate_nutrient_level.png)
-After getting its value from food_name_and_its_data data structure, This function is later used in the function filter_foods_by_nutrient_level
-() after taking all the values from a nutrient column to either classify as low, medium or high and store in the data structure calculated_nutrient_levels and filter_foods_by_nutrient_level.
 
-### 5. Function 5 Detailed design: _filter_foods_by_nutrient_level()_
-![Function 5 flowchart](./Flowcharts/FLOWCHART_filter_foods_by_nutrient_level.png)
-After getting the levels category of a nutrient from the function calculate_nutrient_level(), and data structure food_name_and_its_data() this function then takes the user selection of a nutrient, level selected and returns food items falling in within either of the 3 levels. then storing the values in the data structure filter_foods_by_nutrient_level.
+### 4. <span style="color:red"> Function 4 Detailed design: _filter_foods_by_nutrient_level()_</span>
+![Function 4 flowchart](./Flowcharts/FLOWCHART_filter_foods_by_nutrient_level.png)
+- <span style="color:red"> Changes made to the flowchart:
+- - <span style="color:red">Removed Display messages upon entering of an invalid input
 
-### 6. Function 6 Detailed design: _nutritional_density_visualizer()_
-![Function 6 flowchart](./Flowcharts/FLOWCHART_nutritional_density_visualizer.png)
-The function nutritional_density_visualizer() takes in multiple selected inputs of food items from a user, filters the food items from the food_name_and_its_data data structure to get the comparison in its nutritional density then processes it to return a display of the visual comparison of the entered values.
+- <span style="color:red"> After getting the levels category of a nutrient from the function calculate_nutrient_level(), and data structure food_name_and_its_data() this function then takes the user selection of a nutrient, level selected and returns food items falling in within either of the 3 levels. then storing the values in the data structure filter_foods_by_nutrient_level.
+
+### 5. Function 5 Detailed design: _nutritional_comparison_visualizer()_
+![Function 5 flowchart](./Flowcharts/FLOWCHART_nutritional_comparison_visualizer.png)
+- <span style="color:red"> Changes made to the flowchart: 
+- - <span style="color:red">Added new flow chart to support our new additional feature.
+
+<span style="color:red"> 
+The function nutritional_comparison_visualizer() takes in a single nutritional value to base the comparison on for the two to three food items a user will select from the drop down, processes it upon a user clicking the visualize button and then generate a bar graph below it showing the visual comparison of the values. </span>
 
 ## 4. User Interface Design
 
@@ -703,13 +694,13 @@ For further simplicity, each feature in the software will be carried out in thei
 2. Food search screen
 This screen will contain a search bar to take user input of a food item and display its nutritional details
 3. Nutritional breakdown screen
-This screen will contain a drop down for a user to select a food items and a display area for pie charts and bra graph.
+This screen will contain a <span style="color:red"> list for a user to select a food items and a display area for pie charts.
 4. Nutritional range filter screen
-This screen will contain a dropdown to select a nutrient, take a pair of minimum and maximum values and a display area field to show the filtered food item results
+This screen will contain a dropdown to select a nutrient, take a pair of minimum and maximum values<span style="color:red"> , contain a "filter" button</span> and a display area <span style="color:red"> containing a grid table</span> field to show the filtered food item results
 5. Nutrition level filter screen
-THis screen structure will contain a dropdown to select nutrients, buttons to select either low, medium or high nutrient levels, and a display area to show resulting food items
-6. Nutrition density visualizer screen 
-This screen takes in multiple food items from a user, then returns a visual representation of a comparison between the nutritional densities in the display area field.
+This screen structure will contain a dropdown to select nutrients, buttons to select either low, medium or high nutrient levels,<span style="color:red"> a submit button labeled: "Filter Food Items for that Level" to call the filtering function, static texts to guide a user on how to use the dialog box page,</span> and a display area to show resulting food items
+6. Nutrition <span style="color:red">comparison</span> visualizer screen 
+This screen takes in <span style="color:red">a nutrition name from a drop down,  multiple food items from a user,</span> then returns a visual representation of a comparison between the nutritional <span style="color:red">values of the two or three food items </span> in the display area field.
 
 ### 4.1.2 Information Grouping
 To ensure that we maintain a user friendly interface that is free from clutter, we will need to group our components inside wxForm builder. 
@@ -724,12 +715,15 @@ we will group the elements such that the search bar, the 'submit' button and res
 Being the page that takes in a set of input from a user, we group the nutrient dropdown, the pair of input fields, the submit button to filter and the display panel that shows the results of the filtered values.
 4. Nutrition level filter screen
 On the nutrition level filter screen, we group the elements drop down that selects a specific nutrient, one of three nutrition level low, medium or high, the submit button and results display area.
-5. For the additional function, the nutritional density visualizer will take in a maximum of five drop down properties as input from a user, and we will group that with its submit button and the display area that shows a bar graph of the data comparison.
+5. For the additional function, the nutritional <span style="color:red">comparison</span> visualizer will take in a maximum of <span style="color:red">three</span> drop down properties as input from a user,<span style="color:red">which are the food item names</span> and we will group that with its submit button and the display area that shows a bar graph of the data comparison.
 
 ### 4.1.3 Navigation
 In our navigation design, we implemented consistency in visual and structural design, such that a common menu will be pinned at the top of the frame and provides access to all functional windows in the software. Besides that, each window visited will have a back button, so that if a user is not able to recall which page they were previously on, simply clicking on the back button would return them to their previous page.
  
 ![Hierarchy chart showing page navigation](Wireframes_and_Hierarchy/Nutrient_Analyzer_Hierarchy_navigation.png)
+- <span style="color:red">Changes made to the design image:
+- - <span style="color:red">Added a dropdown selection for the 5th additional feature.
+
 
 #### 4.1.3.1 Navigation Logic
 1. The main home screen user interface will provide a possibility to navigate to any other page by clicking of buttons on the top of the screen. This navigation template is reused in all other pages since it does not collide with the functional pages content, and enhances consistency for a users familiarization of the interface. This transition logic where users do not necessarily have to revisit the home page again to navigate to other modules is helpful to maintain ease of screen navigation.
@@ -757,12 +751,14 @@ This will be the main starting point of the software, where access points to any
 - - Nutrition Breakdown 
 - - Nutrition Range Filter 
 - - Nutrition Level Filter 
-- - Nutritional Density Visualizer
+- - Nutritional <span style="color:red">Comparison</span> Visualizer
 - - Close
 
 - #### Welcome message and a brief introduction
 
 ![Home Page welcome screen](Wireframes_and_Hierarchy/Home_screen_wireframe.png)
+### <span style="color:red">Changes made to the image:</span>
+- <span style="color:red">Renamed the last menu item to match the name of the feature
 ### Justification of the Home screen design:
 - This design is meant to provide a familiar interface that is similar to other already existing applications, leading to an intuitive experience where a user can easily point out the location of a feature they are after. Including a grouped menu also simplifies navigation since all the main functions of Nutrient Analyzer are included here.
 - The menu on the top of the home page will be consistent throughout the user interaction with the software, for a simplified and straight forward user navigation.
@@ -783,6 +779,8 @@ This being the first function of the software, allows a user to enter a food ite
 - Back button to return to the page they were in previously.
 
 ![Food search screen design](Wireframes_and_Hierarchy/food-search-screen.png)
+### <span style="color:red">Changes made to the image:</span>
+- <span style="color:red">Restructured the layout of the components in the view
 
 ### Justification of Food Search Screen design
 Ensuring we have enough space to comfortably view the results, the scroll bar enables more data to load in the view. By fixing the search panel on a different section, we ensure a clean interface design that separated the user input section and results section.
@@ -799,6 +797,8 @@ This screen will display a visual pie charts and bar graphs to show the nutrient
 - Back button to take user to previous page.
 
 ![Nutritional breakdown screen design](Wireframes_and_Hierarchy/Nutritional-Breakdown-Screen.png)
+### <span style="color:red">Changes made to the image:</span>
+- <span style="color:red">Renamed the last menu item to match the feature name
 ### Justification of Nutritional Breakdown Screen design
 - The importance of having a visual representation of the nutritional breakdown structure is to present a visually appealing translation of data for better perception of users. Adding a function to switch between either styling of chart presentation would be accommodating for different audience needs.
 - Including a dropdown instead of users having to type in the names of the food item makes it easier to access records from the database compared to having a normal manual search.
@@ -817,8 +817,11 @@ This screen will display a visual pie charts and bar graphs to show the nutrient
 - Apply filter button
 - Filtered results display area
 - Scroll bar for large data results beyond the first page view
+- <span style="color:red">Close button to the user's main home screen
 
 ![Nutritional range filter screen design](Wireframes_and_Hierarchy/nutritional-range-filter.png)
+### <span style="color:red">Changes made to the image:</span>
+- <span style="color:red">Restructured the layout of the page to suit the justification of the design, renamed the last menu item to suit the feature name.
 
 ### Justification of Nutrition Range Filter design
 - Providing a separated section for user input only and for data display provides a cleaner and an orderly interface.
@@ -836,25 +839,28 @@ The nutrition level filter screen corresponds to the function of allowing a user
 - Button to apply filter
 - Filtered results display section in the screen
 - scroll bar in the display section
-- back button to the user's previous screen
+- <span style="color:red">Close</span> button to the user's main home screen
 
 ![Nutrition level filter screen design](Wireframes_and_Hierarchy/nutrition-level-filter.png)
+### <span style="color:red">Changes made to the image:</span>
+- <span style="color:red">Renamed the last menu item, restructured the layout of the page components to better suit the justification.
 
 ### Justification of Nutrition Level Filter design
 When it comes to making a selection to apply a filter, we want to make it as easy as possible for the user. Hence the use of radio buttons in the nutrition level group which only takes one option. This way a user knows they are supposed to only pick one option.
 
-### 5. Nutrition Density Visualizer Screen
+### 5. Nutrition <span style="color:red">Comparison</span> Visualizer Screen
 This will be the last option on the pinned menu on the user interface, and once on this page, a user can enter several food items to compare their nutritional density, getting a visual representation of the comparison.
-For ease of use of this analysis feature, we limit the food selection options to 5 food items.
+For ease of use of this analysis feature, we limit the food selection options to <span style="color:red">three</span> food items.
 
-#### Components of the Nutrition Density Visualizer Screen:
-- A maximum of 5 food item selection list
-- - An informative label to ask a user to select up to 5 food items from the drop-down options.
+#### Components of the Nutrition Comparison Visualizer Screen:
+- A maximum of <span style="color:red">three</span> food item selection list
+- - An informative label to ask a user to select up to <span style="color:red">three</span> food items from the drop-down options.
 - - Compare button
 - Display panel to show a bar graph that compares the nutritional density levels of the selected food items.
-- Back button to return a user to their previous page.
 
 ![Food density visualizer screen design](Wireframes_and_Hierarchy/food-density-visualizer.png)
+### <span style="color:red">Changes made to the image:</span>
+- <span style="color:red">Restructured and re-organized the page layout to suit the justification, renamed the last menu item component.
 
 ### Justification of Density Visualizer Screen design
 - With this additional feature, we need to compare and get a better representation of the nutritional density of several food items, hence the need to take in multiple selection options of the food items.
