@@ -44,7 +44,7 @@ After finishing searching, click the Close button to exit the Food Search interf
 
 ### Screenshots
 **1. Navigate the Food Search Function:** 
-![FoodSearch_Step1.png](Executive_summary_screenshots/FoodSearch_Step1.png)
+![FoodSearch_Step1.png](Executive_summary_screenshots%2FFoodSearch_Step1.png)
 
 **2. Enter in the food Name:** 
 ![FoodSearch_Step2.png](Executive_summary_screenshots/FoodSearch_Step2.png)
@@ -56,8 +56,7 @@ After finishing searching, click the Close button to exit the Food Search interf
 ![FoodSearch_Step4.png](Executive_summary_screenshots/FoodSearch_Step4.png)
 
 **5. Exit the Feature:**
-![FoodSearch_Step1.png](Executive_summary_screenshots/FoodSearch_Step1.png)
-
+![FoodSearch_Step1.png](Executive_summary_screenshots%2FFoodSearch_Step1.png)
 ---
 
 # 2. Nutrition Breakdown
@@ -95,7 +94,7 @@ Once finished, select Close to exit or go back to the main menu.
 ### Screenshots
  
 **1. Select nutrient Breakdown Option:** 
-![NutrientBreakdown_Step1.png](Executive_summary_screenshots/NutrientBreakdown_Step1.png)
+![NutrientBreakdown_Step1.png](Executive_summary_screenshots%2FNutrientBreakdown_Step1.png)
 
 **2. Choose a Food item:**
 ![NutrientBreakdown_Step2.png](Executive_summary_screenshots/NutrientBreakdown_Step2.png)
@@ -107,7 +106,7 @@ Once finished, select Close to exit or go back to the main menu.
 ![NutrientBreakdown_Step4.png](Executive_summary_screenshots/NutrientBreakdown_Step4.png)
 
 **5. Exit the Feature:**
-![NutrientBreakdown_Step1.png](Executive_summary_screenshots/NutrientBreakdown_Step1.png)
+![NutrientBreakdown_Step1.png](Executive_summary_screenshots%2FNutrientBreakdown_Step1.png)
 
 ---
 
@@ -160,7 +159,7 @@ After locating the foods you want, click the Close button to close the range fil
 ### Screenshots
 
 **1. Select the Nutrition Range Filter Function:**
-![NutritionRangeFilter_Step1.png](Executive_summary_screenshots/NutritionRangeFilter_Step1.png)
+![NutritionRangeFilter_Step1.png](Executive_summary_screenshots%2FNutritionRangeFilter_Step1.png)
 
 **2.Click on Drop Down function:**
 ![NutritionRangeFilter_Step2.png](Executive_summary_screenshots/NutritionRangeFilter_Step2.png)
@@ -177,8 +176,8 @@ After locating the foods you want, click the Close button to close the range fil
 **6. Refine the Filter**  
 ![NutritionRangeFilter_Step6.png](Executive_summary_screenshots/NutritionRangeFilter_Step6.png)
 
-**6. Exit the Feature:** 
-![NutritionRangeFilter_Step1.png](Executive_summary_screenshots/NutritionRangeFilter_Step1.png)
+**7. Exit the Feature:** 
+![NutritionRangeFilter_Step1.png](Executive_summary_screenshots%2FNutritionRangeFilter_Step1.png)
 
 ---
 
@@ -198,11 +197,15 @@ This function lets users filter items according to their nutritional composition
 
 ## Steps
 
-### **1. Navigate the Nutrition Level Feature:**
+### **1. Navigate the Nutrition Level Filter Feature:**
 
 Launch the app, then use the main menu to find the Nutrition Level Filter option and click on it to open.
 
-### **2. Choose Your Nutritional Levels:**
+### **2. Choose the nutrient:**
+
+User chooses the nutrient from the drop-down list of nutrients, to check the low, medium and high level in each food.
+
+### **3. Choose Your Nutritional Levels:**
 
 **i.** There will be radio button for each level—Low, Medium, and High—in the dialogue box that displays.
 
@@ -214,13 +217,13 @@ Launch the app, then use the main menu to find the Nutrition Level Filter option
 
 **iii. High:** Choose this choice to incorporate meals with a nutritional value more than 66%.
 
-### **3. Click on the Filter button:**
+### **4. Click on the Filter button:**
 
 **i.** Click the Filter button once the required nutritional values have been chosen.
 
 **ii.** Based on the levels that have been chosen, the system will filter foods and update the grid with the filtered results.
 
-### **4. View Results Filtered and again adjust the level:**
+### **5. View Results Filtered and again adjust the nutrient and its level:**
 
 **i.** The filtered items will be shown in a grid with their quantities values.
 **ii.** The grid will have the following items:
@@ -229,41 +232,44 @@ Launch the app, then use the main menu to find the Nutrition Level Filter option
 
 **ii. Levels of Nutrients:** The particular concentration of every nutrient in every food item.
 
-### **5. Exit the Feature:**
+### **6. Exit the Feature:**
 
 After locating the items you want, select Close to close the nutrition level filter dialogue and go back to the main program.
 
 ### Screenshots
     
-**1. Navigate the Nutrition Level Feature:**
-![NutritionLevelFilter_Step1.png](Executive_summary_screenshots/NutritionLevelFilter_Step1.png)
+**1. Navigate the Nutrition Level Filter Feature:**
+![NutritionLevelFilter_Step1.png](Executive_summary_screenshots%2FNutritionLevelFilter_Step1.png)
 
-**2. Choose Your Nutritional Levels:**
-![NutritionLevelFilter_Step2.png](Executive_summary_screenshots/NutritionLevelFilter_Step2.png)
+**2. Choose the nutrient:**
+![NutritionLevelFilter_Step2.png](Executive_summary_screenshots%2FNutritionLevelFilter_Step2.png)
 
-**3. Click on the Filter button:**
-![NutritionLevelFilter_Step3.png](Executive_summary_screenshots/NutritionLevelFilter_Step3.png)
+**3. Choose Your Nutritional Levels:**
+![NutritionLevelFilter_Step3.png](Executive_summary_screenshots%2FNutritionLevelFilter_Step3.png)
 
-**4. View Results Filtered and again adjust the level:**
-![NutritionLevelFilter_Step4.png](Executive_summary_screenshots/NutritionLevelFilter_Step4.png)
+**4. Click on the Filter button:**
+![NutritionLevelFilter_Step4.png](Executive_summary_screenshots%2FNutritionLevelFilter_Step4.png)
 
-**5. Exit the Feature:**
-![NutritionLevelFilter_Step1.png](Executive_summary_screenshots/NutritionLevelFilter_Step1.png)
+**5. View Results Filtered and again adjust the nutrient and its level:**
+![NutritionLevelFilter_Step5.png](Executive_summary_screenshots%2FNutritionLevelFilter_Step5.png)
+
+**6. Exit the Feature:**
+![NutritionLevelFilter_Step1.png](Executive_summary_screenshots%2FNutritionLevelFilter_Step1.png)
 ---
 
-# 5. Nutritional Density Visualizer
+# 5. Nutritional Comparison Visualizer
 
 ## Description
 
-Through a visual representation, users may compare the nutritional density of different food products with the Nutritional Density Visualizer tool. Users are presented with a bar chart that compares important elements including fats, proteins, carbs, and sugars when they pick three food products. This tool helps users make educated decisions on their dietary choices by giving a straightforward and interactive method to explore the nutritional value of different meals.
+Users may visually compare the nutrients of various food products using this tool. Users may observe a graphical comparison of many nutritional elements, including fat, protein, carbs, and other important nutrients, by selecting food products from a list. The visualiser helps consumers make educated dietary decisions by offering an easy-to-use method of comparing the nutritional value of various meals.
 
 ## Steps
 
-### **1. Navigate the Nutritional Density Visualizer.**
+### **1. Navigate the Nutritional Comparison Visualizer:**
 
-Open the visualiser by selecting it from the dialogue window or application menu.
+Open the visualiser by selecting it from the application menu.
 
-### **2. Choose the Nutrient**
+### **2. Choose the Nutrient:**
 
 Users choose nutrient from the drop-down list that they want to do food comparison for that nutrient.
 
@@ -275,32 +281,32 @@ Users choose three food items from the drop-down list by selecting the ones they
 
 To produce the comparison, choose the food products and then click the 'Visualize' option.
 
-### **Re-define the findings**
+### **5. Re-define the findings**
 
-The data can be re-define, by selecting the another food to do comparisons.
+The data can be re-define, by selecting the another food with another nutrient to do comparison.
 
-### **5. Exit the Feature:**
+### **6. Exit the Feature:**
 
 After visualize the items you want, select Close to close the nutrition level filter dialogue and go back to the main program.
 
 ### Screenshots
 
-**1. Navigate the Nutritional Density Visualizer.**
-![NutritionalDensityVisualizer_Step1.png](Executive_summary_screenshots/NutritionalDensityVisualizer_Step1.png)
+**1. Navigate the Nutritional Comparison Visualizer:**
+![NutritionalComparisonVisualizer_Step1.png](Executive_summary_screenshots%2FNutritionalComparisonVisualizer_Step1.png)
 
 **2. Choose the Nutrient**
-![NutritionalDensityVisualizer_Step2.png](Executive_summary_screenshots/NutritionalDensityVisualizer_Step2.png)
+![NutritionalComparisonVisualizer_Step2.png](Executive_summary_screenshots%2FNutritionalComparisonVisualizer_Step2.png)
 
 **3. Choose the Food to compare**
-![NutritionalDensityVisualizer_Step3.png](Executive_summary_screenshots/NutritionalDensityVisualizer_Step3.png)
+![NutritionalComparisonVisualizer_Step3.png](Executive_summary_screenshots%2FNutritionalComparisonVisualizer_Step3.png)
 
 **4. Press the 'Visualize' button.**
-![NutritionalDensityVisualizer_Step4.png](Executive_summary_screenshots/NutritionalDensityVisualizer_Step4.png)
+![NutritionalComparisonVisualizer_Step4.png](Executive_summary_screenshots%2FNutritionalComparisonVisualizer_Step4.png)
 
-**Re-define the findings**
-![NutritionalDensityVisualizer_Step5.png](Executive_summary_screenshots/NutritionalDensityVisualizer_Step5.png)
+**5. Re-define the findings**
+![NutritionalComparisonVisualizer_Step5.png](Executive_summary_screenshots%2FNutritionalComparisonVisualizer_Step5.png)
 
-**5. Exit the Feature:**
-![NutritionalDensityVisualizer_Step1.png](Executive_summary_screenshots/NutritionalDensityVisualizer_Step1.png)
+**6. Exit the Feature:**
+![NutritionalComparisonVisualizer_Step1.png](Executive_summary_screenshots%2FNutritionalComparisonVisualizer_Step1.png)
 
 ---
