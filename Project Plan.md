@@ -110,7 +110,7 @@ Subsystems: The project will be divided into several key subsystems
 ## 3. Activity Definition Estimation
 
 
-| Activity #No | Activity Name                                                     | Brief Description                                                                                                                        | Duration                               | Responsible Team Members |
+| Activity #No | Activity Name                                                     | Brief Description                                                                                                                        | Duration (in Days)                     | Responsible Team Members |
 |--------------|-------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|--------------------------|
 | 1            | Project Planning                                                  | Initial planning, including scheduling and team assembly.                                                                                | Total 3                                | All                      |
 | 1.1          | Scheduling initial meetings                                       | To clarify project specifications.                                                                                                       | 1                                      | All                      |

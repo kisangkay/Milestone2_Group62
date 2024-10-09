@@ -1,0 +1,123 @@
+* 22673d1 2024-10-09 by [Kip] | renamed extension file and testing.txt files from Harsh (HEAD -> main, origin/main, origin/HEAD)
+* 722f016 2024-10-09 by [harshpatel2361] | pdf UTR
+* 3257707 2024-10-09 by [harshpatel2361] | pdf SDD
+* ee74480 2024-10-09 by [harshpatel2361] | pdf coverage testing report
+* 9aab4b3 2024-10-09 by [harshpatel2361] | assignment extension by harsh
+* a00c1b3 2024-10-09 by [harshpatel2361] | Project Plan pdf
+* 3291faf 2024-10-09 by [harshpatel2361] | All Functions
+* 74ec0d0 2024-10-09 by [harshpatel2361] | pic for branch coverage test
+* fad4d30 2024-10-09 by [harshpatel2361] | Coverage_Testing_Report.md! Done:)
+* 6db0a51 2024-10-09 by [harshpatel2361] | updated Gantt Chart
+* 8d8fd73 2024-10-09 by [harshpatel2361] | updated image of Gantt Chart
+* 46b3979 2024-10-09 by [harshpatel2361] | updated WBS, Gantt Chart, add 5th feature in scope
+* 89c2e7b 2024-10-09 by [harshpatel2361] | updates in def on_search function
+* 93852df 2024-10-09 by [harshpatel2361] | pic for statement coverage test
+* 9959ff1 2024-10-09 by [harshpatel2361] | All test Functions
+* 7ea64f8 2024-10-09 by [harshpatel2361] | WBS Updated Done
+* 8a5ce9c 2024-10-09 by [harshpatel2361] | Unit Testing Reportgit add ./Unit_Testing_Report.md! Done:)
+* 26f7e4a 2024-10-09 by [harshpatel2361] | Unit Testing
+* e8c5920 2024-10-09 by [harshpatel2361] | Unit Testing
+* fb24e61 2024-10-07 by [Kip] | updated flow chart and GUI.pdf (origin/koech-updates-milestone-2, koech-updates-milestone-2)
+* 262dec5 2024-10-07 by [Simarjot Kaur] | A little adjustments in Level filter Feature and in some screenshots
+* 65b83f9 2024-10-07 by [Kip] | Completed the Software Design Document, relevant flowcharts and wireframes revised, added pycache to gitignore
+* 1778051 2024-10-07 by [Kip] | minor ui changes to suit SDD, SDD updates
+* 4d67312 2024-10-07 by [Kip] | fixed feature 4
+* f43fdc4 2024-10-06 by [Kip] | Updates on Software Design Documentation, moved Executive summary images for order
+*   a1a37e8 2024-10-06 by [Simarjot Kaur] | Merge branch 'Milestone2' Merged Milestone2 branch into main to integrate new features and bug fixes.
+|\  
+| * 8688b6b 2024-10-06 by [Simarjot Kaur] | Final Update to Executive_Summary.md, add step by step screenshots of each feature, create Executive_Summary.pdf file
+* | 339334f 2024-10-06 by [Kip] | further bmp files
+* | 2f36e36 2024-10-06 by [Kip] | fixed bmp component on run_temp
+* | f81fd2c 2024-10-06 by [Kip] | readme and fixed icon references in run_template
+* | 18b754d 2024-10-06 by [Kip] | edited Project plan
+* | 4e5fb94 2024-10-06 by [Kip] | rename GUIs
+* | cf58b6b 2024-10-06 by [Kip] | fixed icon path to be relative. renamed icons
+* | 2654c56 2024-10-06 by [Kip] | Merge branch 'main' of https://github.com/kisangkay/Milestone2_Group62 Pull from origin to check changes before pushing
+|\| 
+| * 2581822 2024-10-06 by [Simarjot Kaur] | Pull Changes
+* | 2a542db 2024-10-06 by [Kip] | fixed ui layouts
+|/  
+* 189be46 2024-10-06 by [Kip] | Added bitmap icons
+* 4a22378 2024-10-06 by [Kip] | finalized the features, making structural changes and documentation next
+* a54e536 2024-10-06 by [Kip] | finished feature 4 and 5 working fine yet to complete Executive summary and update SDD
+* 6cfd888 2024-10-05 by [Kip] | function 3 working well
+*   e13469f 2024-10-05 by [Kip] | Merge branch 'main' of https://github.com/kisangkay/Milestone2_Group62
+|\  
+| * bb12956 2024-10-05 by [Simarjot Kaur] | Pull Changes
+* | 53c300e 2024-10-05 by [Kip] | removed cache
+* | b6c2ef1 2024-10-05 by [Kip] | Feature 3 update
+* | 8ec8520 2024-10-05 by [Kip] | Feature 3 update
+* | 500b1e8 2024-10-05 by [Kip] | Pushing incomplete feature 3 Nutrient filter range for team assistance
+* | d21e6bf 2024-10-05 by [Kip] | Merge branch 'main' of https://github.com/kisangkay/Milestone2_Group62 into koech-updates-milestone-2 Fixing feature 3
+|\| 
+| * 0e03063 2024-10-05 by [Simarjot Kaur] | Update Executive_Summary.md
+| * 5d5ac9e 2024-10-05 by [harshpatel2361] | test commit
+* | 7504e7a 2024-10-05 by [Kip] | some design to use bitmap for home and search pages, minor SDD change, changed GUI design
+* | 252d53a 2024-10-05 by [Kip] | Added doc
+* | 6806cfa 2024-10-05 by [Kip] | Group 62 Milestone 2 Guide notes
+|/  
+* 5802966 2024-10-05 by [Kip] | rename csv file, merged run template file
+* c10080b 2024-10-04 by [Simarjot Kaur] | Update the GUI.fbp, run_template.py, template_frame.py files and start working on Executive_Summary.md file
+* 52daeca 2024-10-04 by [Simarjot Kaur] | Update GUI.fbp file with Fifth feature
+* ce3495e 2024-10-04 by [Simarjot Kaur] | Update GUI.fbp and template_frame.py files
+* e260610 2024-10-03 by [Simarjot Kaur] | Update GUI.fbp, run_template.py and template_frame.py files with first two features
+* f39a2fc 2024-10-02 by [Simarjot Kaur] | Upload run_template.py, template_frame.py and Food_Nutrition_Dataset.csv files
+* bc4a432 2024-10-02 by [Simarjot Kaur] | Created a GUI.fbp file
+* ef88190 2024-09-30 by [Kip] | Added A2 Files
+* 44f3642 2024-09-08 by [Kip] | updated readme.md
+* 255ba17 2024-09-08 by [Kip] | removed structural design template image
+*   301a766 2024-09-08 by [Kip] | Merge main to local branch koech updates milestone 1, gantt chart differs
+|\  
+| * b41188c 2024-09-08 by [harshpatel2361] | updated gantt chart
+* | 927faf0 2024-09-08 by [Kip] | final format checks
+* | 0a78760 2024-09-08 by [Kip] | SDD upates, editing table structure at 2.0
+* | 8537408 2024-09-08 by [Kip] | Renamed wireframes images folder by removing whitespaces, format changes to SDD 2.0 tables
+|/  
+* 7b6b74a 2024-09-08 by [Kip] | removed image files from project template, removed unrelated image files
+* 1ed4388 2024-09-08 by [Kip] | merged main to koech updates milestone 1, fixed table borders for section 2 of the SDD
+*   f4d2ed5 2024-09-08 by [Simarjot Kaur] | iMerge branch 'Milestone1_branch' Merged 'Milestone_branch1' into 'main' Integrated changes from the Milestone1 development branch into the main branch.
+|\  
+| *   bd0aa9b 2024-09-08 by [Kip] | Merge branch 'main' into koech-updates-milestone-1
+| |\  
+| * | b88db85 2024-09-08 by [Kip] | updated table of contents
+| * | 1a24c98 2024-09-07 by [Kip] | Completed final versions of all diagrams and flowcharts, revised SDD sections 3 and 4, stored the diagrams in a separate subfolder for better organization
+* | | 1fd7e7e 2024-09-08 by [Simarjot Kaur] | Update Use Cases, Use case diagrams and upload UseCase_Diagram.drawio.png file
+| |/  
+|/|   
+* | 8909376 2024-09-07 by [Simarjot Kaur] | Update System Vision, User Requirements and Software Requirements
+|\| 
+| * d617d25 2024-09-07 by [Kip] | created detailed flowchart for each listed function in 3.2.1 updated their references as images in SDD
+| *   89756c6 2024-09-07 by [Kip] | Merge branch 'koech-updates-milestone-1' Committing a final draft version of SDD 3.2.1, 3.2.2 and udated Flowchart Diagram
+| |\  
+| | * dad7f75 2024-09-07 by [Kip] | Updated draft 1 flowchart to include all key software features to a final version, Completed Draft version of Software Design Document Section 3.2.1 outlying all functions to support the key features of the software, currently a total of 6 functions. Included an update of SDD Section 3.2.2 of Data Structures types used and all their occurrences in the functions defined in 3.2.1
+| * | d9c5a8d 2024-09-06 by [harshpattel2361] | Updated WBS
+| * | 3bc8995 2024-09-06 by [harshpattel2361] | Updated Project Plan
+| * | f9cd366 2024-09-06 by [harshpattel2361] | Updated Gantt Chart
+| * | 1be4dbe 2024-09-06 by [harshpattel2361] | Updated Gantt Chart
+| * | 2b90637 2024-09-06 by [HARSH PATEL] | Add files via upload
+| * | c49f14b 2024-09-06 by [HARSH PATEL] | Delete WBS.xlsx
+| * | 266c9e0 2024-09-06 by [HARSH PATEL] | Delete WBS.png
+| * | 5565447 2024-09-06 by [HARSH PATEL] | Delete WBS.jpg
+| * | 48d6be1 2024-09-06 by [HARSH PATEL] | Delete Project Plan.md
+| * | f58d828 2024-09-06 by [HARSH PATEL] | Delete Gantt_chart.xlsx
+| * | 5b16a0f 2024-09-06 by [HARSH PATEL] | Delete Gantt_chart.png
+| * | acb0570 2024-09-06 by [HARSH PATEL] | Delete Gantt chart.xlsx
+| * | bb8870f 2024-09-06 by [harshpattel2361] | Update Project Plan (Harsh)
+| * | 2d6cd95 2024-09-06 by [harshpattel2361] | Update WBS
+| * | 0cf3ccb 2024-09-06 by [harshpattel2361] | Update WBS image
+| * | 5e71612 2024-09-06 by [harshpattel2361] | Update Gantt Chart image
+| * | 1cdbeab 2024-09-06 by [harshpattel2361] | Update Gantt Chart
+| |/  
+| * dece6fe 2024-09-04 by [Kip] | Updated Activities column in the gantt chart, and student id section of the software design document
+| *   ebea380 2024-09-03 by [Kip] | Merge branch 'main' of https://github.com/kisangkay/Milestone1_Group62 into koech-updates-milestone-1
+| |\  
+| * | aee86b2 2024-09-03 by [Kip] | Updated software design document and software design flowchart. Suggested the Software Name to be used. In software Design Section 3 3.1 Software design, added a paragraph to describe the flow chart image attached.
+* | | ad66311 2024-09-07 by [Simarjot Kaur] | Update the System Vision, User Requirements and Software Requirements
+| |/  
+|/|   
+* | 555e287 2024-09-03 by [Simarjot Kaur] | Update Problem Identification in Software Design Documemt
+|/  
+* d59932a 2024-08-26 by [kisangkay] | Add files via upload
+* 7d32ca3 2024-08-26 by [kisangkay] | Update README.md
+* e1c5479 2024-08-26 by [kisangkay] | Update .gitignore
+* aee314d 2024-08-26 by [kisangkay] | Initial commit
