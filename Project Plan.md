@@ -3,6 +3,7 @@
 ## Project Name: Nutrient Analyzer
 ## Group Number: 062
 
+
 ### Team members
 
 | Student No. | Full Name     | GitHub Username | Contribution (sum to 100%) | 
@@ -89,6 +90,7 @@ Key Functionalities:
 * Nutrition Breakdown Visualization: The tool will offer graphical representations (e.g., pie charts, bar graphs) of the nutritional content of selected food items.
 * Nutrition Range Filter: Users can filter food items based on specified nutritional ranges, such as calories, fat content, protein levels, etc.
 * Nutrition Level Filter: This feature will allow users to categorize foods into low, mid, and high nutritional levels based on defined thresholds.
+* <span style="color:red"> Analysis of Nutrient Density Visualizer (Additional Feature): Users may examine how three nutrients vary in range of the selected nutrient, for example, how fats or how vitamins range in the selected foods differ. </span>
 
 Subsystems: The project will be divided into several key subsystems
 * User Interface (UI) Subsystem: Responsible for designing and implementing the graphical user interface.
@@ -99,7 +101,7 @@ Subsystems: The project will be divided into several key subsystems
 
 <div style="page-break-after: always;"></div>
 
-## 2. Work Breakdown Structure
+## <span style="color:red">2. Work Breakdown Structure</span>
 
 ![WBS](./WBS.jpg)
 
@@ -108,35 +110,33 @@ Subsystems: The project will be divided into several key subsystems
 ## 3. Activity Definition Estimation
 
 
-| Activity #No | Activity Name                                          | Brief Description                                                                                                                  | Duration | Responsible Team Members |
-|--------------|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|----------|--------------------------|
-| 1            | Project Planning                                       | Initial planning, including scheduling and team assembly.                                                                          | Total 3  | All                      |
-| 1.1          | Scheduling initial meetings                            | To clarify project specifications.                                                                                                 | 1        | All                      |
-| 1.2          | Identify Stakeholders                                  | Determine key individuals or groups involved or impacted by the project.                                                           | 1        | All                      |
-| 1.3          | Project team assembly                                  | Assembling the project team and planning the project schedule.                                                                     | 1        | All                      |
-| 2            | Analysis Tasks                                         | Clarifying project specifications, defining system requirements, and modeling user activities.                                     | Total 3  | All                      |
-| 2.1          | Meeting to clarify project specifications              | Clarifying project specifications with stakeholders.                                                                               | 1        | All                      |
-| 2.2          | User activity modelling                                | Modeling user activities to define system requirements.                                                                            | 2        | All                      |
-| 3            | Design Tasks                                           | Designing the graphical user interface (GUI), ensuring it is user-friendly and intuitive.                                          | Total 5  | All                      |
-| 3.1          | Designing the GUI                                      | Designing the GUI and core functionalities (e.g., search, filter, visualization).                                                  | 3        | Stephen \& Simar         |
-| 3.2          | Database Design & Integration                          | Designing the database schema and integrating the Nutritional_Food_Database.csv with the application.                              | 3        | Stephen \& Harsh         |
-| 4            | Build Tasks                                            | Develop a desktop software, implementing the functionalities (e.g., search, filter, visualization).                                | Total 9  | All                      |
-| 4.1          | Developing the application interface                   | Develop the graphical user interface that will allow users to interact with the tool, including input fields, buttons, and layout. | 3        | Stephen \& Simar         |
-| 4.2          | Features implementation                                | Implement the features Food Search, Nutrition Breakdown, Nutrition Level Filter, Nutrition Range Filter.                           | 4        | All                      |
-| 4.3          | Integrate application interface subsystem and database | Link the subsystems to the database, ensuring smooth data retrieval and processing.                                                | 3        | All                      |
-| 5            | Testing                                                | Testing all features and functionalities, debugging any issues, and ensuring overall system stability.                             | Total 10 | All                      |
-| 5.1          | Perform Unit Testing                                   | Test individual components like search, filter, and visualization in isolation.                                                    | 2        | All                      |
-| 5.2          | Perform Integration Testing                            | Ensure that the UI, database, and all subsystems work together as expected.                                                        | 2        | All                      |
-| 5.3          | Perform Usability Testing                              | Evaluate user experience and ensure the interface is intuitive and easy to use.                                                    | 2        | Stephen \& Simar         |
-| 5.4          | Perform System Testing                                 | Test the entire system as a whole to ensure it meets all functional requirements.                                                  | 2        | All                      |
-| 5.5          | Performing final system                                | Performing final system tests and seeking stakeholder approval.                                                                    | 2        | All                      |
-| 6            | Documentation and Final Reporting                      | Preparing project documentation, including user manuals, and compiling the final report.                                           | Total 2  | All                      |
-| 6.1          | Final Performance Review                               | Assess application performance, ensuring efficiency and responsiveness.                                                            | 1        | All                      |
-| 6.2          | Final Reporting                                        | Preparing project documentation and compiling the final report.                                                                    | 1        | All                      |
+| Activity #No | Activity Name                                                     | Brief Description                                                                                                                        | Duration                               | Responsible Team Members |
+|--------------|-------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|--------------------------|
+| 1            | Project Planning                                                  | Initial planning, including scheduling and team assembly.                                                                                | Total 3                                | All                      |
+| 1.1          | Scheduling initial meetings                                       | To clarify project specifications.                                                                                                       | 1                                      | All                      |
+| 1.2          | Identify Stakeholders                                             | Determine key individuals or groups involved or impacted by the project.                                                                 | 1                                      | All                      |
+| 1.3          | Project team assembly                                             | Assembling the project team and planning the project schedule.                                                                           | 1                                      | All                      |
+| 2            | Analysis Tasks                                                    | Clarifying project specifications, defining system requirements, and modeling user activities.                                           | Total 3                                | All                      |
+| 2.1          | Meeting to clarify project specifications                         | Clarifying project specifications with stakeholders.                                                                                     | 1                                      | All                      |
+| 2.2          | User activity modelling                                           | Modeling user activities to define system requirements.                                                                                  | 2                                      | All                      |
+| 3            | Design Tasks                                                      | Designing the graphical user interface (GUI), ensuring it is user-friendly and intuitive.                                                | Total 5                                | All                      |
+| 3.1          | Designing the GUI                                                 | Designing the GUI and core functionalities (e.g., search, filter, visualization).                                                        | 3                                      | Stephen \& Simar         |
+| 3.2          | Database Design & Integration                                     | Designing the database schema and integrating the Nutritional_Food_Database.csv with the application.                                    | 3                                      | Stephen \& Harsh         |
+| 4            | Build Tasks                                                       | Develop a desktop software, implementing the functionalities (e.g., search, filter, visualization).                                      | Total 9                                | All                      |
+| 4.1          | Developing the application interface                              | Develop the graphical user interface that will allow users to interact with the tool, including input fields, buttons, and layout.       | 3                                      | Stephen \& Simar         |
+| 4.2          | Features implementation                                           | Implement the features Food Search, Nutrition Breakdown, Nutrition Level Filter, Nutrition Range Filter.                                 | 4                                      | All                      |
+| 4.3          | Integrate application interface subsystem and database            | Link the subsystems to the database, ensuring smooth data retrieval and processing.                                                      | 3                                      | All                      |
+| 5            | Testing                                                           | Testing all features and functionalities, debugging any issues, and ensuring overall system stability.                                   | <span style="color:red">Total 6</span> | All                      |
+| 5.1          | Perform Unit Testing                                              | Test individual components like search, filter, and visualization in isolation.                                                          | 2                                      | All                      |
+| 5.2          | <span style="color:red">Perform Statement Coverage Testing</span> | <span style="color:red">Ensures that every line of code in a software program is executed at least once during testing.</span>           | 2                                      | All                      |
+| 5.3          | <span style="color:red">Perform Branch Coverage Testing</span     | <span style="color:red">Ensures that each possible branch or decision point in the code is executed at least once during testing.</span> | 2                                      | Stephen \& Simar         |
+| 6            | Documentation and Final Reporting                                 | Preparing project documentation, including user manuals, and compiling the final report.                                                 | Total 2                                | All                      |
+| 6.1          | Final Performance Review                                          | Assess application performance, ensuring efficiency and responsiveness.                                                                  | 1                                      | All                      |
+| 6.2          | Final Reporting                                                   | Preparing project documentation and compiling the final report.                                                                          | 1                                      | All                      |
 
 <div style="page-break-after: always;"></div>
 
-## 4. Gantt Chart
+## <span style="color:red">4. Gantt Chart</span>
 
 ![Gantt Chart](./Gantt_chart.png)
 
